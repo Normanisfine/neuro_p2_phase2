@@ -1,0 +1,202 @@
+Paper sweep started at: Sat Mar 28 13:51:02 EDT 2026
+Config: mae_mt_m2_vw4.json
+Config: mae_mt_m2_vw4  variant=mae_multitask
+Outdir: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/mae_mt_m2_vw4
+Device: cuda
+Train: 159, Val: 28, Val subset: 8
+Building dataset...
+  59601 trials (11.6s)
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase2/teamate/Project2/cpt/m2.pt
+  Transferred 50 tensors, skipped 7
+Params: 2,291,972
+Ep   1/50 | loss=0.0741 (pos=0.0703 vel=0.0007 cons=0.0024; wpos=0.0703 wvel=0.0026 wcons=0.0012) | val_r2=0.3803 * | lr0=4.00e-06 lr1=2.00e-04 | 22s
+Ep   2/50 | loss=0.0568 (pos=0.0539 vel=0.0003 cons=0.0030; wpos=0.0539 wvel=0.0014 wcons=0.0015) | val_r2=0.4453 * | lr0=6.00e-06 lr1=3.00e-04 | 19s
+Ep   3/50 | loss=0.0483 (pos=0.0455 vel=0.0003 cons=0.0030; wpos=0.0455 wvel=0.0013 wcons=0.0015) | val_r2=0.5075 * | lr0=8.00e-06 lr1=4.00e-04 | 19s
+Ep   4/50 | loss=0.0430 (pos=0.0405 vel=0.0003 cons=0.0027; wpos=0.0405 wvel=0.0012 wcons=0.0014) | val_r2=0.5863 * | lr0=1.00e-05 lr1=5.00e-04 | 20s
+Ep   5/50 | loss=0.0393 (pos=0.0370 vel=0.0003 cons=0.0025; wpos=0.0370 wvel=0.0011 wcons=0.0012) | val_r2=0.6118 * | lr0=1.00e-05 lr1=5.00e-04 | 19s
+Ep   6/50 | loss=0.0364 (pos=0.0342 vel=0.0003 cons=0.0023; wpos=0.0342 wvel=0.0011 wcons=0.0012) | val_r2=0.6167 * | lr0=9.99e-06 lr1=4.99e-04 | 19s
+Ep   7/50 | loss=0.0343 (pos=0.0321 vel=0.0003 cons=0.0022; wpos=0.0321 wvel=0.0010 wcons=0.0011) | val_r2=0.6338 * | lr0=9.95e-06 lr1=4.98e-04 | 20s
+Ep   8/50 | loss=0.0328 (pos=0.0307 vel=0.0003 cons=0.0022; wpos=0.0307 wvel=0.0010 wcons=0.0011) | val_r2=0.6324  | lr0=9.89e-06 lr1=4.95e-04 | 19s
+Ep   9/50 | loss=0.0316 (pos=0.0295 vel=0.0003 cons=0.0021; wpos=0.0295 wvel=0.0010 wcons=0.0011) | val_r2=0.6486 * | lr0=9.81e-06 lr1=4.90e-04 | 20s
+Ep  10/50 | loss=0.0305 (pos=0.0284 vel=0.0002 cons=0.0021; wpos=0.0284 wvel=0.0010 wcons=0.0011) | val_r2=0.6532 * | lr0=9.70e-06 lr1=4.85e-04 | 20s
+Ep  11/50 | loss=0.0297 (pos=0.0276 vel=0.0002 cons=0.0021; wpos=0.0276 wvel=0.0010 wcons=0.0010) | val_r2=0.6619 * | lr0=9.57e-06 lr1=4.79e-04 | 19s
+Ep  12/50 | loss=0.0289 (pos=0.0269 vel=0.0002 cons=0.0020; wpos=0.0269 wvel=0.0010 wcons=0.0010) | val_r2=0.6709 * | lr0=9.42e-06 lr1=4.71e-04 | 20s
+Ep  13/50 | loss=0.0284 (pos=0.0264 vel=0.0002 cons=0.0020; wpos=0.0264 wvel=0.0010 wcons=0.0010) | val_r2=0.6768 * | lr0=9.25e-06 lr1=4.62e-04 | 19s
+Ep  14/50 | loss=0.0277 (pos=0.0257 vel=0.0002 cons=0.0020; wpos=0.0257 wvel=0.0010 wcons=0.0010) | val_r2=0.6653  | lr0=9.05e-06 lr1=4.53e-04 | 19s
+Ep  15/50 | loss=0.0272 (pos=0.0253 vel=0.0002 cons=0.0020; wpos=0.0253 wvel=0.0010 wcons=0.0010) | val_r2=0.6760  | lr0=8.84e-06 lr1=4.42e-04 | 20s
+Ep  16/50 | loss=0.0268 (pos=0.0248 vel=0.0002 cons=0.0020; wpos=0.0248 wvel=0.0010 wcons=0.0010) | val_r2=0.6791 * | lr0=8.61e-06 lr1=4.31e-04 | 20s
+Ep  17/50 | loss=0.0264 (pos=0.0245 vel=0.0002 cons=0.0020; wpos=0.0245 wvel=0.0009 wcons=0.0010) | val_r2=0.6963 * | lr0=8.36e-06 lr1=4.18e-04 | 19s
+Ep  18/50 | loss=0.0260 (pos=0.0241 vel=0.0002 cons=0.0020; wpos=0.0241 wvel=0.0009 wcons=0.0010) | val_r2=0.6781  | lr0=8.10e-06 lr1=4.05e-04 | 19s
+Ep  19/50 | loss=0.0256 (pos=0.0237 vel=0.0002 cons=0.0019; wpos=0.0237 wvel=0.0009 wcons=0.0010) | val_r2=0.6946  | lr0=7.82e-06 lr1=3.91e-04 | 20s
+Ep  20/50 | loss=0.0253 (pos=0.0234 vel=0.0002 cons=0.0019; wpos=0.0234 wvel=0.0009 wcons=0.0010) | val_r2=0.6875  | lr0=7.52e-06 lr1=3.76e-04 | 20s
+Ep  21/50 | loss=0.0250 (pos=0.0231 vel=0.0002 cons=0.0019; wpos=0.0231 wvel=0.0009 wcons=0.0010) | val_r2=0.7012 * | lr0=7.22e-06 lr1=3.61e-04 | 19s
+Ep  22/50 | loss=0.0248 (pos=0.0229 vel=0.0002 cons=0.0019; wpos=0.0229 wvel=0.0009 wcons=0.0010) | val_r2=0.7027 * | lr0=6.90e-06 lr1=3.45e-04 | 19s
+Ep  23/50 | loss=0.0246 (pos=0.0227 vel=0.0002 cons=0.0019; wpos=0.0227 wvel=0.0009 wcons=0.0010) | val_r2=0.6958  | lr0=6.58e-06 lr1=3.29e-04 | 20s
+Ep  24/50 | loss=0.0243 (pos=0.0224 vel=0.0002 cons=0.0019; wpos=0.0224 wvel=0.0009 wcons=0.0010) | val_r2=0.7014  | lr0=6.25e-06 lr1=3.12e-04 | 20s
+Ep  25/50 | loss=0.0240 (pos=0.0222 vel=0.0002 cons=0.0019; wpos=0.0222 wvel=0.0009 wcons=0.0010) | val_r2=0.7138 * | lr0=5.91e-06 lr1=2.95e-04 | 19s
+Ep  26/50 | loss=0.0239 (pos=0.0220 vel=0.0002 cons=0.0019; wpos=0.0220 wvel=0.0009 wcons=0.0010) | val_r2=0.7111  | lr0=5.57e-06 lr1=2.78e-04 | 19s
+Ep  27/50 | loss=0.0238 (pos=0.0219 vel=0.0002 cons=0.0019; wpos=0.0219 wvel=0.0009 wcons=0.0009) | val_r2=0.7111  | lr0=5.22e-06 lr1=2.61e-04 | 20s
+Ep  28/50 | loss=0.0235 (pos=0.0217 vel=0.0002 cons=0.0019; wpos=0.0217 wvel=0.0009 wcons=0.0010) | val_r2=0.7131  | lr0=4.88e-06 lr1=2.44e-04 | 20s
+Ep  29/50 | loss=0.0234 (pos=0.0215 vel=0.0002 cons=0.0019; wpos=0.0215 wvel=0.0009 wcons=0.0009) | val_r2=0.7086  | lr0=4.53e-06 lr1=2.27e-04 | 20s
+Ep  30/50 | loss=0.0231 (pos=0.0213 vel=0.0002 cons=0.0019; wpos=0.0213 wvel=0.0009 wcons=0.0009) | val_r2=0.7089  | lr0=4.19e-06 lr1=2.10e-04 | 20s
+Ep  31/50 | loss=0.0231 (pos=0.0212 vel=0.0002 cons=0.0019; wpos=0.0212 wvel=0.0009 wcons=0.0009) | val_r2=0.7192 * | lr0=3.85e-06 lr1=1.93e-04 | 20s
+Ep  32/50 | loss=0.0230 (pos=0.0211 vel=0.0002 cons=0.0019; wpos=0.0211 wvel=0.0009 wcons=0.0009) | val_r2=0.7160  | lr0=3.52e-06 lr1=1.76e-04 | 20s
+Ep  33/50 | loss=0.0228 (pos=0.0209 vel=0.0002 cons=0.0019; wpos=0.0209 wvel=0.0009 wcons=0.0009) | val_r2=0.7136  | lr0=3.20e-06 lr1=1.60e-04 | 20s
+Ep  34/50 | loss=0.0228 (pos=0.0209 vel=0.0002 cons=0.0019; wpos=0.0209 wvel=0.0009 wcons=0.0009) | val_r2=0.7118  | lr0=2.88e-06 lr1=1.44e-04 | 20s
+Ep  35/50 | loss=0.0226 (pos=0.0208 vel=0.0002 cons=0.0019; wpos=0.0208 wvel=0.0009 wcons=0.0009) | val_r2=0.7186  | lr0=2.58e-06 lr1=1.29e-04 | 19s
+Ep  36/50 | loss=0.0226 (pos=0.0207 vel=0.0002 cons=0.0019; wpos=0.0207 wvel=0.0009 wcons=0.0009) | val_r2=0.7165  | lr0=2.28e-06 lr1=1.14e-04 | 19s
+Ep  37/50 | loss=0.0225 (pos=0.0206 vel=0.0002 cons=0.0019; wpos=0.0206 wvel=0.0009 wcons=0.0009) | val_r2=0.7220 * | lr0=2.00e-06 lr1=1.00e-04 | 19s
+Ep  38/50 | loss=0.0224 (pos=0.0206 vel=0.0002 cons=0.0019; wpos=0.0206 wvel=0.0009 wcons=0.0010) | val_r2=0.7189  | lr0=1.74e-06 lr1=8.69e-05 | 20s
+Ep  39/50 | loss=0.0223 (pos=0.0205 vel=0.0002 cons=0.0019; wpos=0.0205 wvel=0.0009 wcons=0.0009) | val_r2=0.7199  | lr0=1.49e-06 lr1=7.45e-05 | 20s
+Ep  40/50 | loss=0.0222 (pos=0.0204 vel=0.0002 cons=0.0019; wpos=0.0204 wvel=0.0009 wcons=0.0010) | val_r2=0.7204  | lr0=1.26e-06 lr1=6.29e-05 | 19s
+Ep  41/50 | loss=0.0223 (pos=0.0205 vel=0.0002 cons=0.0019; wpos=0.0205 wvel=0.0009 wcons=0.0009) | val_r2=0.7217  | lr0=1.05e-06 lr1=5.23e-05 | 20s
+Ep  42/50 | loss=0.0222 (pos=0.0203 vel=0.0002 cons=0.0019; wpos=0.0203 wvel=0.0009 wcons=0.0010) | val_r2=0.7172  | lr0=8.52e-07 lr1=4.26e-05 | 20s
+Ep  43/50 | loss=0.0222 (pos=0.0204 vel=0.0002 cons=0.0019; wpos=0.0204 wvel=0.0009 wcons=0.0010) | val_r2=0.7200  | lr0=6.79e-07 lr1=3.40e-05 | 20s
+Ep  44/50 | loss=0.0221 (pos=0.0203 vel=0.0002 cons=0.0019; wpos=0.0203 wvel=0.0009 wcons=0.0009) | val_r2=0.7176  | lr0=5.28e-07 lr1=2.64e-05 | 19s
+Ep  45/50 | loss=0.0222 (pos=0.0203 vel=0.0002 cons=0.0019; wpos=0.0203 wvel=0.0009 wcons=0.0009) | val_r2=0.7210  | lr0=3.99e-07 lr1=1.99e-05 | 19s
+Ep  46/50 | loss=0.0221 (pos=0.0202 vel=0.0002 cons=0.0019; wpos=0.0202 wvel=0.0009 wcons=0.0009) | val_r2=0.7199  | lr0=2.92e-07 lr1=1.46e-05 | 20s
+Ep  47/50 | loss=0.0221 (pos=0.0202 vel=0.0002 cons=0.0019; wpos=0.0202 wvel=0.0009 wcons=0.0010) | val_r2=0.7200  | lr0=2.08e-07 lr1=1.04e-05 | 20s
+Ep  48/50 | loss=0.0220 (pos=0.0202 vel=0.0002 cons=0.0019; wpos=0.0202 wvel=0.0009 wcons=0.0010) | val_r2=0.7205  | lr0=1.48e-07 lr1=7.41e-06 | 20s
+Ep  49/50 | loss=0.0220 (pos=0.0202 vel=0.0002 cons=0.0019; wpos=0.0202 wvel=0.0009 wcons=0.0009) | val_r2=0.7200  | lr0=1.12e-07 lr1=5.60e-06 | 20s
+Ep  50/50 | loss=0.0221 (pos=0.0202 vel=0.0002 cons=0.0019; wpos=0.0202 wvel=0.0009 wcons=0.0010) | val_r2=0.7192  | lr0=1.00e-07 lr1=5.00e-06 | 20s
+
+Full validation with best model...
+Full val R²: 0.5865 (best epoch 37)
+Saved config.json, best_model.pt, last_model.pt
+Device: cuda
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase2/teamate/Project2/cpt/m2.pt
+  Transferred 50 tensors, skipped 7
+Loaded: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/mae_mt_m2_vw4/best_model.pt (epoch 37, val_r2=0.7219768956322513)
+Inference config: variant=mae_multitask max_seq_len=192 stride=96 position_blend=0.750
+Test sessions: 125
+  [1/125] D002: 24246 bins (0.7s)
+  [2/125] D003: 24647 bins (0.5s)
+  [3/125] D004: 23764 bins (0.6s)
+  [4/125] D005: 20828 bins (0.5s)
+  [5/125] D006: 26032 bins (0.5s)
+  [6/125] D008: 25489 bins (0.5s)
+  [7/125] D010: 25503 bins (0.5s)
+  [8/125] D012: 23475 bins (0.5s)
+  [9/125] D013: 23900 bins (0.5s)
+  [10/125] D014: 24188 bins (0.5s)
+  [11/125] D015: 25023 bins (0.5s)
+  [12/125] D016: 21120 bins (0.5s)
+  [13/125] D017: 22031 bins (0.5s)
+  [14/125] D020: 24685 bins (0.5s)
+  [15/125] D025: 24874 bins (0.5s)
+  [16/125] D027: 24231 bins (0.5s)
+  [17/125] D028: 26305 bins (0.5s)
+  [18/125] D029: 24818 bins (0.5s)
+  [19/125] D034: 24066 bins (0.5s)
+  [20/125] D035: 21037 bins (0.5s)
+  [21/125] D036: 25057 bins (0.5s)
+  [22/125] D039: 26497 bins (0.5s)
+  [23/125] D040: 24304 bins (0.5s)
+  [24/125] D041: 25052 bins (0.5s)
+  [25/125] D046: 21001 bins (0.5s)
+  [26/125] D047: 25612 bins (0.5s)
+  [27/125] D048: 22225 bins (0.5s)
+  [28/125] D051: 24997 bins (0.5s)
+  [29/125] D054: 23915 bins (0.5s)
+  [30/125] D055: 25719 bins (0.5s)
+  [31/125] D057: 24450 bins (0.5s)
+  [32/125] D059: 24618 bins (0.5s)
+  [33/125] D060: 22292 bins (0.5s)
+  [34/125] D061: 25620 bins (0.5s)
+  [35/125] D070: 23416 bins (0.5s)
+  [36/125] D075: 21566 bins (0.5s)
+  [37/125] D076: 21535 bins (0.5s)
+  [38/125] D077: 24188 bins (0.5s)
+  [39/125] D078: 23653 bins (0.5s)
+  [40/125] D085: 24670 bins (0.6s)
+  [41/125] D086: 25191 bins (0.5s)
+  [42/125] D089: 21878 bins (0.5s)
+  [43/125] D092: 26243 bins (0.5s)
+  [44/125] D097: 22194 bins (0.5s)
+  [45/125] D098: 24193 bins (0.5s)
+  [46/125] D099: 24942 bins (0.5s)
+  [47/125] D102: 21444 bins (0.5s)
+  [48/125] D104: 25760 bins (0.5s)
+  [49/125] D105: 24699 bins (0.5s)
+  [50/125] D106: 25163 bins (0.5s)
+  [51/125] D109: 22504 bins (0.5s)
+  [52/125] D110: 21546 bins (0.5s)
+  [53/125] D112: 25547 bins (0.5s)
+  [54/125] D114: 21763 bins (0.5s)
+  [55/125] D116: 23137 bins (0.5s)
+  [56/125] D121: 28655 bins (0.5s)
+  [57/125] D129: 24399 bins (0.5s)
+  [58/125] D135: 25084 bins (0.5s)
+  [59/125] D136: 23816 bins (0.5s)
+  [60/125] D142: 21434 bins (0.5s)
+  [61/125] D143: 21171 bins (0.5s)
+  [62/125] D144: 26791 bins (0.5s)
+  [63/125] D145: 23359 bins (0.5s)
+  [64/125] D146: 23994 bins (0.5s)
+  [65/125] D151: 25015 bins (0.5s)
+  [66/125] D155: 24682 bins (0.5s)
+  [67/125] D156: 26109 bins (0.5s)
+  [68/125] D157: 23542 bins (0.5s)
+  [69/125] D161: 21964 bins (0.5s)
+  [70/125] D167: 26165 bins (0.5s)
+  [71/125] D170: 26616 bins (0.5s)
+  [72/125] D171: 24535 bins (0.5s)
+  [73/125] D175: 25290 bins (0.5s)
+  [74/125] D176: 25916 bins (0.5s)
+  [75/125] D182: 20848 bins (0.5s)
+  [76/125] D183: 25144 bins (0.5s)
+  [77/125] D185: 24055 bins (0.5s)
+  [78/125] D190: 25177 bins (0.5s)
+  [79/125] D192: 22286 bins (0.5s)
+  [80/125] D194: 22384 bins (0.5s)
+  [81/125] D195: 23565 bins (0.5s)
+  [82/125] D198: 25248 bins (0.5s)
+  [83/125] D199: 25166 bins (0.5s)
+  [84/125] D200: 24481 bins (0.5s)
+  [85/125] D201: 24437 bins (0.5s)
+  [86/125] D213: 24786 bins (0.5s)
+  [87/125] D216: 21839 bins (0.5s)
+  [88/125] D218: 24982 bins (0.5s)
+  [89/125] D222: 22725 bins (0.5s)
+  [90/125] D224: 24529 bins (0.5s)
+  [91/125] D226: 21153 bins (0.5s)
+  [92/125] D233: 22545 bins (0.5s)
+  [93/125] D234: 23720 bins (0.5s)
+  [94/125] D236: 31505 bins (0.5s)
+  [95/125] D237: 24493 bins (0.5s)
+  [96/125] D239: 25325 bins (0.5s)
+  [97/125] D241: 25728 bins (0.5s)
+  [98/125] D242: 25540 bins (0.5s)
+  [99/125] D243: 25453 bins (0.5s)
+  [100/125] D245: 20848 bins (0.5s)
+  [101/125] D247: 25354 bins (0.5s)
+  [102/125] D253: 24810 bins (0.5s)
+  [103/125] D254: 25763 bins (0.5s)
+  [104/125] D255: 21821 bins (0.5s)
+  [105/125] D257: 21381 bins (0.5s)
+  [106/125] D260: 22145 bins (0.5s)
+  [107/125] D267: 24945 bins (0.5s)
+  [108/125] D268: 24487 bins (0.5s)
+  [109/125] D272: 20878 bins (0.5s)
+  [110/125] D273: 21338 bins (0.5s)
+  [111/125] D276: 20859 bins (0.5s)
+  [112/125] D277: 21283 bins (0.5s)
+  [113/125] D282: 21023 bins (0.5s)
+  [114/125] D283: 26003 bins (0.5s)
+  [115/125] D284: 25068 bins (0.5s)
+  [116/125] D287: 23833 bins (0.5s)
+  [117/125] D289: 21498 bins (0.5s)
+  [118/125] D291: 21337 bins (0.5s)
+  [119/125] D296: 22568 bins (0.5s)
+  [120/125] D299: 21878 bins (0.5s)
+  [121/125] D300: 24591 bins (0.5s)
+  [122/125] D303: 24664 bins (0.5s)
+  [123/125] D304: 22364 bins (0.5s)
+  [124/125] D307: 26506 bins (0.5s)
+  [125/125] D308: 24181 bins (0.5s)
+Submission saved to /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/mae_mt_m2_vw4/submission.csv (2993930 rows)
+Submission path: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/mae_mt_m2_vw4/submission.csv
++ /scratch/ml8347/conda/envs/neuroinformatics/bin/python /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py --config /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/configs/mae_mt_m2_vw4.json --wandb
++ /scratch/ml8347/conda/envs/neuroinformatics/bin/python /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/submit.py --config /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/configs/mae_mt_m2_vw4.json --checkpoint /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/mae_mt_m2_vw4/best_model.pt
+Finished at: Sat Mar 28 14:11:46 EDT 2026
+Total time: 20m 44s

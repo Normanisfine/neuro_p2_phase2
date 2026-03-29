@@ -1,0 +1,48 @@
+INFO:    FUSE2FS (3): Warning: Mounting unchecked fs, running e2fsck is recommended.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ml8347/.netrc.
+wandb: Currently logged in as: limjiannn (limjiannn-new-york-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 6j8dio9j
+wandb: Tracking run with wandb version 0.25.0
+wandb: Run data is saved locally in /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/wandb/run-20260328_135528-6j8dio9j
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run txf_mt_longctx
+wandb: ⭐️ View project at https://wandb.ai/limjiannn-new-york-university/neuro-p2-paper-sweep
+wandb: 🚀 View run at https://wandb.ai/limjiannn-new-york-university/neuro-p2-paper-sweep/runs/6j8dio9j
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:386: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)
+wandb: uploading history steps 59-59, summary, console lines 65-67; updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading summary, console lines 68-69
+wandb: 
+wandb: Run history:
+wandb:           epoch ▁▁▁▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇████
+wandb:            lr/0 ▅▇████████▇▇▇▇▇▆▆▆▆▅▅▅▅▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁
+wandb:            lr/1 ▄▅▇███████▇▇▇▇▆▆▆▆▅▅▅▄▄▄▃▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁
+wandb:          time_s █▅▃▄▃▁▃▂▁▁▃▃▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁
+wandb: train/cons_loss █▇▅▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:      train/loss █▅▅▄▄▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  train/pos_loss █▇▆▅▅▅▄▄▄▄▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁
+wandb:  train/vel_loss █▅▅▄▄▄▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:    train/w_cons █▇▅▄▃▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:     train/w_pos █▆▅▄▄▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:              +3 ...
+wandb: 
+wandb: Run summary:
+wandb:      best_epoch 40
+wandb:           epoch 60
+wandb:            lr/0 0.0
+wandb:            lr/1 0.0
+wandb:     r2/best_val 0.71478
+wandb:     r2/full_val 0.59408
+wandb:          time_s 33.58883
+wandb: train/cons_loss 0.0007
+wandb:      train/loss 0.00757
+wandb:  train/pos_loss 0.00651
+wandb:              +6 ...
+wandb: 
+wandb: 🚀 View run txf_mt_longctx at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-paper-sweep/runs/6j8dio9j
+wandb: ⭐️ View project at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-paper-sweep
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260328_135528-6j8dio9j/logs
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:386: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)

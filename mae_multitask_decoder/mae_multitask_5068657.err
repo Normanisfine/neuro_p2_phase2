@@ -1,0 +1,46 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ml8347/.netrc.
+wandb: Currently logged in as: limjiannn (limjiannn-new-york-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run o9fheaoq
+wandb: Tracking run with wandb version 0.25.0
+wandb: Run data is saved locally in /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_decoder/wandb/run-20260328_130838-o9fheaoq
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run mae_mt_s0_vb0.5_cb0.25
+wandb: ⭐️ View project at https://wandb.ai/limjiannn-new-york-university/neuro-p2-multitask
+wandb: 🚀 View run at https://wandb.ai/limjiannn-new-york-university/neuro-p2-multitask/runs/o9fheaoq
+/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_decoder/train.py:94: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading summary, console lines 62-63
+wandb: 
+wandb: Run history:
+wandb:           epoch ▁▁▁▁▂▂▂▂▂▂▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇██
+wandb:      lr/encoder ▄▅▇███████▇▇▇▇▇▆▆▆▆▅▅▅▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb:         lr/head ▄▅▇███████▇▇▇▇▇▆▆▆▅▅▅▄▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb:          time_s █▂▁▁▁▇▂▅▂▂▅▂▅▂▂▂▆▄▅▅▂▂▅▂▂▅▂▂▅▂▅▂▆▅▆▁▂▆▃▂
+wandb: train/cons_loss ▅█▇▅▄▃▃▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:      train/loss █▆▄▄▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  train/pos_loss █▆▄▄▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:  train/vel_loss █▅▄▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:     val/best_r2 ▁▃▄▅▆▆▆▇▇▇▇▇▇▇▇▇▇███████████████████████
+wandb:          val/r2 ▁▃▄▅▆▆▆▇▇▇▇▇▇▇▇▇████████████████████████
+wandb: 
+wandb: Run summary:
+wandb:      best_epoch 38
+wandb:           epoch 50
+wandb:      lr/encoder 0.0
+wandb:         lr/head 1e-05
+wandb:     r2/best_val 0.72871
+wandb:     r2/full_val 0.60767
+wandb:          time_s 18.8909
+wandb: train/cons_loss 0.00243
+wandb:      train/loss 0.01934
+wandb:  train/pos_loss 0.01862
+wandb:              +3 ...
+wandb: 
+wandb: 🚀 View run mae_mt_s0_vb0.5_cb0.25 at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-multitask/runs/o9fheaoq
+wandb: ⭐️ View project at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-multitask
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260328_130838-o9fheaoq/logs
+/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_decoder/train.py:94: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)

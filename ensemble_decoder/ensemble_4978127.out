@@ -1,0 +1,703 @@
+Ensemble Decoder started at: Thu Mar 26 13:18:04 EDT 2026
+SLURM_JOB_ID: 4978127
+=== Starting ensemble pipeline ===
+========================================
+ Phase 2 Ensemble Decoder Pipeline
+========================================
+DATA_DIR   = /scratch/ml8347/neuroinformatics/project2/phase2/kaggle_data
+OUT_ROOT   = /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder
+EPOCHS     = 50
+USER_CKPT  = /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/best_model.pt
+M1_CKPT    = /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m1.pt
+M2_CKPT    = /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m2.pt
+M5_CKPT    = /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m5.pt
+
+=== [user_ft] Fine-tuning from: /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/best_model.pt (seed=0) ===
+Device: cuda
+Train: 159, Val: 28, seed: 0
+Building dataset...
+  59601 trials (8.1s)
+Params: 2,238,306
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/best_model.pt
+  Phase 1 checkpoint: epoch=19, val_nmse=0.7387984395027161
+  Transferred 57 tensors, skipped 0
+Val subset for training: 8 sessions (balanced easy+hard)
+Ep   1/50 | loss=0.0685 | val_r2=0.3520 * | lr_enc=4.00e-06 lr_hd=2.00e-04 | 14s
+Ep   2/50 | loss=0.0519 | val_r2=0.4671 * | lr_enc=6.00e-06 lr_hd=3.00e-04 | 12s
+Ep   3/50 | loss=0.0432 | val_r2=0.5357 * | lr_enc=8.00e-06 lr_hd=4.00e-04 | 12s
+Ep   4/50 | loss=0.0386 | val_r2=0.5669 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   5/50 | loss=0.0354 | val_r2=0.5825 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   6/50 | loss=0.0330 | val_r2=0.5886 * | lr_enc=9.99e-06 lr_hd=4.99e-04 | 12s
+Ep   7/50 | loss=0.0314 | val_r2=0.6036 * | lr_enc=9.95e-06 lr_hd=4.98e-04 | 12s
+Ep   8/50 | loss=0.0301 | val_r2=0.6036 * | lr_enc=9.89e-06 lr_hd=4.95e-04 | 12s
+Ep   9/50 | loss=0.0290 | val_r2=0.6099 * | lr_enc=9.81e-06 lr_hd=4.90e-04 | 12s
+Ep  10/50 | loss=0.0280 | val_r2=0.6192 * | lr_enc=9.70e-06 lr_hd=4.85e-04 | 12s
+Ep  11/50 | loss=0.0273 | val_r2=0.6173  | lr_enc=9.57e-06 lr_hd=4.79e-04 | 12s
+Ep  12/50 | loss=0.0266 | val_r2=0.6115  | lr_enc=9.42e-06 lr_hd=4.71e-04 | 12s
+Ep  13/50 | loss=0.0261 | val_r2=0.6248 * | lr_enc=9.25e-06 lr_hd=4.62e-04 | 12s
+Ep  14/50 | loss=0.0255 | val_r2=0.6259 * | lr_enc=9.05e-06 lr_hd=4.53e-04 | 12s
+Ep  15/50 | loss=0.0250 | val_r2=0.6250  | lr_enc=8.84e-06 lr_hd=4.42e-04 | 12s
+Ep  16/50 | loss=0.0246 | val_r2=0.6280 * | lr_enc=8.61e-06 lr_hd=4.31e-04 | 12s
+Ep  17/50 | loss=0.0242 | val_r2=0.6236  | lr_enc=8.36e-06 lr_hd=4.18e-04 | 12s
+Ep  18/50 | loss=0.0238 | val_r2=0.6249  | lr_enc=8.10e-06 lr_hd=4.05e-04 | 12s
+Ep  19/50 | loss=0.0236 | val_r2=0.6211  | lr_enc=7.82e-06 lr_hd=3.91e-04 | 12s
+Ep  20/50 | loss=0.0232 | val_r2=0.6346 * | lr_enc=7.52e-06 lr_hd=3.76e-04 | 12s
+Ep  21/50 | loss=0.0230 | val_r2=0.6306  | lr_enc=7.22e-06 lr_hd=3.61e-04 | 12s
+Ep  22/50 | loss=0.0228 | val_r2=0.6291  | lr_enc=6.90e-06 lr_hd=3.45e-04 | 12s
+Ep  23/50 | loss=0.0225 | val_r2=0.6285  | lr_enc=6.58e-06 lr_hd=3.29e-04 | 12s
+Ep  24/50 | loss=0.0222 | val_r2=0.6357 * | lr_enc=6.25e-06 lr_hd=3.12e-04 | 12s
+Ep  25/50 | loss=0.0221 | val_r2=0.6297  | lr_enc=5.91e-06 lr_hd=2.95e-04 | 12s
+Ep  26/50 | loss=0.0219 | val_r2=0.6228  | lr_enc=5.57e-06 lr_hd=2.78e-04 | 12s
+Ep  27/50 | loss=0.0217 | val_r2=0.6261  | lr_enc=5.22e-06 lr_hd=2.61e-04 | 12s
+Ep  28/50 | loss=0.0215 | val_r2=0.6284  | lr_enc=4.88e-06 lr_hd=2.44e-04 | 12s
+Ep  29/50 | loss=0.0214 | val_r2=0.6352  | lr_enc=4.53e-06 lr_hd=2.27e-04 | 12s
+Ep  30/50 | loss=0.0212 | val_r2=0.6257  | lr_enc=4.19e-06 lr_hd=2.10e-04 | 12s
+Ep  31/50 | loss=0.0211 | val_r2=0.6376 * | lr_enc=3.85e-06 lr_hd=1.93e-04 | 12s
+Ep  32/50 | loss=0.0210 | val_r2=0.6334  | lr_enc=3.52e-06 lr_hd=1.76e-04 | 12s
+Ep  33/50 | loss=0.0209 | val_r2=0.6311  | lr_enc=3.20e-06 lr_hd=1.60e-04 | 12s
+Ep  34/50 | loss=0.0208 | val_r2=0.6386 * | lr_enc=2.88e-06 lr_hd=1.44e-04 | 12s
+Ep  35/50 | loss=0.0207 | val_r2=0.6333  | lr_enc=2.58e-06 lr_hd=1.29e-04 | 12s
+Ep  36/50 | loss=0.0206 | val_r2=0.6303  | lr_enc=2.28e-06 lr_hd=1.14e-04 | 12s
+Ep  37/50 | loss=0.0206 | val_r2=0.6407 * | lr_enc=2.00e-06 lr_hd=1.00e-04 | 12s
+Ep  38/50 | loss=0.0205 | val_r2=0.6364  | lr_enc=1.74e-06 lr_hd=8.69e-05 | 12s
+Ep  39/50 | loss=0.0204 | val_r2=0.6368  | lr_enc=1.49e-06 lr_hd=7.45e-05 | 12s
+Ep  40/50 | loss=0.0204 | val_r2=0.6355  | lr_enc=1.26e-06 lr_hd=6.29e-05 | 12s
+Ep  41/50 | loss=0.0203 | val_r2=0.6367  | lr_enc=1.05e-06 lr_hd=5.23e-05 | 12s
+Ep  42/50 | loss=0.0202 | val_r2=0.6384  | lr_enc=8.52e-07 lr_hd=4.26e-05 | 12s
+Ep  43/50 | loss=0.0203 | val_r2=0.6388  | lr_enc=6.79e-07 lr_hd=3.40e-05 | 12s
+Ep  44/50 | loss=0.0202 | val_r2=0.6344  | lr_enc=5.28e-07 lr_hd=2.64e-05 | 12s
+Ep  45/50 | loss=0.0202 | val_r2=0.6372  | lr_enc=3.99e-07 lr_hd=1.99e-05 | 12s
+Ep  46/50 | loss=0.0202 | val_r2=0.6380  | lr_enc=2.92e-07 lr_hd=1.46e-05 | 12s
+Ep  47/50 | loss=0.0202 | val_r2=0.6375  | lr_enc=2.08e-07 lr_hd=1.04e-05 | 12s
+Ep  48/50 | loss=0.0201 | val_r2=0.6372  | lr_enc=1.48e-07 lr_hd=7.41e-06 | 12s
+Ep  49/50 | loss=0.0201 | val_r2=0.6373  | lr_enc=1.12e-07 lr_hd=5.60e-06 | 12s
+Ep  50/50 | loss=0.0202 | val_r2=0.6374  | lr_enc=1.00e-07 lr_hd=5.00e-06 | 12s
+
+Full validation with best model...
+Full val R²: 0.5257 (best epoch 37)
+Saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/user_ft/
+[user_ft] Done. Model: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/user_ft/best_model.pt
+
+=== [m1_ft] Fine-tuning from: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m1.pt (seed=1) ===
+Device: cuda
+Train: 159, Val: 28, seed: 1
+Building dataset...
+  59601 trials (4.8s)
+Params: 2,238,306
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m1.pt
+  Phase 1 checkpoint: epoch=37, val_nmse=0.6530582024198439
+  Transferred 57 tensors, skipped 0
+Val subset for training: 8 sessions (balanced easy+hard)
+Ep   1/50 | loss=0.0704 | val_r2=0.3401 * | lr_enc=4.00e-06 lr_hd=2.00e-04 | 12s
+Ep   2/50 | loss=0.0547 | val_r2=0.4317 * | lr_enc=6.00e-06 lr_hd=3.00e-04 | 12s
+Ep   3/50 | loss=0.0452 | val_r2=0.4940 * | lr_enc=8.00e-06 lr_hd=4.00e-04 | 12s
+Ep   4/50 | loss=0.0394 | val_r2=0.5489 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   5/50 | loss=0.0357 | val_r2=0.5598 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   6/50 | loss=0.0331 | val_r2=0.5818 * | lr_enc=9.99e-06 lr_hd=4.99e-04 | 12s
+Ep   7/50 | loss=0.0311 | val_r2=0.5887 * | lr_enc=9.95e-06 lr_hd=4.98e-04 | 12s
+Ep   8/50 | loss=0.0297 | val_r2=0.6070 * | lr_enc=9.89e-06 lr_hd=4.95e-04 | 12s
+Ep   9/50 | loss=0.0286 | val_r2=0.6147 * | lr_enc=9.81e-06 lr_hd=4.90e-04 | 12s
+Ep  10/50 | loss=0.0277 | val_r2=0.6122  | lr_enc=9.70e-06 lr_hd=4.85e-04 | 12s
+Ep  11/50 | loss=0.0269 | val_r2=0.6009  | lr_enc=9.57e-06 lr_hd=4.79e-04 | 12s
+Ep  12/50 | loss=0.0261 | val_r2=0.6307 * | lr_enc=9.42e-06 lr_hd=4.71e-04 | 12s
+Ep  13/50 | loss=0.0256 | val_r2=0.6288  | lr_enc=9.25e-06 lr_hd=4.62e-04 | 12s
+Ep  14/50 | loss=0.0250 | val_r2=0.6228  | lr_enc=9.05e-06 lr_hd=4.53e-04 | 12s
+Ep  15/50 | loss=0.0245 | val_r2=0.6195  | lr_enc=8.84e-06 lr_hd=4.42e-04 | 12s
+Ep  16/50 | loss=0.0242 | val_r2=0.6299  | lr_enc=8.61e-06 lr_hd=4.31e-04 | 12s
+Ep  17/50 | loss=0.0236 | val_r2=0.6455 * | lr_enc=8.36e-06 lr_hd=4.18e-04 | 12s
+Ep  18/50 | loss=0.0234 | val_r2=0.6284  | lr_enc=8.10e-06 lr_hd=4.05e-04 | 12s
+Ep  19/50 | loss=0.0230 | val_r2=0.6397  | lr_enc=7.82e-06 lr_hd=3.91e-04 | 12s
+Ep  20/50 | loss=0.0227 | val_r2=0.6374  | lr_enc=7.52e-06 lr_hd=3.76e-04 | 12s
+Ep  21/50 | loss=0.0225 | val_r2=0.6304  | lr_enc=7.22e-06 lr_hd=3.61e-04 | 12s
+Ep  22/50 | loss=0.0222 | val_r2=0.6482 * | lr_enc=6.90e-06 lr_hd=3.45e-04 | 12s
+Ep  23/50 | loss=0.0220 | val_r2=0.6314  | lr_enc=6.58e-06 lr_hd=3.29e-04 | 12s
+Ep  24/50 | loss=0.0218 | val_r2=0.6452  | lr_enc=6.25e-06 lr_hd=3.12e-04 | 12s
+Ep  25/50 | loss=0.0215 | val_r2=0.6429  | lr_enc=5.91e-06 lr_hd=2.95e-04 | 12s
+Ep  26/50 | loss=0.0214 | val_r2=0.6470  | lr_enc=5.57e-06 lr_hd=2.78e-04 | 12s
+Ep  27/50 | loss=0.0212 | val_r2=0.6374  | lr_enc=5.22e-06 lr_hd=2.61e-04 | 12s
+Ep  28/50 | loss=0.0211 | val_r2=0.6434  | lr_enc=4.88e-06 lr_hd=2.44e-04 | 12s
+Ep  29/50 | loss=0.0209 | val_r2=0.6428  | lr_enc=4.53e-06 lr_hd=2.27e-04 | 12s
+Ep  30/50 | loss=0.0208 | val_r2=0.6452  | lr_enc=4.19e-06 lr_hd=2.10e-04 | 12s
+Ep  31/50 | loss=0.0207 | val_r2=0.6418  | lr_enc=3.85e-06 lr_hd=1.93e-04 | 12s
+Ep  32/50 | loss=0.0206 | val_r2=0.6472  | lr_enc=3.52e-06 lr_hd=1.76e-04 | 12s
+Ep  33/50 | loss=0.0205 | val_r2=0.6432  | lr_enc=3.20e-06 lr_hd=1.60e-04 | 12s
+Ep  34/50 | loss=0.0203 | val_r2=0.6404  | lr_enc=2.88e-06 lr_hd=1.44e-04 | 12s
+Ep  35/50 | loss=0.0203 | val_r2=0.6512 * | lr_enc=2.58e-06 lr_hd=1.29e-04 | 12s
+Ep  36/50 | loss=0.0202 | val_r2=0.6474  | lr_enc=2.28e-06 lr_hd=1.14e-04 | 12s
+Ep  37/50 | loss=0.0201 | val_r2=0.6461  | lr_enc=2.00e-06 lr_hd=1.00e-04 | 12s
+Ep  38/50 | loss=0.0201 | val_r2=0.6458  | lr_enc=1.74e-06 lr_hd=8.69e-05 | 12s
+Ep  39/50 | loss=0.0200 | val_r2=0.6469  | lr_enc=1.49e-06 lr_hd=7.45e-05 | 12s
+Ep  40/50 | loss=0.0200 | val_r2=0.6503  | lr_enc=1.26e-06 lr_hd=6.29e-05 | 12s
+Ep  41/50 | loss=0.0199 | val_r2=0.6469  | lr_enc=1.05e-06 lr_hd=5.23e-05 | 12s
+Ep  42/50 | loss=0.0199 | val_r2=0.6442  | lr_enc=8.52e-07 lr_hd=4.26e-05 | 12s
+Ep  43/50 | loss=0.0199 | val_r2=0.6463  | lr_enc=6.79e-07 lr_hd=3.40e-05 | 12s
+Ep  44/50 | loss=0.0198 | val_r2=0.6476  | lr_enc=5.28e-07 lr_hd=2.64e-05 | 12s
+Ep  45/50 | loss=0.0198 | val_r2=0.6482  | lr_enc=3.99e-07 lr_hd=1.99e-05 | 12s
+Ep  46/50 | loss=0.0197 | val_r2=0.6468  | lr_enc=2.92e-07 lr_hd=1.46e-05 | 12s
+Ep  47/50 | loss=0.0198 | val_r2=0.6479  | lr_enc=2.08e-07 lr_hd=1.04e-05 | 12s
+Ep  48/50 | loss=0.0198 | val_r2=0.6482  | lr_enc=1.48e-07 lr_hd=7.41e-06 | 12s
+Ep  49/50 | loss=0.0197 | val_r2=0.6475  | lr_enc=1.12e-07 lr_hd=5.60e-06 | 12s
+Ep  50/50 | loss=0.0197 | val_r2=0.6479  | lr_enc=1.00e-07 lr_hd=5.00e-06 | 12s
+
+Full validation with best model...
+Full val R²: 0.5127 (best epoch 35)
+Saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m1_ft/
+[m1_ft] Done. Model: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m1_ft/best_model.pt
+
+=== [m2_ft] Fine-tuning from: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m2.pt (seed=2) ===
+Device: cuda
+Train: 159, Val: 28, seed: 2
+Building dataset...
+  59601 trials (4.8s)
+Params: 2,238,306
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m2.pt
+  Phase 1 checkpoint: epoch=35, val_nmse=0.6517936474022766
+  Transferred 57 tensors, skipped 0
+Val subset for training: 8 sessions (balanced easy+hard)
+Ep   1/50 | loss=0.0704 | val_r2=0.3283 * | lr_enc=4.00e-06 lr_hd=2.00e-04 | 12s
+Ep   2/50 | loss=0.0550 | val_r2=0.4281 * | lr_enc=6.00e-06 lr_hd=3.00e-04 | 12s
+Ep   3/50 | loss=0.0457 | val_r2=0.4906 * | lr_enc=8.00e-06 lr_hd=4.00e-04 | 12s
+Ep   4/50 | loss=0.0399 | val_r2=0.5279 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   5/50 | loss=0.0360 | val_r2=0.5578 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   6/50 | loss=0.0332 | val_r2=0.5864 * | lr_enc=9.99e-06 lr_hd=4.99e-04 | 12s
+Ep   7/50 | loss=0.0312 | val_r2=0.6073 * | lr_enc=9.95e-06 lr_hd=4.98e-04 | 12s
+Ep   8/50 | loss=0.0299 | val_r2=0.6074 * | lr_enc=9.89e-06 lr_hd=4.95e-04 | 12s
+Ep   9/50 | loss=0.0287 | val_r2=0.6125 * | lr_enc=9.81e-06 lr_hd=4.90e-04 | 12s
+Ep  10/50 | loss=0.0278 | val_r2=0.6345 * | lr_enc=9.70e-06 lr_hd=4.85e-04 | 12s
+Ep  11/50 | loss=0.0270 | val_r2=0.6370 * | lr_enc=9.57e-06 lr_hd=4.79e-04 | 12s
+Ep  12/50 | loss=0.0263 | val_r2=0.6371 * | lr_enc=9.42e-06 lr_hd=4.71e-04 | 12s
+Ep  13/50 | loss=0.0257 | val_r2=0.6365  | lr_enc=9.25e-06 lr_hd=4.62e-04 | 12s
+Ep  14/50 | loss=0.0252 | val_r2=0.6441 * | lr_enc=9.05e-06 lr_hd=4.53e-04 | 12s
+Ep  15/50 | loss=0.0246 | val_r2=0.6492 * | lr_enc=8.84e-06 lr_hd=4.42e-04 | 12s
+Ep  16/50 | loss=0.0243 | val_r2=0.6593 * | lr_enc=8.61e-06 lr_hd=4.31e-04 | 12s
+Ep  17/50 | loss=0.0239 | val_r2=0.6522  | lr_enc=8.36e-06 lr_hd=4.18e-04 | 12s
+Ep  18/50 | loss=0.0235 | val_r2=0.6598 * | lr_enc=8.10e-06 lr_hd=4.05e-04 | 12s
+Ep  19/50 | loss=0.0232 | val_r2=0.6561  | lr_enc=7.82e-06 lr_hd=3.91e-04 | 12s
+Ep  20/50 | loss=0.0229 | val_r2=0.6572  | lr_enc=7.52e-06 lr_hd=3.76e-04 | 12s
+Ep  21/50 | loss=0.0226 | val_r2=0.6581  | lr_enc=7.22e-06 lr_hd=3.61e-04 | 12s
+Ep  22/50 | loss=0.0223 | val_r2=0.6644 * | lr_enc=6.90e-06 lr_hd=3.45e-04 | 12s
+Ep  23/50 | loss=0.0222 | val_r2=0.6640  | lr_enc=6.58e-06 lr_hd=3.29e-04 | 12s
+Ep  24/50 | loss=0.0219 | val_r2=0.6714 * | lr_enc=6.25e-06 lr_hd=3.12e-04 | 12s
+Ep  25/50 | loss=0.0217 | val_r2=0.6642  | lr_enc=5.91e-06 lr_hd=2.95e-04 | 12s
+Ep  26/50 | loss=0.0216 | val_r2=0.6744 * | lr_enc=5.57e-06 lr_hd=2.78e-04 | 12s
+Ep  27/50 | loss=0.0213 | val_r2=0.6725  | lr_enc=5.22e-06 lr_hd=2.61e-04 | 12s
+Ep  28/50 | loss=0.0212 | val_r2=0.6713  | lr_enc=4.88e-06 lr_hd=2.44e-04 | 12s
+Ep  29/50 | loss=0.0212 | val_r2=0.6708  | lr_enc=4.53e-06 lr_hd=2.27e-04 | 12s
+Ep  30/50 | loss=0.0210 | val_r2=0.6805 * | lr_enc=4.19e-06 lr_hd=2.10e-04 | 12s
+Ep  31/50 | loss=0.0208 | val_r2=0.6711  | lr_enc=3.85e-06 lr_hd=1.93e-04 | 12s
+Ep  32/50 | loss=0.0207 | val_r2=0.6762  | lr_enc=3.52e-06 lr_hd=1.76e-04 | 12s
+Ep  33/50 | loss=0.0206 | val_r2=0.6736  | lr_enc=3.20e-06 lr_hd=1.60e-04 | 12s
+Ep  34/50 | loss=0.0205 | val_r2=0.6791  | lr_enc=2.88e-06 lr_hd=1.44e-04 | 12s
+Ep  35/50 | loss=0.0204 | val_r2=0.6759  | lr_enc=2.58e-06 lr_hd=1.29e-04 | 12s
+Ep  36/50 | loss=0.0203 | val_r2=0.6762  | lr_enc=2.28e-06 lr_hd=1.14e-04 | 12s
+Ep  37/50 | loss=0.0203 | val_r2=0.6810 * | lr_enc=2.00e-06 lr_hd=1.00e-04 | 12s
+Ep  38/50 | loss=0.0203 | val_r2=0.6776  | lr_enc=1.74e-06 lr_hd=8.69e-05 | 12s
+Ep  39/50 | loss=0.0202 | val_r2=0.6791  | lr_enc=1.49e-06 lr_hd=7.45e-05 | 12s
+Ep  40/50 | loss=0.0201 | val_r2=0.6725  | lr_enc=1.26e-06 lr_hd=6.29e-05 | 12s
+Ep  41/50 | loss=0.0200 | val_r2=0.6800  | lr_enc=1.05e-06 lr_hd=5.23e-05 | 12s
+Ep  42/50 | loss=0.0200 | val_r2=0.6793  | lr_enc=8.52e-07 lr_hd=4.26e-05 | 12s
+Ep  43/50 | loss=0.0201 | val_r2=0.6765  | lr_enc=6.79e-07 lr_hd=3.40e-05 | 12s
+Ep  44/50 | loss=0.0199 | val_r2=0.6776  | lr_enc=5.28e-07 lr_hd=2.64e-05 | 12s
+Ep  45/50 | loss=0.0200 | val_r2=0.6784  | lr_enc=3.99e-07 lr_hd=1.99e-05 | 12s
+Ep  46/50 | loss=0.0200 | val_r2=0.6783  | lr_enc=2.92e-07 lr_hd=1.46e-05 | 12s
+Ep  47/50 | loss=0.0200 | val_r2=0.6768  | lr_enc=2.08e-07 lr_hd=1.04e-05 | 12s
+Ep  48/50 | loss=0.0199 | val_r2=0.6774  | lr_enc=1.48e-07 lr_hd=7.41e-06 | 12s
+Ep  49/50 | loss=0.0199 | val_r2=0.6779  | lr_enc=1.12e-07 lr_hd=5.60e-06 | 12s
+Ep  50/50 | loss=0.0198 | val_r2=0.6777  | lr_enc=1.00e-07 lr_hd=5.00e-06 | 12s
+
+Full validation with best model...
+Full val R²: 0.5298 (best epoch 37)
+Saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m2_ft/
+[m2_ft] Done. Model: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m2_ft/best_model.pt
+
+=== [m5_ft] Fine-tuning from: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m5.pt (seed=3) ===
+Device: cuda
+Train: 159, Val: 28, seed: 3
+Building dataset...
+  59601 trials (4.9s)
+Params: 2,238,306
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m5.pt
+  Phase 1 checkpoint: epoch=34, val_nmse=0.6521053586879538
+  Transferred 57 tensors, skipped 0
+Val subset for training: 8 sessions (balanced easy+hard)
+Ep   1/50 | loss=0.0702 | val_r2=0.3334 * | lr_enc=4.00e-06 lr_hd=2.00e-04 | 12s
+Ep   2/50 | loss=0.0547 | val_r2=0.4276 * | lr_enc=6.00e-06 lr_hd=3.00e-04 | 12s
+Ep   3/50 | loss=0.0456 | val_r2=0.4848 * | lr_enc=8.00e-06 lr_hd=4.00e-04 | 12s
+Ep   4/50 | loss=0.0400 | val_r2=0.5389 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   5/50 | loss=0.0361 | val_r2=0.5654 * | lr_enc=1.00e-05 lr_hd=5.00e-04 | 12s
+Ep   6/50 | loss=0.0334 | val_r2=0.5897 * | lr_enc=9.99e-06 lr_hd=4.99e-04 | 12s
+Ep   7/50 | loss=0.0316 | val_r2=0.6068 * | lr_enc=9.95e-06 lr_hd=4.98e-04 | 12s
+Ep   8/50 | loss=0.0300 | val_r2=0.6040  | lr_enc=9.89e-06 lr_hd=4.95e-04 | 12s
+Ep   9/50 | loss=0.0289 | val_r2=0.6172 * | lr_enc=9.81e-06 lr_hd=4.90e-04 | 12s
+Ep  10/50 | loss=0.0280 | val_r2=0.6238 * | lr_enc=9.70e-06 lr_hd=4.85e-04 | 12s
+Ep  11/50 | loss=0.0273 | val_r2=0.6270 * | lr_enc=9.57e-06 lr_hd=4.79e-04 | 12s
+Ep  12/50 | loss=0.0266 | val_r2=0.6378 * | lr_enc=9.42e-06 lr_hd=4.71e-04 | 12s
+Ep  13/50 | loss=0.0259 | val_r2=0.6279  | lr_enc=9.25e-06 lr_hd=4.62e-04 | 12s
+Ep  14/50 | loss=0.0254 | val_r2=0.6309  | lr_enc=9.05e-06 lr_hd=4.53e-04 | 12s
+Ep  15/50 | loss=0.0250 | val_r2=0.6438 * | lr_enc=8.84e-06 lr_hd=4.42e-04 | 12s
+Ep  16/50 | loss=0.0245 | val_r2=0.6335  | lr_enc=8.61e-06 lr_hd=4.31e-04 | 12s
+Ep  17/50 | loss=0.0242 | val_r2=0.6461 * | lr_enc=8.36e-06 lr_hd=4.18e-04 | 13s
+Ep  18/50 | loss=0.0238 | val_r2=0.6396  | lr_enc=8.10e-06 lr_hd=4.05e-04 | 12s
+Ep  19/50 | loss=0.0234 | val_r2=0.6438  | lr_enc=7.82e-06 lr_hd=3.91e-04 | 12s
+Ep  20/50 | loss=0.0231 | val_r2=0.6445  | lr_enc=7.52e-06 lr_hd=3.76e-04 | 12s
+Ep  21/50 | loss=0.0228 | val_r2=0.6567 * | lr_enc=7.22e-06 lr_hd=3.61e-04 | 12s
+Ep  22/50 | loss=0.0226 | val_r2=0.6480  | lr_enc=6.90e-06 lr_hd=3.45e-04 | 12s
+Ep  23/50 | loss=0.0223 | val_r2=0.6460  | lr_enc=6.58e-06 lr_hd=3.29e-04 | 12s
+Ep  24/50 | loss=0.0221 | val_r2=0.6375  | lr_enc=6.25e-06 lr_hd=3.12e-04 | 12s
+Ep  25/50 | loss=0.0219 | val_r2=0.6386  | lr_enc=5.91e-06 lr_hd=2.95e-04 | 12s
+Ep  26/50 | loss=0.0218 | val_r2=0.6536  | lr_enc=5.57e-06 lr_hd=2.78e-04 | 12s
+Ep  27/50 | loss=0.0216 | val_r2=0.6476  | lr_enc=5.22e-06 lr_hd=2.61e-04 | 12s
+Ep  28/50 | loss=0.0213 | val_r2=0.6543  | lr_enc=4.88e-06 lr_hd=2.44e-04 | 12s
+Ep  29/50 | loss=0.0212 | val_r2=0.6400  | lr_enc=4.53e-06 lr_hd=2.27e-04 | 12s
+Ep  30/50 | loss=0.0211 | val_r2=0.6533  | lr_enc=4.19e-06 lr_hd=2.10e-04 | 12s
+Ep  31/50 | loss=0.0210 | val_r2=0.6575 * | lr_enc=3.85e-06 lr_hd=1.93e-04 | 12s
+Ep  32/50 | loss=0.0209 | val_r2=0.6498  | lr_enc=3.52e-06 lr_hd=1.76e-04 | 12s
+Ep  33/50 | loss=0.0208 | val_r2=0.6565  | lr_enc=3.20e-06 lr_hd=1.60e-04 | 12s
+Ep  34/50 | loss=0.0206 | val_r2=0.6549  | lr_enc=2.88e-06 lr_hd=1.44e-04 | 12s
+Ep  35/50 | loss=0.0205 | val_r2=0.6586 * | lr_enc=2.58e-06 lr_hd=1.29e-04 | 12s
+Ep  36/50 | loss=0.0205 | val_r2=0.6612 * | lr_enc=2.28e-06 lr_hd=1.14e-04 | 12s
+Ep  37/50 | loss=0.0204 | val_r2=0.6548  | lr_enc=2.00e-06 lr_hd=1.00e-04 | 12s
+Ep  38/50 | loss=0.0203 | val_r2=0.6547  | lr_enc=1.74e-06 lr_hd=8.69e-05 | 12s
+Ep  39/50 | loss=0.0203 | val_r2=0.6544  | lr_enc=1.49e-06 lr_hd=7.45e-05 | 12s
+Ep  40/50 | loss=0.0202 | val_r2=0.6593  | lr_enc=1.26e-06 lr_hd=6.29e-05 | 12s
+Ep  41/50 | loss=0.0202 | val_r2=0.6595  | lr_enc=1.05e-06 lr_hd=5.23e-05 | 12s
+Ep  42/50 | loss=0.0201 | val_r2=0.6601  | lr_enc=8.52e-07 lr_hd=4.26e-05 | 12s
+Ep  43/50 | loss=0.0201 | val_r2=0.6568  | lr_enc=6.79e-07 lr_hd=3.40e-05 | 12s
+Ep  44/50 | loss=0.0201 | val_r2=0.6581  | lr_enc=5.28e-07 lr_hd=2.64e-05 | 12s
+Ep  45/50 | loss=0.0201 | val_r2=0.6575  | lr_enc=3.99e-07 lr_hd=1.99e-05 | 12s
+Ep  46/50 | loss=0.0200 | val_r2=0.6562  | lr_enc=2.92e-07 lr_hd=1.46e-05 | 12s
+Ep  47/50 | loss=0.0200 | val_r2=0.6589  | lr_enc=2.08e-07 lr_hd=1.04e-05 | 12s
+Ep  48/50 | loss=0.0201 | val_r2=0.6582  | lr_enc=1.48e-07 lr_hd=7.41e-06 | 12s
+Ep  49/50 | loss=0.0201 | val_r2=0.6580  | lr_enc=1.12e-07 lr_hd=5.60e-06 | 12s
+Ep  50/50 | loss=0.0201 | val_r2=0.6572  | lr_enc=1.00e-07 lr_hd=5.00e-06 | 12s
+
+Full validation with best model...
+Full val R²: 0.5101 (best epoch 36)
+Saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m5_ft/
+[m5_ft] Done. Model: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m5_ft/best_model.pt
+
+=== Ensemble inference (plain, no TTA) ===
+Device: cuda
+
+Loading 4 checkpoints:
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/user_ft/best_model.pt  (epoch=37, val_r2=0.6407)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m1_ft/best_model.pt  (epoch=35, val_r2=0.6512)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m2_ft/best_model.pt  (epoch=37, val_r2=0.6810)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m5_ft/best_model.pt  (epoch=36, val_r2=0.6612)
+Ensemble size: 4 models
+TTA: disabled (plain ensemble)
+Test sessions: 125
+
+  [  1/125] D002: 24246 bins  (2.1s, 4 models avg)
+  [  2/125] D003: 24647 bins  (1.9s, 4 models avg)
+  [  3/125] D004: 23764 bins  (1.9s, 4 models avg)
+  [  4/125] D005: 20828 bins  (1.9s, 4 models avg)
+  [  5/125] D006: 26032 bins  (1.9s, 4 models avg)
+  [  6/125] D008: 25489 bins  (2.0s, 4 models avg)
+  [  7/125] D010: 25503 bins  (1.9s, 4 models avg)
+  [  8/125] D012: 23475 bins  (1.9s, 4 models avg)
+  [  9/125] D013: 23900 bins  (1.9s, 4 models avg)
+  [ 10/125] D014: 24188 bins  (1.9s, 4 models avg)
+  [ 11/125] D015: 25023 bins  (1.9s, 4 models avg)
+  [ 12/125] D016: 21120 bins  (1.9s, 4 models avg)
+  [ 13/125] D017: 22031 bins  (1.9s, 4 models avg)
+  [ 14/125] D020: 24685 bins  (1.9s, 4 models avg)
+  [ 15/125] D025: 24874 bins  (1.9s, 4 models avg)
+  [ 16/125] D027: 24231 bins  (1.9s, 4 models avg)
+  [ 17/125] D028: 26305 bins  (1.9s, 4 models avg)
+  [ 18/125] D029: 24818 bins  (1.9s, 4 models avg)
+  [ 19/125] D034: 24066 bins  (1.9s, 4 models avg)
+  [ 20/125] D035: 21037 bins  (1.9s, 4 models avg)
+  [ 21/125] D036: 25057 bins  (1.9s, 4 models avg)
+  [ 22/125] D039: 26497 bins  (2.0s, 4 models avg)
+  [ 23/125] D040: 24304 bins  (1.9s, 4 models avg)
+  [ 24/125] D041: 25052 bins  (1.9s, 4 models avg)
+  [ 25/125] D046: 21001 bins  (1.9s, 4 models avg)
+  [ 26/125] D047: 25612 bins  (1.9s, 4 models avg)
+  [ 27/125] D048: 22225 bins  (1.9s, 4 models avg)
+  [ 28/125] D051: 24997 bins  (1.9s, 4 models avg)
+  [ 29/125] D054: 23915 bins  (1.9s, 4 models avg)
+  [ 30/125] D055: 25719 bins  (1.9s, 4 models avg)
+  [ 31/125] D057: 24450 bins  (1.9s, 4 models avg)
+  [ 32/125] D059: 24618 bins  (1.9s, 4 models avg)
+  [ 33/125] D060: 22292 bins  (1.9s, 4 models avg)
+  [ 34/125] D061: 25620 bins  (1.9s, 4 models avg)
+  [ 35/125] D070: 23416 bins  (1.9s, 4 models avg)
+  [ 36/125] D075: 21566 bins  (1.9s, 4 models avg)
+  [ 37/125] D076: 21535 bins  (1.9s, 4 models avg)
+  [ 38/125] D077: 24188 bins  (1.9s, 4 models avg)
+  [ 39/125] D078: 23653 bins  (1.9s, 4 models avg)
+  [ 40/125] D085: 24670 bins  (1.9s, 4 models avg)
+  [ 41/125] D086: 25191 bins  (1.9s, 4 models avg)
+  [ 42/125] D089: 21878 bins  (1.9s, 4 models avg)
+  [ 43/125] D092: 26243 bins  (1.9s, 4 models avg)
+  [ 44/125] D097: 22194 bins  (1.9s, 4 models avg)
+  [ 45/125] D098: 24193 bins  (1.9s, 4 models avg)
+  [ 46/125] D099: 24942 bins  (1.9s, 4 models avg)
+  [ 47/125] D102: 21444 bins  (1.9s, 4 models avg)
+  [ 48/125] D104: 25760 bins  (1.9s, 4 models avg)
+  [ 49/125] D105: 24699 bins  (1.9s, 4 models avg)
+  [ 50/125] D106: 25163 bins  (1.9s, 4 models avg)
+  [ 51/125] D109: 22504 bins  (1.9s, 4 models avg)
+  [ 52/125] D110: 21546 bins  (1.9s, 4 models avg)
+  [ 53/125] D112: 25547 bins  (1.9s, 4 models avg)
+  [ 54/125] D114: 21763 bins  (1.9s, 4 models avg)
+  [ 55/125] D116: 23137 bins  (1.9s, 4 models avg)
+  [ 56/125] D121: 28655 bins  (2.0s, 4 models avg)
+  [ 57/125] D129: 24399 bins  (1.9s, 4 models avg)
+  [ 58/125] D135: 25084 bins  (1.9s, 4 models avg)
+  [ 59/125] D136: 23816 bins  (1.9s, 4 models avg)
+  [ 60/125] D142: 21434 bins  (1.9s, 4 models avg)
+  [ 61/125] D143: 21171 bins  (1.9s, 4 models avg)
+  [ 62/125] D144: 26791 bins  (1.9s, 4 models avg)
+  [ 63/125] D145: 23359 bins  (1.9s, 4 models avg)
+  [ 64/125] D146: 23994 bins  (1.9s, 4 models avg)
+  [ 65/125] D151: 25015 bins  (1.9s, 4 models avg)
+  [ 66/125] D155: 24682 bins  (1.9s, 4 models avg)
+  [ 67/125] D156: 26109 bins  (1.9s, 4 models avg)
+  [ 68/125] D157: 23542 bins  (1.9s, 4 models avg)
+  [ 69/125] D161: 21964 bins  (1.9s, 4 models avg)
+  [ 70/125] D167: 26165 bins  (1.9s, 4 models avg)
+  [ 71/125] D170: 26616 bins  (1.9s, 4 models avg)
+  [ 72/125] D171: 24535 bins  (1.9s, 4 models avg)
+  [ 73/125] D175: 25290 bins  (1.9s, 4 models avg)
+  [ 74/125] D176: 25916 bins  (1.9s, 4 models avg)
+  [ 75/125] D182: 20848 bins  (1.9s, 4 models avg)
+  [ 76/125] D183: 25144 bins  (1.9s, 4 models avg)
+  [ 77/125] D185: 24055 bins  (1.9s, 4 models avg)
+  [ 78/125] D190: 25177 bins  (1.9s, 4 models avg)
+  [ 79/125] D192: 22286 bins  (1.9s, 4 models avg)
+  [ 80/125] D194: 22384 bins  (1.9s, 4 models avg)
+  [ 81/125] D195: 23565 bins  (1.9s, 4 models avg)
+  [ 82/125] D198: 25248 bins  (1.9s, 4 models avg)
+  [ 83/125] D199: 25166 bins  (1.9s, 4 models avg)
+  [ 84/125] D200: 24481 bins  (1.9s, 4 models avg)
+  [ 85/125] D201: 24437 bins  (1.9s, 4 models avg)
+  [ 86/125] D213: 24786 bins  (1.9s, 4 models avg)
+  [ 87/125] D216: 21839 bins  (1.9s, 4 models avg)
+  [ 88/125] D218: 24982 bins  (1.9s, 4 models avg)
+  [ 89/125] D222: 22725 bins  (1.9s, 4 models avg)
+  [ 90/125] D224: 24529 bins  (1.9s, 4 models avg)
+  [ 91/125] D226: 21153 bins  (1.9s, 4 models avg)
+  [ 92/125] D233: 22545 bins  (1.9s, 4 models avg)
+  [ 93/125] D234: 23720 bins  (1.9s, 4 models avg)
+  [ 94/125] D236: 31505 bins  (2.0s, 4 models avg)
+  [ 95/125] D237: 24493 bins  (1.9s, 4 models avg)
+  [ 96/125] D239: 25325 bins  (1.9s, 4 models avg)
+  [ 97/125] D241: 25728 bins  (1.9s, 4 models avg)
+  [ 98/125] D242: 25540 bins  (1.9s, 4 models avg)
+  [ 99/125] D243: 25453 bins  (1.9s, 4 models avg)
+  [100/125] D245: 20848 bins  (1.8s, 4 models avg)
+  [101/125] D247: 25354 bins  (1.9s, 4 models avg)
+  [102/125] D253: 24810 bins  (1.9s, 4 models avg)
+  [103/125] D254: 25763 bins  (1.9s, 4 models avg)
+  [104/125] D255: 21821 bins  (1.9s, 4 models avg)
+  [105/125] D257: 21381 bins  (1.9s, 4 models avg)
+  [106/125] D260: 22145 bins  (1.9s, 4 models avg)
+  [107/125] D267: 24945 bins  (1.9s, 4 models avg)
+  [108/125] D268: 24487 bins  (1.9s, 4 models avg)
+  [109/125] D272: 20878 bins  (1.8s, 4 models avg)
+  [110/125] D273: 21338 bins  (1.9s, 4 models avg)
+  [111/125] D276: 20859 bins  (1.8s, 4 models avg)
+  [112/125] D277: 21283 bins  (1.8s, 4 models avg)
+  [113/125] D282: 21023 bins  (1.9s, 4 models avg)
+  [114/125] D283: 26003 bins  (1.9s, 4 models avg)
+  [115/125] D284: 25068 bins  (1.9s, 4 models avg)
+  [116/125] D287: 23833 bins  (1.9s, 4 models avg)
+  [117/125] D289: 21498 bins  (1.9s, 4 models avg)
+  [118/125] D291: 21337 bins  (1.8s, 4 models avg)
+  [119/125] D296: 22568 bins  (1.9s, 4 models avg)
+  [120/125] D299: 21878 bins  (1.9s, 4 models avg)
+  [121/125] D300: 24591 bins  (1.9s, 4 models avg)
+  [122/125] D303: 24664 bins  (1.9s, 4 models avg)
+  [123/125] D304: 22364 bins  (1.9s, 4 models avg)
+  [124/125] D307: 26506 bins  (1.9s, 4 models avg)
+  [125/125] D308: 24181 bins  (1.9s, 4 models avg)
+Submission saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/submission_ensemble.csv (2993930 rows)
+
+========================================
+ Submission: /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/submission_ensemble.csv
+========================================
+
+=== Ablation: 3-model ensembles (optional, for analysis) ===
+Device: cuda
+
+Loading 3 checkpoints:
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m1_ft/best_model.pt  (epoch=35, val_r2=0.6512)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m2_ft/best_model.pt  (epoch=37, val_r2=0.6810)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m5_ft/best_model.pt  (epoch=36, val_r2=0.6612)
+Ensemble size: 3 models
+TTA: disabled (plain ensemble)
+Test sessions: 125
+
+  [  1/125] D002: 24246 bins  (1.6s, 3 models avg)
+  [  2/125] D003: 24647 bins  (1.4s, 3 models avg)
+  [  3/125] D004: 23764 bins  (1.4s, 3 models avg)
+  [  4/125] D005: 20828 bins  (1.4s, 3 models avg)
+  [  5/125] D006: 26032 bins  (1.4s, 3 models avg)
+  [  6/125] D008: 25489 bins  (1.4s, 3 models avg)
+  [  7/125] D010: 25503 bins  (1.4s, 3 models avg)
+  [  8/125] D012: 23475 bins  (1.4s, 3 models avg)
+  [  9/125] D013: 23900 bins  (1.4s, 3 models avg)
+  [ 10/125] D014: 24188 bins  (1.4s, 3 models avg)
+  [ 11/125] D015: 25023 bins  (1.4s, 3 models avg)
+  [ 12/125] D016: 21120 bins  (1.4s, 3 models avg)
+  [ 13/125] D017: 22031 bins  (1.4s, 3 models avg)
+  [ 14/125] D020: 24685 bins  (1.4s, 3 models avg)
+  [ 15/125] D025: 24874 bins  (1.4s, 3 models avg)
+  [ 16/125] D027: 24231 bins  (1.4s, 3 models avg)
+  [ 17/125] D028: 26305 bins  (1.4s, 3 models avg)
+  [ 18/125] D029: 24818 bins  (1.4s, 3 models avg)
+  [ 19/125] D034: 24066 bins  (1.4s, 3 models avg)
+  [ 20/125] D035: 21037 bins  (1.4s, 3 models avg)
+  [ 21/125] D036: 25057 bins  (1.4s, 3 models avg)
+  [ 22/125] D039: 26497 bins  (1.4s, 3 models avg)
+  [ 23/125] D040: 24304 bins  (1.4s, 3 models avg)
+  [ 24/125] D041: 25052 bins  (1.4s, 3 models avg)
+  [ 25/125] D046: 21001 bins  (1.4s, 3 models avg)
+  [ 26/125] D047: 25612 bins  (1.4s, 3 models avg)
+  [ 27/125] D048: 22225 bins  (1.4s, 3 models avg)
+  [ 28/125] D051: 24997 bins  (1.4s, 3 models avg)
+  [ 29/125] D054: 23915 bins  (1.4s, 3 models avg)
+  [ 30/125] D055: 25719 bins  (1.4s, 3 models avg)
+  [ 31/125] D057: 24450 bins  (1.4s, 3 models avg)
+  [ 32/125] D059: 24618 bins  (1.4s, 3 models avg)
+  [ 33/125] D060: 22292 bins  (1.4s, 3 models avg)
+  [ 34/125] D061: 25620 bins  (1.4s, 3 models avg)
+  [ 35/125] D070: 23416 bins  (1.4s, 3 models avg)
+  [ 36/125] D075: 21566 bins  (1.4s, 3 models avg)
+  [ 37/125] D076: 21535 bins  (1.4s, 3 models avg)
+  [ 38/125] D077: 24188 bins  (1.4s, 3 models avg)
+  [ 39/125] D078: 23653 bins  (1.4s, 3 models avg)
+  [ 40/125] D085: 24670 bins  (1.4s, 3 models avg)
+  [ 41/125] D086: 25191 bins  (1.4s, 3 models avg)
+  [ 42/125] D089: 21878 bins  (1.4s, 3 models avg)
+  [ 43/125] D092: 26243 bins  (1.4s, 3 models avg)
+  [ 44/125] D097: 22194 bins  (1.4s, 3 models avg)
+  [ 45/125] D098: 24193 bins  (1.4s, 3 models avg)
+  [ 46/125] D099: 24942 bins  (1.4s, 3 models avg)
+  [ 47/125] D102: 21444 bins  (1.4s, 3 models avg)
+  [ 48/125] D104: 25760 bins  (1.4s, 3 models avg)
+  [ 49/125] D105: 24699 bins  (1.4s, 3 models avg)
+  [ 50/125] D106: 25163 bins  (1.4s, 3 models avg)
+  [ 51/125] D109: 22504 bins  (1.4s, 3 models avg)
+  [ 52/125] D110: 21546 bins  (1.4s, 3 models avg)
+  [ 53/125] D112: 25547 bins  (1.4s, 3 models avg)
+  [ 54/125] D114: 21763 bins  (1.4s, 3 models avg)
+  [ 55/125] D116: 23137 bins  (1.4s, 3 models avg)
+  [ 56/125] D121: 28655 bins  (1.5s, 3 models avg)
+  [ 57/125] D129: 24399 bins  (1.4s, 3 models avg)
+  [ 58/125] D135: 25084 bins  (1.4s, 3 models avg)
+  [ 59/125] D136: 23816 bins  (1.4s, 3 models avg)
+  [ 60/125] D142: 21434 bins  (1.4s, 3 models avg)
+  [ 61/125] D143: 21171 bins  (1.4s, 3 models avg)
+  [ 62/125] D144: 26791 bins  (1.4s, 3 models avg)
+  [ 63/125] D145: 23359 bins  (1.4s, 3 models avg)
+  [ 64/125] D146: 23994 bins  (1.4s, 3 models avg)
+  [ 65/125] D151: 25015 bins  (1.4s, 3 models avg)
+  [ 66/125] D155: 24682 bins  (1.4s, 3 models avg)
+  [ 67/125] D156: 26109 bins  (1.4s, 3 models avg)
+  [ 68/125] D157: 23542 bins  (1.4s, 3 models avg)
+  [ 69/125] D161: 21964 bins  (1.4s, 3 models avg)
+  [ 70/125] D167: 26165 bins  (1.4s, 3 models avg)
+  [ 71/125] D170: 26616 bins  (1.4s, 3 models avg)
+  [ 72/125] D171: 24535 bins  (1.4s, 3 models avg)
+  [ 73/125] D175: 25290 bins  (1.4s, 3 models avg)
+  [ 74/125] D176: 25916 bins  (1.4s, 3 models avg)
+  [ 75/125] D182: 20848 bins  (1.4s, 3 models avg)
+  [ 76/125] D183: 25144 bins  (1.4s, 3 models avg)
+  [ 77/125] D185: 24055 bins  (1.4s, 3 models avg)
+  [ 78/125] D190: 25177 bins  (1.4s, 3 models avg)
+  [ 79/125] D192: 22286 bins  (1.4s, 3 models avg)
+  [ 80/125] D194: 22384 bins  (1.4s, 3 models avg)
+  [ 81/125] D195: 23565 bins  (1.4s, 3 models avg)
+  [ 82/125] D198: 25248 bins  (1.4s, 3 models avg)
+  [ 83/125] D199: 25166 bins  (1.4s, 3 models avg)
+  [ 84/125] D200: 24481 bins  (1.4s, 3 models avg)
+  [ 85/125] D201: 24437 bins  (1.4s, 3 models avg)
+  [ 86/125] D213: 24786 bins  (1.4s, 3 models avg)
+  [ 87/125] D216: 21839 bins  (1.4s, 3 models avg)
+  [ 88/125] D218: 24982 bins  (1.4s, 3 models avg)
+  [ 89/125] D222: 22725 bins  (1.4s, 3 models avg)
+  [ 90/125] D224: 24529 bins  (1.4s, 3 models avg)
+  [ 91/125] D226: 21153 bins  (1.4s, 3 models avg)
+  [ 92/125] D233: 22545 bins  (1.4s, 3 models avg)
+  [ 93/125] D234: 23720 bins  (1.4s, 3 models avg)
+  [ 94/125] D236: 31505 bins  (1.5s, 3 models avg)
+  [ 95/125] D237: 24493 bins  (1.4s, 3 models avg)
+  [ 96/125] D239: 25325 bins  (1.4s, 3 models avg)
+  [ 97/125] D241: 25728 bins  (1.4s, 3 models avg)
+  [ 98/125] D242: 25540 bins  (1.4s, 3 models avg)
+  [ 99/125] D243: 25453 bins  (1.4s, 3 models avg)
+  [100/125] D245: 20848 bins  (1.4s, 3 models avg)
+  [101/125] D247: 25354 bins  (1.4s, 3 models avg)
+  [102/125] D253: 24810 bins  (1.4s, 3 models avg)
+  [103/125] D254: 25763 bins  (1.4s, 3 models avg)
+  [104/125] D255: 21821 bins  (1.4s, 3 models avg)
+  [105/125] D257: 21381 bins  (1.4s, 3 models avg)
+  [106/125] D260: 22145 bins  (1.4s, 3 models avg)
+  [107/125] D267: 24945 bins  (1.4s, 3 models avg)
+  [108/125] D268: 24487 bins  (1.4s, 3 models avg)
+  [109/125] D272: 20878 bins  (1.4s, 3 models avg)
+  [110/125] D273: 21338 bins  (1.4s, 3 models avg)
+  [111/125] D276: 20859 bins  (1.4s, 3 models avg)
+  [112/125] D277: 21283 bins  (1.4s, 3 models avg)
+  [113/125] D282: 21023 bins  (1.4s, 3 models avg)
+  [114/125] D283: 26003 bins  (1.4s, 3 models avg)
+  [115/125] D284: 25068 bins  (1.4s, 3 models avg)
+  [116/125] D287: 23833 bins  (1.4s, 3 models avg)
+  [117/125] D289: 21498 bins  (1.4s, 3 models avg)
+  [118/125] D291: 21337 bins  (1.4s, 3 models avg)
+  [119/125] D296: 22568 bins  (1.4s, 3 models avg)
+  [120/125] D299: 21878 bins  (1.4s, 3 models avg)
+  [121/125] D300: 24591 bins  (1.4s, 3 models avg)
+  [122/125] D303: 24664 bins  (1.4s, 3 models avg)
+  [123/125] D304: 22364 bins  (1.4s, 3 models avg)
+  [124/125] D307: 26506 bins  (1.4s, 3 models avg)
+  [125/125] D308: 24181 bins  (1.4s, 3 models avg)
+Submission saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/submission_m1m2m5_ens.csv (2993930 rows)
+  m1+m2+m5 ensemble saved.
+Device: cuda
+
+Loading 4 checkpoints:
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/user_ft/best_model.pt  (epoch=37, val_r2=0.6407)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m1_ft/best_model.pt  (epoch=35, val_r2=0.6512)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m2_ft/best_model.pt  (epoch=37, val_r2=0.6810)
+  /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/models/m5_ft/best_model.pt  (epoch=36, val_r2=0.6612)
+Ensemble size: 4 models
+TTA: 2 epochs @ lr=7e-05 (WARNING: may hurt — check plain ensemble first)
+Test sessions: 125
+
+  [  1/125] D002: 24246 bins  (9.3s, 4 models avg)
+  [  2/125] D003: 24647 bins  (4.6s, 4 models avg)
+  [  3/125] D004: 23764 bins  (4.5s, 4 models avg)
+  [  4/125] D005: 20828 bins  (4.3s, 4 models avg)
+  [  5/125] D006: 26032 bins  (4.6s, 4 models avg)
+  [  6/125] D008: 25489 bins  (4.6s, 4 models avg)
+  [  7/125] D010: 25503 bins  (4.6s, 4 models avg)
+  [  8/125] D012: 23475 bins  (4.5s, 4 models avg)
+  [  9/125] D013: 23900 bins  (4.5s, 4 models avg)
+  [ 10/125] D014: 24188 bins  (4.5s, 4 models avg)
+  [ 11/125] D015: 25023 bins  (4.6s, 4 models avg)
+  [ 12/125] D016: 21120 bins  (4.3s, 4 models avg)
+  [ 13/125] D017: 22031 bins  (4.3s, 4 models avg)
+  [ 14/125] D020: 24685 bins  (4.5s, 4 models avg)
+  [ 15/125] D025: 24874 bins  (4.5s, 4 models avg)
+  [ 16/125] D027: 24231 bins  (4.5s, 4 models avg)
+  [ 17/125] D028: 26305 bins  (4.6s, 4 models avg)
+  [ 18/125] D029: 24818 bins  (4.5s, 4 models avg)
+  [ 19/125] D034: 24066 bins  (4.5s, 4 models avg)
+  [ 20/125] D035: 21037 bins  (4.2s, 4 models avg)
+  [ 21/125] D036: 25057 bins  (4.5s, 4 models avg)
+  [ 22/125] D039: 26497 bins  (4.6s, 4 models avg)
+  [ 23/125] D040: 24304 bins  (4.5s, 4 models avg)
+  [ 24/125] D041: 25052 bins  (4.5s, 4 models avg)
+  [ 25/125] D046: 21001 bins  (4.3s, 4 models avg)
+  [ 26/125] D047: 25612 bins  (4.6s, 4 models avg)
+  [ 27/125] D048: 22225 bins  (4.3s, 4 models avg)
+  [ 28/125] D051: 24997 bins  (4.5s, 4 models avg)
+  [ 29/125] D054: 23915 bins  (4.4s, 4 models avg)
+  [ 30/125] D055: 25719 bins  (4.6s, 4 models avg)
+  [ 31/125] D057: 24450 bins  (4.5s, 4 models avg)
+  [ 32/125] D059: 24618 bins  (4.5s, 4 models avg)
+  [ 33/125] D060: 22292 bins  (4.3s, 4 models avg)
+  [ 34/125] D061: 25620 bins  (4.6s, 4 models avg)
+  [ 35/125] D070: 23416 bins  (4.4s, 4 models avg)
+  [ 36/125] D075: 21566 bins  (4.3s, 4 models avg)
+  [ 37/125] D076: 21535 bins  (4.3s, 4 models avg)
+  [ 38/125] D077: 24188 bins  (4.5s, 4 models avg)
+  [ 39/125] D078: 23653 bins  (4.5s, 4 models avg)
+  [ 40/125] D085: 24670 bins  (4.5s, 4 models avg)
+  [ 41/125] D086: 25191 bins  (4.5s, 4 models avg)
+  [ 42/125] D089: 21878 bins  (4.3s, 4 models avg)
+  [ 43/125] D092: 26243 bins  (4.6s, 4 models avg)
+  [ 44/125] D097: 22194 bins  (4.3s, 4 models avg)
+  [ 45/125] D098: 24193 bins  (4.5s, 4 models avg)
+  [ 46/125] D099: 24942 bins  (4.5s, 4 models avg)
+  [ 47/125] D102: 21444 bins  (4.3s, 4 models avg)
+  [ 48/125] D104: 25760 bins  (4.6s, 4 models avg)
+  [ 49/125] D105: 24699 bins  (4.5s, 4 models avg)
+  [ 50/125] D106: 25163 bins  (4.6s, 4 models avg)
+  [ 51/125] D109: 22504 bins  (4.4s, 4 models avg)
+  [ 52/125] D110: 21546 bins  (4.3s, 4 models avg)
+  [ 53/125] D112: 25547 bins  (4.5s, 4 models avg)
+  [ 54/125] D114: 21763 bins  (4.3s, 4 models avg)
+  [ 55/125] D116: 23137 bins  (4.4s, 4 models avg)
+  [ 56/125] D121: 28655 bins  (4.8s, 4 models avg)
+  [ 57/125] D129: 24399 bins  (4.5s, 4 models avg)
+  [ 58/125] D135: 25084 bins  (4.5s, 4 models avg)
+  [ 59/125] D136: 23816 bins  (4.4s, 4 models avg)
+  [ 60/125] D142: 21434 bins  (4.3s, 4 models avg)
+  [ 61/125] D143: 21171 bins  (4.3s, 4 models avg)
+  [ 62/125] D144: 26791 bins  (4.6s, 4 models avg)
+  [ 63/125] D145: 23359 bins  (4.4s, 4 models avg)
+  [ 64/125] D146: 23994 bins  (4.4s, 4 models avg)
+  [ 65/125] D151: 25015 bins  (4.5s, 4 models avg)
+  [ 66/125] D155: 24682 bins  (4.5s, 4 models avg)
+  [ 67/125] D156: 26109 bins  (4.6s, 4 models avg)
+  [ 68/125] D157: 23542 bins  (4.4s, 4 models avg)
+  [ 69/125] D161: 21964 bins  (4.3s, 4 models avg)
+  [ 70/125] D167: 26165 bins  (4.6s, 4 models avg)
+  [ 71/125] D170: 26616 bins  (4.7s, 4 models avg)
+  [ 72/125] D171: 24535 bins  (4.5s, 4 models avg)
+  [ 73/125] D175: 25290 bins  (4.6s, 4 models avg)
+  [ 74/125] D176: 25916 bins  (4.6s, 4 models avg)
+  [ 75/125] D182: 20848 bins  (4.2s, 4 models avg)
+  [ 76/125] D183: 25144 bins  (4.5s, 4 models avg)
+  [ 77/125] D185: 24055 bins  (4.5s, 4 models avg)
+  [ 78/125] D190: 25177 bins  (4.5s, 4 models avg)
+  [ 79/125] D192: 22286 bins  (4.4s, 4 models avg)
+  [ 80/125] D194: 22384 bins  (4.3s, 4 models avg)
+  [ 81/125] D195: 23565 bins  (4.4s, 4 models avg)
+  [ 82/125] D198: 25248 bins  (4.5s, 4 models avg)
+  [ 83/125] D199: 25166 bins  (4.5s, 4 models avg)
+  [ 84/125] D200: 24481 bins  (4.5s, 4 models avg)
+  [ 85/125] D201: 24437 bins  (4.5s, 4 models avg)
+  [ 86/125] D213: 24786 bins  (4.5s, 4 models avg)
+  [ 87/125] D216: 21839 bins  (4.3s, 4 models avg)
+  [ 88/125] D218: 24982 bins  (4.5s, 4 models avg)
+  [ 89/125] D222: 22725 bins  (4.4s, 4 models avg)
+  [ 90/125] D224: 24529 bins  (4.5s, 4 models avg)
+  [ 91/125] D226: 21153 bins  (4.3s, 4 models avg)
+  [ 92/125] D233: 22545 bins  (4.4s, 4 models avg)
+  [ 93/125] D234: 23720 bins  (4.4s, 4 models avg)
+  [ 94/125] D236: 31505 bins  (4.9s, 4 models avg)
+  [ 95/125] D237: 24493 bins  (4.5s, 4 models avg)
+  [ 96/125] D239: 25325 bins  (4.5s, 4 models avg)
+  [ 97/125] D241: 25728 bins  (4.6s, 4 models avg)
+  [ 98/125] D242: 25540 bins  (4.6s, 4 models avg)
+  [ 99/125] D243: 25453 bins  (4.6s, 4 models avg)
+  [100/125] D245: 20848 bins  (4.2s, 4 models avg)
+  [101/125] D247: 25354 bins  (4.6s, 4 models avg)
+  [102/125] D253: 24810 bins  (4.5s, 4 models avg)
+  [103/125] D254: 25763 bins  (4.6s, 4 models avg)
+  [104/125] D255: 21821 bins  (4.3s, 4 models avg)
+  [105/125] D257: 21381 bins  (4.3s, 4 models avg)
+  [106/125] D260: 22145 bins  (4.3s, 4 models avg)
+  [107/125] D267: 24945 bins  (4.5s, 4 models avg)
+  [108/125] D268: 24487 bins  (4.5s, 4 models avg)
+  [109/125] D272: 20878 bins  (4.2s, 4 models avg)
+  [110/125] D273: 21338 bins  (4.3s, 4 models avg)
+  [111/125] D276: 20859 bins  (4.2s, 4 models avg)
+  [112/125] D277: 21283 bins  (4.3s, 4 models avg)
+  [113/125] D282: 21023 bins  (4.3s, 4 models avg)
+  [114/125] D283: 26003 bins  (4.8s, 4 models avg)
+  [115/125] D284: 25068 bins  (4.5s, 4 models avg)
+  [116/125] D287: 23833 bins  (4.4s, 4 models avg)
+  [117/125] D289: 21498 bins  (4.3s, 4 models avg)
+  [118/125] D291: 21337 bins  (4.3s, 4 models avg)
+  [119/125] D296: 22568 bins  (4.4s, 4 models avg)
+  [120/125] D299: 21878 bins  (4.3s, 4 models avg)
+  [121/125] D300: 24591 bins  (4.5s, 4 models avg)
+  [122/125] D303: 24664 bins  (4.5s, 4 models avg)
+  [123/125] D304: 22364 bins  (4.4s, 4 models avg)
+  [124/125] D307: 26506 bins  (4.6s, 4 models avg)
+  [125/125] D308: 24181 bins  (4.5s, 4 models avg)
+Submission saved to /scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/submission_ensemble_tta2.csv (2993930 rows)
+  4-model + TTA2 ensemble saved.
+
+Done.
+
+=== Done ===
+Finished at: Thu Mar 26 14:20:58 EDT 2026
+Total time: 1h 2m 54s

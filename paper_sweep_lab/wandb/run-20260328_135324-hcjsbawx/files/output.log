@@ -1,0 +1,63 @@
+Train: 159, Val: 28, Val subset: 8
+Building dataset...
+  59601 trials (7.7s)
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:431: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.channel_encoder = nn.TransformerEncoder(ch_layer, num_layers=channel_layers)
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:446: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.time_encoder = nn.TransformerEncoder(time_layer, num_layers=num_layers)
+Params: 2,540,549
+Ep   1/60 | loss=0.0868 (pos=0.0848 vel=0.0005 cons=0.0002; wpos=0.0848 wvel=0.0020 wcons=0.0001) | val_r2=0.0508 * | lr0=1.20e-04 lr1=1.20e-04 | 386s
+Ep   2/60 | loss=0.0843 (pos=0.0827 vel=0.0004 cons=0.0001; wpos=0.0827 wvel=0.0016 wcons=0.0001) | val_r2=0.0013  | lr0=1.80e-04 lr1=1.80e-04 | 386s
+Ep   3/60 | loss=0.0821 (pos=0.0805 vel=0.0004 cons=0.0002; wpos=0.0805 wvel=0.0015 wcons=0.0001) | val_r2=0.0468  | lr0=2.40e-04 lr1=2.40e-04 | 387s
+Ep   4/60 | loss=0.0800 (pos=0.0784 vel=0.0004 cons=0.0002; wpos=0.0784 wvel=0.0015 wcons=0.0001) | val_r2=0.0472  | lr0=3.00e-04 lr1=3.00e-04 | 386s
+Ep   5/60 | loss=0.0784 (pos=0.0768 vel=0.0004 cons=0.0003; wpos=0.0768 wvel=0.0015 wcons=0.0001) | val_r2=0.1224 * | lr0=3.00e-04 lr1=3.00e-04 | 387s
+Ep   6/60 | loss=0.0769 (pos=0.0753 vel=0.0004 cons=0.0003; wpos=0.0753 wvel=0.0014 wcons=0.0001) | val_r2=0.1270 * | lr0=3.00e-04 lr1=3.00e-04 | 387s
+Ep   7/60 | loss=0.0741 (pos=0.0726 vel=0.0004 cons=0.0003; wpos=0.0726 wvel=0.0014 wcons=0.0002) | val_r2=0.0236  | lr0=2.99e-04 lr1=2.99e-04 | 386s
+Ep   8/60 | loss=0.0698 (pos=0.0683 vel=0.0003 cons=0.0004; wpos=0.0683 wvel=0.0014 wcons=0.0002) | val_r2=0.1627 * | lr0=2.98e-04 lr1=2.98e-04 | 386s
+Ep   9/60 | loss=0.0666 (pos=0.0650 vel=0.0003 cons=0.0005; wpos=0.0650 wvel=0.0013 wcons=0.0002) | val_r2=0.0845  | lr0=2.96e-04 lr1=2.96e-04 | 386s
+Ep  10/60 | loss=0.0643 (pos=0.0628 vel=0.0003 cons=0.0005; wpos=0.0628 wvel=0.0013 wcons=0.0003) | val_r2=0.1431  | lr0=2.94e-04 lr1=2.94e-04 | 386s
+Ep  11/60 | loss=0.0625 (pos=0.0609 vel=0.0003 cons=0.0006; wpos=0.0609 wvel=0.0013 wcons=0.0003) | val_r2=0.1726 * | lr0=2.91e-04 lr1=2.91e-04 | 387s
+Ep  12/60 | loss=0.0605 (pos=0.0589 vel=0.0003 cons=0.0006; wpos=0.0589 wvel=0.0013 wcons=0.0003) | val_r2=0.2176 * | lr0=2.88e-04 lr1=2.88e-04 | 386s
+Ep  13/60 | loss=0.0592 (pos=0.0576 vel=0.0003 cons=0.0006; wpos=0.0576 wvel=0.0013 wcons=0.0003) | val_r2=0.2066  | lr0=2.85e-04 lr1=2.85e-04 | 387s
+Ep  14/60 | loss=0.0576 (pos=0.0561 vel=0.0003 cons=0.0007; wpos=0.0561 wvel=0.0013 wcons=0.0003) | val_r2=0.1987  | lr0=2.81e-04 lr1=2.81e-04 | 386s
+Ep  15/60 | loss=0.0563 (pos=0.0547 vel=0.0003 cons=0.0007; wpos=0.0547 wvel=0.0012 wcons=0.0003) | val_r2=0.1872  | lr0=2.76e-04 lr1=2.76e-04 | 386s
+Ep  16/60 | loss=0.0548 (pos=0.0532 vel=0.0003 cons=0.0007; wpos=0.0532 wvel=0.0012 wcons=0.0003) | val_r2=0.2128  | lr0=2.72e-04 lr1=2.72e-04 | 386s
+Ep  17/60 | loss=0.0534 (pos=0.0518 vel=0.0003 cons=0.0007; wpos=0.0518 wvel=0.0012 wcons=0.0004) | val_r2=0.2845 * | lr0=2.66e-04 lr1=2.66e-04 | 386s
+Ep  18/60 | loss=0.0524 (pos=0.0509 vel=0.0003 cons=0.0007; wpos=0.0509 wvel=0.0012 wcons=0.0004) | val_r2=0.2910 * | lr0=2.61e-04 lr1=2.61e-04 | 387s
+Ep  19/60 | loss=0.0513 (pos=0.0497 vel=0.0003 cons=0.0007; wpos=0.0497 wvel=0.0012 wcons=0.0004) | val_r2=0.2546  | lr0=2.55e-04 lr1=2.55e-04 | 386s
+Ep  20/60 | loss=0.0506 (pos=0.0491 vel=0.0003 cons=0.0008; wpos=0.0491 wvel=0.0012 wcons=0.0004) | val_r2=0.2716  | lr0=2.49e-04 lr1=2.49e-04 | 386s
+Ep  21/60 | loss=0.0493 (pos=0.0477 vel=0.0003 cons=0.0008; wpos=0.0477 wvel=0.0012 wcons=0.0004) | val_r2=0.3077 * | lr0=2.42e-04 lr1=2.42e-04 | 386s
+Ep  22/60 | loss=0.0478 (pos=0.0462 vel=0.0003 cons=0.0008; wpos=0.0462 wvel=0.0012 wcons=0.0004) | val_r2=0.2617  | lr0=2.35e-04 lr1=2.35e-04 | 386s
+Ep  23/60 | loss=0.0470 (pos=0.0454 vel=0.0003 cons=0.0008; wpos=0.0454 wvel=0.0012 wcons=0.0004) | val_r2=0.1694  | lr0=2.28e-04 lr1=2.28e-04 | 387s
+Ep  24/60 | loss=0.0461 (pos=0.0445 vel=0.0003 cons=0.0008; wpos=0.0445 wvel=0.0012 wcons=0.0004) | val_r2=0.2509  | lr0=2.21e-04 lr1=2.21e-04 | 386s
+Ep  25/60 | loss=0.0449 (pos=0.0433 vel=0.0003 cons=0.0009; wpos=0.0433 wvel=0.0011 wcons=0.0004) | val_r2=0.2912  | lr0=2.13e-04 lr1=2.13e-04 | 386s
+Ep  26/60 | loss=0.0440 (pos=0.0424 vel=0.0003 cons=0.0009; wpos=0.0424 wvel=0.0011 wcons=0.0004) | val_r2=0.2181  | lr0=2.05e-04 lr1=2.05e-04 | 386s
+Ep  27/60 | loss=0.0432 (pos=0.0416 vel=0.0003 cons=0.0009; wpos=0.0416 wvel=0.0011 wcons=0.0005) | val_r2=0.2700  | lr0=1.97e-04 lr1=1.97e-04 | 386s
+Ep  28/60 | loss=0.0420 (pos=0.0404 vel=0.0003 cons=0.0009; wpos=0.0404 wvel=0.0011 wcons=0.0005) | val_r2=0.3069  | lr0=1.89e-04 lr1=1.89e-04 | 386s
+Ep  29/60 | loss=0.0413 (pos=0.0397 vel=0.0003 cons=0.0009; wpos=0.0397 wvel=0.0011 wcons=0.0005) | val_r2=0.2768  | lr0=1.81e-04 lr1=1.81e-04 | 386s
+Ep  30/60 | loss=0.0404 (pos=0.0389 vel=0.0003 cons=0.0010; wpos=0.0389 wvel=0.0011 wcons=0.0005) | val_r2=0.2501  | lr0=1.73e-04 lr1=1.73e-04 | 386s
+Ep  31/60 | loss=0.0395 (pos=0.0379 vel=0.0003 cons=0.0010; wpos=0.0379 wvel=0.0011 wcons=0.0005) | val_r2=0.3406 * | lr0=1.64e-04 lr1=1.64e-04 | 386s
+Ep  32/60 | loss=0.0386 (pos=0.0370 vel=0.0003 cons=0.0010; wpos=0.0370 wvel=0.0011 wcons=0.0005) | val_r2=0.2884  | lr0=1.56e-04 lr1=1.56e-04 | 387s
+Ep  33/60 | loss=0.0377 (pos=0.0361 vel=0.0003 cons=0.0010; wpos=0.0361 wvel=0.0011 wcons=0.0005) | val_r2=0.3164  | lr0=1.47e-04 lr1=1.47e-04 | 386s
+Ep  34/60 | loss=0.0368 (pos=0.0352 vel=0.0003 cons=0.0010; wpos=0.0352 wvel=0.0011 wcons=0.0005) | val_r2=0.3056  | lr0=1.39e-04 lr1=1.39e-04 | 387s
+Ep  35/60 | loss=0.0361 (pos=0.0345 vel=0.0003 cons=0.0010; wpos=0.0345 wvel=0.0011 wcons=0.0005) | val_r2=0.2604  | lr0=1.30e-04 lr1=1.30e-04 | 386s
+Ep  36/60 | loss=0.0356 (pos=0.0340 vel=0.0003 cons=0.0011; wpos=0.0340 wvel=0.0011 wcons=0.0005) | val_r2=0.2657  | lr0=1.22e-04 lr1=1.22e-04 | 386s
+Ep  37/60 | loss=0.0344 (pos=0.0328 vel=0.0003 cons=0.0011; wpos=0.0328 wvel=0.0011 wcons=0.0005) | val_r2=0.2606  | lr0=1.14e-04 lr1=1.14e-04 | 386s
+Ep  38/60 | loss=0.0338 (pos=0.0322 vel=0.0003 cons=0.0011; wpos=0.0322 wvel=0.0011 wcons=0.0005) | val_r2=0.2661  | lr0=1.06e-04 lr1=1.06e-04 | 387s
+Ep  39/60 | loss=0.0331 (pos=0.0315 vel=0.0003 cons=0.0011; wpos=0.0315 wvel=0.0011 wcons=0.0006) | val_r2=0.3191  | lr0=9.76e-05 lr1=9.76e-05 | 387s
+Ep  40/60 | loss=0.0326 (pos=0.0309 vel=0.0003 cons=0.0011; wpos=0.0309 wvel=0.0010 wcons=0.0006) | val_r2=0.2777  | lr0=8.98e-05 lr1=8.98e-05 | 386s
+Ep  41/60 | loss=0.0316 (pos=0.0300 vel=0.0003 cons=0.0011; wpos=0.0300 wvel=0.0010 wcons=0.0006) | val_r2=0.1984  | lr0=8.22e-05 lr1=8.22e-05 | 386s
+Ep  42/60 | loss=0.0312 (pos=0.0296 vel=0.0003 cons=0.0012; wpos=0.0296 wvel=0.0010 wcons=0.0006) | val_r2=0.2451  | lr0=7.48e-05 lr1=7.48e-05 | 386s
+Ep  43/60 | loss=0.0306 (pos=0.0290 vel=0.0003 cons=0.0012; wpos=0.0290 wvel=0.0010 wcons=0.0006) | val_r2=0.2496  | lr0=6.77e-05 lr1=6.77e-05 | 386s
+Ep  44/60 | loss=0.0300 (pos=0.0283 vel=0.0003 cons=0.0012; wpos=0.0283 wvel=0.0010 wcons=0.0006) | val_r2=0.2255  | lr0=6.08e-05 lr1=6.08e-05 | 386s
+Ep  45/60 | loss=0.0296 (pos=0.0279 vel=0.0003 cons=0.0012; wpos=0.0279 wvel=0.0010 wcons=0.0006) | val_r2=0.2531  | lr0=5.43e-05 lr1=5.43e-05 | 386s
+Ep  46/60 | loss=0.0289 (pos=0.0273 vel=0.0003 cons=0.0012; wpos=0.0273 wvel=0.0010 wcons=0.0006) | val_r2=0.2548  | lr0=4.80e-05 lr1=4.80e-05 | 386s
+Ep  47/60 | loss=0.0285 (pos=0.0269 vel=0.0003 cons=0.0012; wpos=0.0269 wvel=0.0010 wcons=0.0006) | val_r2=0.2481  | lr0=4.21e-05 lr1=4.21e-05 | 387s
+Ep  48/60 | loss=0.0281 (pos=0.0264 vel=0.0003 cons=0.0012; wpos=0.0264 wvel=0.0010 wcons=0.0006) | val_r2=0.2537  | lr0=3.65e-05 lr1=3.65e-05 | 387s
+Ep  49/60 | loss=0.0277 (pos=0.0260 vel=0.0003 cons=0.0013; wpos=0.0260 wvel=0.0010 wcons=0.0006) | val_r2=0.2605  | lr0=3.14e-05 lr1=3.14e-05 | 386s
+Ep  50/60 | loss=0.0273 (pos=0.0256 vel=0.0003 cons=0.0013; wpos=0.0256 wvel=0.0010 wcons=0.0006) | val_r2=0.2629  | lr0=2.66e-05 lr1=2.66e-05 | 387s
+Ep  51/60 | loss=0.0270 (pos=0.0253 vel=0.0003 cons=0.0013; wpos=0.0253 wvel=0.0010 wcons=0.0006) | val_r2=0.2460  | lr0=2.22e-05 lr1=2.22e-05 | 387s
+Ep  52/60 | loss=0.0267 (pos=0.0251 vel=0.0003 cons=0.0013; wpos=0.0251 wvel=0.0010 wcons=0.0006) | val_r2=0.2471  | lr0=1.82e-05 lr1=1.82e-05 | 386s
+Ep  53/60 | loss=0.0264 (pos=0.0248 vel=0.0003 cons=0.0013; wpos=0.0248 wvel=0.0010 wcons=0.0006) | val_r2=0.2399  | lr0=1.47e-05 lr1=1.47e-05 | 386s
+Ep  54/60 | loss=0.0262 (pos=0.0246 vel=0.0002 cons=0.0013; wpos=0.0246 wvel=0.0010 wcons=0.0006) | val_r2=0.2305  | lr0=1.16e-05 lr1=1.16e-05 | 386s
+Ep  55/60 | loss=0.0260 (pos=0.0244 vel=0.0002 cons=0.0013; wpos=0.0244 wvel=0.0010 wcons=0.0007) | val_r2=0.2360  | lr0=9.02e-06 lr1=9.02e-06 | 386s

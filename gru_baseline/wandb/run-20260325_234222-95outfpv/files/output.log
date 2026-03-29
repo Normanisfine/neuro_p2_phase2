@@ -1,0 +1,39 @@
+Device: cuda
+Train: 159, Val: 28
+Building dataset...
+  59601 trials (13.2s)
+Params: 2,006,786
+Ep   1/30 | loss=0.0528 | val_r2=0.5584 * | lr=3.33e-04 | 11s
+Ep   2/30 | loss=0.0327 | val_r2=0.6245 * | lr=5.00e-04 | 10s
+Ep   3/30 | loss=0.0268 | val_r2=0.6646 * | lr=5.00e-04 | 10s
+Ep   4/30 | loss=0.0225 | val_r2=0.6887 * | lr=4.98e-04 | 10s
+Ep   5/30 | loss=0.0201 | val_r2=0.6819  | lr=4.93e-04 | 11s
+Ep   6/30 | loss=0.0181 | val_r2=0.6947 * | lr=4.85e-04 | 11s
+Ep   7/30 | loss=0.0166 | val_r2=0.6448  | lr=4.74e-04 | 10s
+Ep   8/30 | loss=0.0150 | val_r2=0.6795  | lr=4.59e-04 | 9s
+Ep   9/30 | loss=0.0139 | val_r2=0.6743  | lr=4.42e-04 | 10s
+Ep  10/30 | loss=0.0128 | val_r2=0.6953 * | lr=4.22e-04 | 9s
+Ep  11/30 | loss=0.0118 | val_r2=0.6870  | lr=4.00e-04 | 9s
+Ep  12/30 | loss=0.0109 | val_r2=0.6905  | lr=3.76e-04 | 10s
+Ep  13/30 | loss=0.0100 | val_r2=0.7045 * | lr=3.51e-04 | 10s
+Ep  14/30 | loss=0.0093 | val_r2=0.6965  | lr=3.23e-04 | 10s
+Ep  15/30 | loss=0.0085 | val_r2=0.6899  | lr=2.95e-04 | 11s
+Ep  16/30 | loss=0.0078 | val_r2=0.6876  | lr=2.67e-04 | 9s
+Ep  17/30 | loss=0.0072 | val_r2=0.6744  | lr=2.38e-04 | 10s
+Ep  18/30 | loss=0.0066 | val_r2=0.6797  | lr=2.10e-04 | 10s
+Ep  19/30 | loss=0.0060 | val_r2=0.6851  | lr=1.82e-04 | 10s
+Ep  20/30 | loss=0.0056 | val_r2=0.6870  | lr=1.54e-04 | 10s
+Ep  21/30 | loss=0.0052 | val_r2=0.6725  | lr=1.29e-04 | 10s
+Ep  22/30 | loss=0.0048 | val_r2=0.6849  | lr=1.05e-04 | 9s
+Ep  23/30 | loss=0.0045 | val_r2=0.6817  | lr=8.27e-05 | 10s
+Ep  24/30 | loss=0.0043 | val_r2=0.6752  | lr=6.29e-05 | 10s
+Ep  25/30 | loss=0.0041 | val_r2=0.6730  | lr=4.57e-05 | 10s
+Ep  26/30 | loss=0.0040 | val_r2=0.6779  | lr=3.13e-05 | 10s
+Ep  27/30 | loss=0.0038 | val_r2=0.6746  | lr=1.99e-05 | 10s
+Ep  28/30 | loss=0.0038 | val_r2=0.6764  | lr=1.17e-05 | 10s
+Ep  29/30 | loss=0.0037 | val_r2=0.6745  | lr=6.67e-06 | 10s
+Ep  30/30 | loss=0.0037 | val_r2=0.6735  | lr=5.00e-06 | 10s
+
+Full validation with best model...
+Full val R²: 0.4977 (best epoch 13)
+Saved config.json, best_model.pt, last_model.pt

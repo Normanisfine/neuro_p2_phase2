@@ -1,0 +1,18 @@
+{
+  "variant": "spint_like",
+  "epochs": 60,
+  "batch_size": 48,
+  "lr": 0.0003,
+  "dropout": 0.1,
+  "num_layers": 4,
+  "max_seq_len": 192,
+  "inference_stride": 96,
+  "position_blend": 0.7,
+  "vel_weight": 4.0,
+  "consistency_weight": 0.5,
+  "extra_dropout_max": 8,
+  "spint_channel_dim": 128,
+  "spint_channel_layers": 2,
+  "n_val_sessions": 8,
+  "seed": 0
+}

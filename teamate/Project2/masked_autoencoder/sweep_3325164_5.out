@@ -1,0 +1,62 @@
+Config 5: lr3e-4_do0.05_ep50_wu5_rw0.00
+Device: cuda
+Train: 206, Val: 20
+Epochs: 50  BS: 64  LR: 0.0003  Dropout: 0.05  Warmup: 5  recon_w: 0.0
+Building dataset...
+  77250 trials (7.6s)
+Params: 2,204,640
+Ep   1/50 | loss=0.8106 | val=0.7627 * | lr=1.20e-04 | 32s
+Ep   2/50 | loss=0.7685 | val=0.7533 * | lr=1.80e-04 | 21s
+Ep   3/50 | loss=0.7569 | val=0.7496 * | lr=2.40e-04 | 20s
+Ep   4/50 | loss=0.7472 | val=0.7479 * | lr=3.00e-04 | 20s
+Ep   5/50 | loss=0.7402 | val=0.7459 * | lr=3.00e-04 | 20s
+Ep   6/50 | loss=0.7356 | val=0.7442 * | lr=3.00e-04 | 20s
+Ep   7/50 | loss=0.7330 | val=0.7422 * | lr=2.99e-04 | 20s
+Ep   8/50 | loss=0.7316 | val=0.7426  | lr=2.97e-04 | 20s
+Ep   9/50 | loss=0.7300 | val=0.7400 * | lr=2.94e-04 | 20s
+Ep  10/50 | loss=0.7288 | val=0.7379 * | lr=2.91e-04 | 20s
+Ep  11/50 | loss=0.7278 | val=0.7375 * | lr=2.87e-04 | 20s
+Ep  12/50 | loss=0.7267 | val=0.7368 * | lr=2.83e-04 | 20s
+Ep  13/50 | loss=0.7263 | val=0.7356 * | lr=2.77e-04 | 20s
+Ep  14/50 | loss=0.7252 | val=0.7347 * | lr=2.72e-04 | 20s
+Ep  15/50 | loss=0.7250 | val=0.7348  | lr=2.65e-04 | 20s
+Ep  16/50 | loss=0.7244 | val=0.7346 * | lr=2.58e-04 | 20s
+Ep  17/50 | loss=0.7237 | val=0.7337 * | lr=2.51e-04 | 20s
+Ep  18/50 | loss=0.7231 | val=0.7345  | lr=2.43e-04 | 20s
+Ep  19/50 | loss=0.7231 | val=0.7327 * | lr=2.35e-04 | 20s
+Ep  20/50 | loss=0.7225 | val=0.7326 * | lr=2.26e-04 | 21s
+Ep  21/50 | loss=0.7218 | val=0.7325 * | lr=2.17e-04 | 20s
+Ep  22/50 | loss=0.7218 | val=0.7324 * | lr=2.07e-04 | 20s
+Ep  23/50 | loss=0.7214 | val=0.7316 * | lr=1.97e-04 | 20s
+Ep  24/50 | loss=0.7209 | val=0.7312 * | lr=1.87e-04 | 20s
+Ep  25/50 | loss=0.7204 | val=0.7320  | lr=1.77e-04 | 20s
+Ep  26/50 | loss=0.7201 | val=0.7322  | lr=1.67e-04 | 20s
+Ep  27/50 | loss=0.7198 | val=0.7312 * | lr=1.57e-04 | 20s
+Ep  28/50 | loss=0.7198 | val=0.7315  | lr=1.46e-04 | 20s
+Ep  29/50 | loss=0.7195 | val=0.7307 * | lr=1.36e-04 | 20s
+Ep  30/50 | loss=0.7192 | val=0.7304 * | lr=1.26e-04 | 20s
+Ep  31/50 | loss=0.7190 | val=0.7303 * | lr=1.16e-04 | 20s
+Ep  32/50 | loss=0.7187 | val=0.7303  | lr=1.06e-04 | 20s
+Ep  33/50 | loss=0.7189 | val=0.7307  | lr=9.59e-05 | 20s
+Ep  34/50 | loss=0.7185 | val=0.7300 * | lr=8.64e-05 | 20s
+Ep  35/50 | loss=0.7182 | val=0.7297 * | lr=7.73e-05 | 20s
+Ep  36/50 | loss=0.7181 | val=0.7296 * | lr=6.85e-05 | 20s
+Ep  37/50 | loss=0.7179 | val=0.7296  | lr=6.01e-05 | 20s
+Ep  38/50 | loss=0.7178 | val=0.7295 * | lr=5.21e-05 | 20s
+Ep  39/50 | loss=0.7174 | val=0.7294 * | lr=4.47e-05 | 20s
+Ep  40/50 | loss=0.7175 | val=0.7293 * | lr=3.77e-05 | 20s
+Ep  41/50 | loss=0.7174 | val=0.7292 * | lr=3.14e-05 | 20s
+Ep  42/50 | loss=0.7175 | val=0.7294  | lr=2.56e-05 | 20s
+Ep  43/50 | loss=0.7171 | val=0.7293  | lr=2.04e-05 | 20s
+Ep  44/50 | loss=0.7172 | val=0.7293  | lr=1.58e-05 | 20s
+Ep  45/50 | loss=0.7172 | val=0.7292  | lr=1.20e-05 | 20s
+Ep  46/50 | loss=0.7172 | val=0.7290 * | lr=8.75e-06 | 20s
+Ep  47/50 | loss=0.7168 | val=0.7289 * | lr=6.25e-06 | 20s
+Ep  48/50 | loss=0.7169 | val=0.7290  | lr=4.45e-06 | 20s
+Ep  49/50 | loss=0.7170 | val=0.7289 * | lr=3.36e-06 | 20s
+Ep  50/50 | loss=0.7171 | val=0.7290  | lr=3.00e-06 | 20s
+
+Full validation with best model...
+Full val NMSE: 0.7302 (best epoch 49)
+Saved config.json, best_model.pt, last_model.pt
+Config 5 done: 17m 48s

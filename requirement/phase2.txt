@@ -1,0 +1,169 @@
+Overview
+In Phase 1, you predicted masked neural activity from partial observations. In Phase 2, the task flips: decode finger positions from neural activity — with missing channels and neural drift.
+
+Intracortical brain-computer interfaces (iBCIs) must translate neural signals into movement commands. Two fundamental challenges are neural drift — signal statistics shift over days, weeks, and months — and channel dropout — electrodes degrade or fail over time. A robust decoder must handle both.
+
+In this competition, you will work with long-term intracortical recordings spanning hundreds of sessions collected over multiple years from a non-human primate performing a finger-pressing task. Your goal is to predict 2 finger position variables from 96-channel Spiking Band Power (SBP) at each time bin across 125 held-out test sessions.
+
+Key challenges:
+
+Neural drift: Training sessions span 60% days ; test sessions span the rest. Your decoder must generalize across months of signal drift.
+Channel dropout: ~30% of channels are randomly zeroed out in each session (simulating electrode degradation). Your model must be robust to missing input channels.
+Start
+
+7 days ago
+Close
+4 days to go
+Description
+The Data
+The dataset consists of recordings from a 96-channel intracortical electrode array (two 64-channel Utah arrays) implanted in the motor cortex of a non-human primate. During each recording session, the subject performed a finger-movement task while neural activity and finger kinematics were captured simultaneously.
+
+Each session provides:
+
+Spiking Band Power (SBP): A 96-channel neural feature extracted at 50 Hz (20 ms bins). Shape: (N_timebins, 96). ~30% of channels are zeroed out per session (different channels each session), simulating real-world electrode degradation.
+Finger Kinematics (training only): 4 behavioral variables — index finger position, middle-ring-pinky (MRP) finger position, index velocity, and MRP velocity. Positions are normalized to [0, 1]. Shape: (N_timebins, 4).
+Trial Information: Each session contains multiple trials (~375 per session). Trial start/end time bins are provided.
+Note: While the kinematics files contain 4 columns (positions and velocities), only the 2 position channels are evaluated. Velocity is provided for convenience — it is simply the discrete time derivative of position (vel[t] = pos[t+1] - pos[t]).
+
+Target Variables
+Column	Description
+index_pos	Index finger position (0 = extended, 1 = flexed), range [0, 1]
+mrp_pos	Middle-ring-pinky finger position (0 = extended, 1 = flexed), range [0, 1]
+Channel Dropout
+~30% of channels (28 out of 96) are randomly zeroed out in every session. The zeroed channels differ per session. You can identify which channels are active by checking which columns are all-zero:
+
+sbp = np.load('train/D042_sbp.npy')        # (N, 96)
+active_mask = ~(sbp == 0).all(axis=0)       # True for active channels
+print(f"Active channels: {active_mask.sum()}/96")  # ~68/96
+Your model must handle varying subsets of active channels across sessions.
+
+Decoding Approaches
+There are two natural strategies for predicting finger position:
+
+Direct position decoding: Predict position directly from neural activity.
+Velocity-first decoding: Decode velocity from neural activity, then integrate to recover position (since position = integral of velocity). This can be more natural because velocity is zero-anchored, while position is relative to an arbitrary reference point. If you take this approach, make sure to calibrate your integrated output so the final position values are on the correct scale.
+The Task
+For each of the 125 test sessions, you are given SBP neural activity (with ~30% channels zeroed) but kinematics are withheld. Your goal is to predict the 2 finger position variables at every time bin.
+
+Your goal: predict finger positions from neural activity at each time bin.
+
+This is a supervised decoding task. You have 187 training sessions with paired SBP and kinematics to learn the neural-to-kinematic mapping, then must apply your decoder to 125 test sessions where only SBP is available.
+
+The split is chronological: training sessions come from the first ~60% of the recording timeline, and test sessions from the last ~40%. This means test sessions are always in the future relative to training — your decoder must handle neural drift without access to future calibration data.
+
+Evaluation
+Submissions are evaluated by comparing your predicted positions to the hidden ground truth at all time bins across 125 test sessions (~3.0M total time bins).
+
+R² (Coefficient of Determination)
+R² measures how well your predictions capture the variance in the true positions. It is computed per session, per position channel:
+
+                         sum((predicted_i - true_i)^2)
+R²(s, c) = 1  -  -----------------------------------------
+                   sum((true_i - mean(true))^2)
+Where:
+
+s = session, c = position channel
+mean(true) = mean of the true values for channel c in session s
+The sums are over all time bins in the session Final Score:
+R² = mean of R²(s, c) across all 125 sessions x 2 channels = 250 groups
+This ensures all sessions and channels contribute equally regardless of signal magnitude. Range: 1.0 and below (higher is better). On the Kaggle leaderboard, a higher R² corresponds to a higher rank.
+
+R²	Meaning
+1.0	Perfect prediction
+> 0.0	Model captures meaningful position variance
+0.0	Equivalent to predicting the per-session channel mean (trivial baseline)
+< 0.0	Worse than the trivial baseline
+Public/Private Split
+Public leaderboard: 64 test sessions
+Private leaderboard: 61 test sessions The split uses blockwise allocation along the recording timeline. The final ranking uses the private portion. This prevents overfitting to the leaderboard. Baseline model scores (on masked data with 30% channel dropout):
+Model	R²
+Ridge Regression (Wiener filter)	-4.119
+LSTM (2-layer, hidden=128)	0.199
+GRU (2-layer, hidden=128)	0.213
+Transformer + SSL pretraining	0.448
+Ridge regression fails entirely on cross-session decoding with channel dropout. Neural network models with per-session normalization perform better but still have significant room for improvement.
+Submission Format
+Submit a CSV file with five columns matching the format of sample_submission.csv:
+
+sample_id	session_id	time_bin	index_pos	mrp_pos
+0	D267	0	0.5	0.5
+1	D267	1	0.5	0.5
+…	…	…	…	…
+sample_id: Integer index matching the rows in sample_submission.csv.
+session_id: Which test session this entry belongs to.
+time_bin: Which time bin (row index into the NumPy arrays).
+index_pos, mrp_pos: Your predicted finger position values (float). The file sample_submission.csv provides a template. Replace the position columns with your predicted values. IMPORTANT: Your submission must have the exact same sample_id ordering as sample_submission.csv. Kaggle matches predictions to ground truth using sample_id only. The easiest approach is to load sample_submission.csv (or test_index.csv), fill in your predictions for each row, and save — this guarantees correct alignment. Total rows: ~3.0M (one per time bin across all 125 test sessions)
+Check	Requirement
+Column names	Exactly sample_id,session_id,time_bin,index_pos,mrp_pos
+Row count	Must match sample_submission.csv
+No nulls	All position values must be finite numbers
+| Encoding | UTF-8 CSV |
+
+Dataset Description
+File Structure
+├── train/
+│   ├── {session_id}_sbp.npy              # (N, 96) SBP values, float32 (~30% channels zeroed)
+│   ├── {session_id}_kinematics.npy       # (N, 4)  finger kinematics, float32
+│   └── {session_id}_trial_info.npz       # trial start/end bins
+├── test/
+│   ├── {session_id}_sbp.npy              # (N, 96) SBP values, float32 (~30% channels zeroed)
+│   └── {session_id}_trial_info.npz       # trial start/end bins
+├── test_index.csv
+├── sample_submission.csv
+└── metric.py
+187 training sessions and 125 test sessions are provided.
+
+test_index.csv
+Each row is one time bin you need to predict. This defines the expected rows in your submission:
+
+Column	Description
+sample_id	Unique integer identifying this time bin
+session_id	Which test session this entry belongs to
+time_bin	Which time bin (row index into the NumPy arrays)
+sample_submission.csv
+A template submission file with default predictions. Replace the position columns with your values:
+
+Column	Description
+sample_id	Unique integer (matches test_index.csv)
+session_id	Which test session
+time_bin	Which time bin
+index_pos	Your prediction for index finger position
+mrp_pos	Your prediction for MRP finger position
+NumPy Files
+Training sessions (train/):
+
+{sid}_sbp.npy — Float32 (N_timebins, 96). SBP values with ~30% channels zeroed per session.
+{sid}_kinematics.npy — Float32 (N_timebins, 4). Columns: [index_pos, mrp_pos, index_vel, mrp_vel]. Positions are in [0, 1]; velocities are derived from positions via vel[t] = pos[t+1] - pos[t]. Only the first 2 columns (positions) are evaluated.
+{sid}_trial_info.npz — Contains start_bins, end_bins (arrays of trial boundaries), and n_trials. Test sessions (test/):
+{sid}_sbp.npy — Float32 (N_timebins, 96). SBP values with ~30% channels zeroed. Kinematics are NOT provided.
+{sid}_trial_info.npz — Same format as training.
+metric.py
+The R² metric used for scoring is included in the dataset. You can use it for local evaluation:
+
+import pandas as pd
+from metric import score
+solution = pd.read_csv('solution.csv')       # you won't have this — use for local cross-val
+submission = pd.read_csv('my_submission.csv')
+print(f"R²: {score(solution, submission, 'sample_id'):.4f}")
+Loading Data (Python)
+import numpy as np
+import pandas as pd
+# Load a training session
+sbp = np.load('train/D042_sbp.npy')              # (N, 96) — ~30% channels zeroed
+kin = np.load('train/D042_kinematics.npy')        # (N, 4)
+pos = kin[:, :2]  # index_pos, mrp_pos (evaluated)
+vel = kin[:, 2:]  # index_vel, mrp_vel (available but not evaluated)
+trials = np.load('train/D042_trial_info.npz')     # start_bins, end_bins, n_trials
+# Identify active (non-zeroed) channels
+active = ~(sbp == 0).all(axis=0)                  # ~68 of 96 channels active
+print(f"Active channels: {active.sum()}")
+# Load a test session
+sbp_test = np.load('test/D267_sbp.npy')           # (N, 96)
+trials_test = np.load('test/D267_trial_info.npz')
+# Load metadata
+meta = pd.read_csv('metadata.csv')
+train_sessions = meta[meta['split'] == 'train']['session_id'].tolist()
+test_sessions = meta[meta['split'] == 'test']['session_id'].tolist()
+# Load submission template
+sub = pd.read_csv('sample_submission.csv')
+# sub columns: sample_id, session_id, time_bin, index_pos, mrp_pos

@@ -1,0 +1,25 @@
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_setup.py:_flush():81] Configure stats pid to 2969351
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /scratch/ml8347/neuroinformatics/project2/phase2/transformer_decoder/sweep_4954587_1/wandb/run-20260325_235321-pog9zmtq/logs/debug.log
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /scratch/ml8347/neuroinformatics/project2/phase2/transformer_decoder/sweep_4954587_1/wandb/run-20260325_235321-pog9zmtq/logs/debug-internal.log
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_init.py:init():844] calling init triggers
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'data_dir': '/scratch/ml8347/neuroinformatics/project2/phase2/transformer_decoder/../kaggle_data', 'epochs': 50, 'batch_size': 64, 'lr': 0.0003, 'warmup_epochs': 5, 'd_model': 256, 'nhead': 4, 'num_layers': 4, 'd_ff': 512, 'dropout': 0.1, 'max_seq_len': 128, 'save_every': 10, 'quick': False, 'wandb': True, 'wandb_project': 'neuro-p2-phase2', 'wandb_name': 'txf_lr3e-4_do0.10_L4_ep50', '_wandb': {}}
+2026-03-25 23:53:21,767 INFO    MainThread:2969351 [wandb_init.py:init():892] starting backend
+2026-03-25 23:53:22,886 INFO    MainThread:2969351 [wandb_init.py:init():895] sending inform_init request
+2026-03-25 23:53:22,910 INFO    MainThread:2969351 [wandb_init.py:init():903] backend started and connected
+2026-03-25 23:53:23,579 INFO    MainThread:2969351 [wandb_init.py:init():973] updated telemetry
+2026-03-25 23:53:23,582 INFO    MainThread:2969351 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-25 23:53:23,924 INFO    MainThread:2969351 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-25 23:53:24,834 INFO    MainThread:2969351 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-25 23:53:24,834 INFO    MainThread:2969351 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-25 23:53:24,834 INFO    MainThread:2969351 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-25 23:53:24,834 INFO    MainThread:2969351 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-25 23:53:24,864 INFO    MainThread:2969351 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-25 23:53:39,411 INFO    MainThread:2969351 [wandb_run.py:_config_callback():1403] config_cb None None {'n_params': 2192002, 'n_trials': 59601}
+2026-03-26 00:02:41,910 INFO    MainThread:2969351 [wandb_run.py:_finish():2291] finishing run limjiannn-new-york-university/neuro-p2-phase2/pog9zmtq
+2026-03-26 00:02:41,911 INFO    MainThread:2969351 [wandb_run.py:_atexit_cleanup():2490] got exitcode: 0
+2026-03-26 00:02:41,912 INFO    MainThread:2969351 [wandb_run.py:_restore():2472] restore
+2026-03-26 00:02:41,912 INFO    MainThread:2969351 [wandb_run.py:_restore():2478] restore done
+2026-03-26 00:02:42,855 INFO    MainThread:2969351 [wandb_run.py:_footer_sync_info():3868] logging synced files

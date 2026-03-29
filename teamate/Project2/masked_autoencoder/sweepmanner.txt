@@ -1,0 +1,12 @@
+# One-shot full pipeline (sweep -> pick best -> submission variants)
+cd /home/th3482/course/Neuroinformatic/Project2/masked_autoencoder
+
+# Ensure wandb key is configured for non-interactive sbatch
+# export WANDB_API_KEY=your_key
+
+sbatch full_pipeline.sbatch
+
+# Outputs:
+# /scratch/th3482/neuroinformatics/project2/masked_autoencoder/full_<JOBID>.out
+# /scratch/th3482/neuroinformatics/project2/masked_autoencoder/sub_best_*.csv
+# /scratch/th3482/neuroinformatics/project2/masked_autoencoder/full_pipeline_summary_<JOBID>.txt

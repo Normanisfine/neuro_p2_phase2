@@ -1,0 +1,38 @@
+INFO:    FUSE2FS (3): Warning: Mounting unchecked fs, running e2fsck is recommended.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ml8347/.netrc.
+wandb: Currently logged in as: limjiannn (limjiannn-new-york-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 0f2zp2rz
+wandb: Tracking run with wandb version 0.25.0
+wandb: Run data is saved locally in /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/wandb/run-20260304_193359-0f2zp2rz
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run mae_lr3e-4_do0.05_ep50_wu5_rw0.00
+wandb: ⭐️ View project at https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase1
+wandb: 🚀 View run at https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase1/runs/0f2zp2rz
+/scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/train.py:72: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: 
+wandb: Run history:
+wandb:      epoch ▁▁▁▁▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇███
+wandb:         lr ▄▅▇███████▇▇▇▇▇▆▆▆▆▅▅▅▄▄▄▃▃▃▃▂▂▂▂▂▁▁▁▁▁▁
+wandb:     time_s █▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: train/loss █▅▄▃▃▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   val/best █▇▆▆▅▅▄▄▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:   val/nmse █▇▆▅▅▄▄▃▃▃▃▃▂▃▂▂▂▂▂▂▂▂▂▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:    best_epoch 49
+wandb:         epoch 50
+wandb:            lr 0.0
+wandb: nmse/best_val 0.7289
+wandb: nmse/full_val 0.73019
+wandb:        time_s 20.13866
+wandb:    train/loss 0.71711
+wandb:      val/best 0.7289
+wandb:      val/nmse 0.72897
+wandb: 
+wandb: 🚀 View run mae_lr3e-4_do0.05_ep50_wu5_rw0.00 at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase1/runs/0f2zp2rz
+wandb: ⭐️ View project at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase1
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260304_193359-0f2zp2rz/logs

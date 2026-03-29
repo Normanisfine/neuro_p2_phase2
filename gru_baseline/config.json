@@ -1,0 +1,13 @@
+{
+  "hidden_dim": 256,
+  "num_layers": 2,
+  "dropout": 0.1,
+  "max_seq_len": 128,
+  "warmup_epochs": 3,
+  "epochs": 30,
+  "batch_size": 128,
+  "lr": 0.0005,
+  "best_val_r2": 0.7044814861689953,
+  "best_epoch": 13,
+  "full_val_r2": 0.49766814129306597
+}

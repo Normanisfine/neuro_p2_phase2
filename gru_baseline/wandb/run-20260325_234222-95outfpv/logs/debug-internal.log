@@ -1,0 +1,12 @@
+{"time":"2026-03-25T23:42:24.042241868-04:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-25T23:42:24.614568977-04:00","level":"INFO","msg":"stream: created new stream","id":"95outfpv"}
+{"time":"2026-03-25T23:42:24.61469814-04:00","level":"INFO","msg":"handler: started","stream_id":"95outfpv"}
+{"time":"2026-03-25T23:42:24.621162357-04:00","level":"INFO","msg":"stream: started","id":"95outfpv"}
+{"time":"2026-03-25T23:42:24.621300763-04:00","level":"INFO","msg":"writer: started","stream_id":"95outfpv"}
+{"time":"2026-03-25T23:42:24.621323453-04:00","level":"INFO","msg":"sender: started","stream_id":"95outfpv"}
+{"time":"2026-03-25T23:48:19.274161085-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-25T23:48:19.541420485-04:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-25T23:48:19.553194571-04:00","level":"INFO","msg":"stream: closing","id":"95outfpv"}
+{"time":"2026-03-25T23:48:19.553200171-04:00","level":"INFO","msg":"handler: closed","stream_id":"95outfpv"}
+{"time":"2026-03-25T23:48:19.560022877-04:00","level":"INFO","msg":"sender: closed","stream_id":"95outfpv"}
+{"time":"2026-03-25T23:48:19.560036138-04:00","level":"INFO","msg":"stream: closed","id":"95outfpv"}

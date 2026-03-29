@@ -1,0 +1,171 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            cbmsczag2m66twxmh1ozptfee7gdcrs6:
+                args:
+                    - --config
+                    - /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/configs/mae_ctx_m2_uf4.json
+                    - --wandb
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 80
+                cpu_count_logical: 80
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "56404180992"
+                        used: "694964224"
+                email: limjiannn@gmail.com
+                executable: /scratch/ml8347/conda/envs/neuroinformatics/bin/python
+                gpu: NVIDIA A100-SXM4-80GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-bbda8836-53bc-4145-7e8c-b4e8679df326
+                host: ga013.hpc.nyu.edu
+                memory:
+                    total: "1081288417280"
+                os: Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39
+                program: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py
+                python: CPython 3.10.19
+                root: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab
+                slurm:
+                    array_job_id: "5069454"
+                    array_task_count: "8"
+                    array_task_id: "0"
+                    array_task_max: "7"
+                    array_task_min: "0"
+                    array_task_step: "1"
+                    cluster_name: torch
+                    conf: /opt/slurm/data/slurmd/conf-cache/slurm.conf
+                    cpus_on_node: "8"
+                    cpus_per_task: "8"
+                    gpus_on_node: "1"
+                    gtids: "0"
+                    job_account: torch_pr_38_tandon_advanced
+                    job_cpus_per_node: "8"
+                    job_end_time: "1774741640"
+                    job_gid: "3940421"
+                    job_gpus: "2"
+                    job_id: "5069455"
+                    job_name: p2_paper_sw
+                    job_nodelist: ga013
+                    job_num_nodes: "1"
+                    job_partition: a100_tandon
+                    job_qos: gpu48
+                    job_start_time: "1774720040"
+                    job_uid: "3940421"
+                    job_user: ml8347
+                    jobid: "5069455"
+                    jobtmp: /state/partition1/job-5069455
+                    localid: "0"
+                    mem_per_node: "65536"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: ga013
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    script_context: prolog_task
+                    submit_dir: /scratch/ml8347
+                    submit_host: torch-login-a-0.hpc-infra.svc.cluster.local
+                    task_pid: "3937342"
+                    tasks_per_node: "1"
+                    tmpdir: /state/partition1/job-5069455
+                    topology_addr: ga013
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=8
+                startedAt: "2026-03-28T17:47:41.943770Z"
+                writerId: cbmsczag2m66twxmh1ozptfee7gdcrs6
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+                - 62
+            "4": 3.10.19
+            "5": 0.25.0
+            "8":
+                - 2
+            "12": 0.25.0
+            "13": linux-x86_64
+batch_size:
+    value: 48
+config_name:
+    value: mae_ctx_m2_uf4
+config_path:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/configs/mae_ctx_m2_uf4.json
+consistency_weight:
+    value: 0.25
+d_ff:
+    value: 512
+d_model:
+    value: 256
+data_dir:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/kaggle_data
+dropout:
+    value: 0.1
+encoder_lr:
+    value: 1e-05
+epochs:
+    value: 50
+extra_dropout_max:
+    value: 6
+head_lr:
+    value: 0.0004
+inference_stride:
+    value: 96
+lr:
+    value: 0.0003
+max_seq_len:
+    value: 192
+n_params:
+    value: 2446596
+n_trials:
+    value: 59601
+n_val_sessions:
+    value: 8
+nhead:
+    value: 4
+num_layers:
+    value: 4
+outdir:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/mae_ctx_m2_uf4
+position_blend:
+    value: 0.8
+pretrained_checkpoint:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/teamate/Project2/cpt/m2.pt
+save_every:
+    value: 10
+seed:
+    value: 3
+spint_channel_dim:
+    value: 128
+spint_channel_layers:
+    value: 2
+train_input_proj:
+    value: false
+unfreeze_last_n:
+    value: 4
+variant:
+    value: mae_context
+vel_weight:
+    value: 2
+wandb:
+    value: true
+wandb_name:
+    value: null
+wandb_project:
+    value: neuro-p2-paper-sweep
+warmup_epochs:
+    value: 5

@@ -1,0 +1,15 @@
+INFO:    FUSE2FS (3): Warning: Mounting unchecked fs, running e2fsck is recommended.
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ml8347/.netrc.
+wandb: Currently logged in as: limjiannn (limjiannn-new-york-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run ve9qfgg3
+wandb: Tracking run with wandb version 0.25.0
+wandb: Run data is saved locally in /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/wandb/run-20260328_135406-ve9qfgg3
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run spint_wide
+wandb: ⭐️ View project at https://wandb.ai/limjiannn-new-york-university/neuro-p2-paper-sweep
+wandb: 🚀 View run at https://wandb.ai/limjiannn-new-york-university/neuro-p2-paper-sweep/runs/ve9qfgg3
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:431: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.channel_encoder = nn.TransformerEncoder(ch_layer, num_layers=channel_layers)
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:446: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.time_encoder = nn.TransformerEncoder(time_layer, num_layers=num_layers)
+[2026-03-28T19:53:46.013] error: *** JOB 5069527 ON gl006 CANCELLED AT 2026-03-28T19:53:46 DUE TO TIME LIMIT ***

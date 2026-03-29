@@ -1,0 +1,21 @@
+{
+  "d_model": 256,
+  "nhead": 4,
+  "num_layers": 6,
+  "d_ff": 512,
+  "dropout": 0.1,
+  "max_seq_len": 192,
+  "inference_stride": 96,
+  "position_blend": 0.7,
+  "vel_weight": 0.5,
+  "consistency_weight": 0.25,
+  "extra_dropout_max": 8,
+  "warmup_epochs": 5,
+  "epochs": 60,
+  "batch_size": 48,
+  "lr": 0.0003,
+  "seed": 0,
+  "best_val_r2": 0.7410555414443083,
+  "best_epoch": 49,
+  "full_val_r2": 0.6098576555238636
+}

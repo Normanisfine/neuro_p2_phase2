@@ -1,0 +1,6 @@
+{"time":"2026-03-28T13:53:24.79360482-04:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-28T13:53:25.213498089-04:00","level":"INFO","msg":"stream: created new stream","id":"hcjsbawx"}
+{"time":"2026-03-28T13:53:25.213596654-04:00","level":"INFO","msg":"handler: started","stream_id":"hcjsbawx"}
+{"time":"2026-03-28T13:53:25.219680547-04:00","level":"INFO","msg":"stream: started","id":"hcjsbawx"}
+{"time":"2026-03-28T13:53:25.219810185-04:00","level":"INFO","msg":"writer: started","stream_id":"hcjsbawx"}
+{"time":"2026-03-28T13:53:25.219831433-04:00","level":"INFO","msg":"sender: started","stream_id":"hcjsbawx"}

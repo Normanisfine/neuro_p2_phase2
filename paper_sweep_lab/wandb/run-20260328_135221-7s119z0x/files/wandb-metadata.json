@@ -1,0 +1,88 @@
+{
+  "os":  "Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-03-28T17:52:21.235042Z",
+  "args":  [
+    "--config",
+    "/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/configs/mae_mt_p1best_vw4.json",
+    "--wandb"
+  ],
+  "program":  "/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py",
+  "codePath":  "train.py",
+  "codePathLocal":  "train.py",
+  "email":  "limjiannn@gmail.com",
+  "root":  "/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab",
+  "host":  "gl007.hpc.nyu.edu",
+  "executable":  "/scratch/ml8347/conda/envs/neuroinformatics/bin/python",
+  "cpu_count":  128,
+  "cpu_count_logical":  128,
+  "gpu":  "NVIDIA L40S",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "56404180992",
+      "used":  "694964224"
+    }
+  },
+  "memory":  {
+    "total":  "540218810368"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA L40S",
+      "memoryTotal":  "48305799168",
+      "cudaCores":  18176,
+      "architecture":  "Ada",
+      "uuid":  "GPU-ca9a02f2-7480-8e5b-a905-90c312db21ab"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "slurm":  {
+    "array_job_id":  "5069454",
+    "array_task_count":  "8",
+    "array_task_id":  "3",
+    "array_task_max":  "7",
+    "array_task_min":  "0",
+    "array_task_step":  "1",
+    "cluster_name":  "torch",
+    "conf":  "/opt/slurm/data/slurmd/conf-cache/slurm.conf",
+    "cpus_on_node":  "8",
+    "cpus_per_task":  "8",
+    "gpus_on_node":  "1",
+    "gtids":  "0",
+    "job_account":  "torch_pr_38_tandon_advanced",
+    "job_cpus_per_node":  "8",
+    "job_end_time":  "1774741907",
+    "job_gid":  "3940421",
+    "job_gpus":  "0",
+    "job_id":  "5069484",
+    "job_name":  "p2_paper_sw",
+    "job_nodelist":  "gl007",
+    "job_num_nodes":  "1",
+    "job_partition":  "l40s_public",
+    "job_qos":  "gpu48",
+    "job_start_time":  "1774720307",
+    "job_uid":  "3940421",
+    "job_user":  "ml8347",
+    "jobid":  "5069484",
+    "jobtmp":  "/state/partition1/job-5069484",
+    "localid":  "0",
+    "mem_per_node":  "65536",
+    "nnodes":  "1",
+    "nodeid":  "0",
+    "nodelist":  "gl007",
+    "oom_kill_step":  "0",
+    "prio_process":  "0",
+    "procid":  "0",
+    "script_context":  "prolog_task",
+    "submit_dir":  "/scratch/ml8347",
+    "submit_host":  "torch-login-a-0.hpc-infra.svc.cluster.local",
+    "task_pid":  "652214",
+    "tasks_per_node":  "1",
+    "tmpdir":  "/state/partition1/job-5069484",
+    "topology_addr":  "gl007",
+    "topology_addr_pattern":  "node",
+    "tres_per_task":  "cpu=8"
+  },
+  "writerId":  "qmlhifhxwyho6pp5g4q2bp12rao4xcag"
+}

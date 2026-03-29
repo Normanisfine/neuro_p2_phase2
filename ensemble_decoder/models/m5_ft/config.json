@@ -1,0 +1,18 @@
+{
+  "d_model": 256,
+  "nhead": 4,
+  "num_layers": 4,
+  "d_ff": 512,
+  "max_seq_len": 128,
+  "dropout": 0.1,
+  "warmup_epochs": 5,
+  "epochs": 50,
+  "batch_size": 64,
+  "encoder_lr": 1e-05,
+  "head_lr": 0.0005,
+  "seed": 3,
+  "pretrained_checkpoint": "/scratch/ml8347/neuroinformatics/project2/phase2/ensemble_decoder/../teamate/Project2/cpt/m5.pt",
+  "best_val_r2": 0.6612353277684277,
+  "best_epoch": 36,
+  "full_val_r2": 0.5100821759636802
+}

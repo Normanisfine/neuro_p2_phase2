@@ -1,0 +1,20 @@
+# Large binary data files
+*.npy
+*.npz
+*.pt
+*.pth
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Wandb binary run files
+*.wandb
+
+# Large submission/data CSVs (78-132MB, exceed GitHub limits)
+submission*.csv
+kaggle_data/
+
+# Keep SLURM output/error logs
+.out
+.err

@@ -1,0 +1,61 @@
+Device: cuda
+Train: 159, Val: 28
+Building dataset...
+  59601 trials (14.6s)
+/scratch/ml8347/neuroinformatics/project2/phase2/transformer_decoder/train.py:74: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)
+Params: 2,192,002
+Ep   1/50 | loss=0.0453 | val_r2=0.5958 * | lr=6.67e-04 | 13s
+Ep   2/50 | loss=0.0342 | val_r2=0.6118 * | lr=1.00e-03 | 10s
+Ep   3/50 | loss=0.0326 | val_r2=0.6034  | lr=1.00e-03 | 10s
+Ep   4/50 | loss=0.0291 | val_r2=0.6446 * | lr=9.99e-04 | 10s
+Ep   5/50 | loss=0.0265 | val_r2=0.6184  | lr=9.96e-04 | 10s
+Ep   6/50 | loss=0.0253 | val_r2=0.6563 * | lr=9.90e-04 | 11s
+Ep   7/50 | loss=0.0236 | val_r2=0.6424  | lr=9.82e-04 | 11s
+Ep   8/50 | loss=0.0225 | val_r2=0.6214  | lr=9.73e-04 | 11s
+Ep   9/50 | loss=0.0218 | val_r2=0.6434  | lr=9.61e-04 | 11s
+Ep  10/50 | loss=0.0207 | val_r2=0.6063  | lr=9.47e-04 | 11s
+Ep  11/50 | loss=0.0200 | val_r2=0.5758  | lr=9.31e-04 | 12s
+Ep  12/50 | loss=0.0193 | val_r2=0.6192  | lr=9.13e-04 | 11s
+Ep  13/50 | loss=0.0186 | val_r2=0.5856  | lr=8.93e-04 | 11s
+Ep  14/50 | loss=0.0177 | val_r2=0.5942  | lr=8.72e-04 | 11s
+Ep  15/50 | loss=0.0173 | val_r2=0.5934  | lr=8.49e-04 | 12s
+Ep  16/50 | loss=0.0168 | val_r2=0.5691  | lr=8.25e-04 | 11s
+Ep  17/50 | loss=0.0165 | val_r2=0.5734  | lr=7.99e-04 | 11s
+Ep  18/50 | loss=0.0156 | val_r2=0.6085  | lr=7.71e-04 | 12s
+Ep  19/50 | loss=0.0151 | val_r2=0.5588  | lr=7.43e-04 | 11s
+Ep  20/50 | loss=0.0149 | val_r2=0.5679  | lr=7.13e-04 | 11s
+Ep  21/50 | loss=0.0142 | val_r2=0.5998  | lr=6.83e-04 | 12s
+Ep  22/50 | loss=0.0136 | val_r2=0.5943  | lr=6.52e-04 | 11s
+Ep  23/50 | loss=0.0135 | val_r2=0.5651  | lr=6.20e-04 | 10s
+Ep  24/50 | loss=0.0129 | val_r2=0.5807  | lr=5.87e-04 | 10s
+Ep  25/50 | loss=0.0125 | val_r2=0.5810  | lr=5.55e-04 | 11s
+Ep  26/50 | loss=0.0122 | val_r2=0.5807  | lr=5.22e-04 | 10s
+Ep  27/50 | loss=0.0119 | val_r2=0.5848  | lr=4.88e-04 | 11s
+Ep  28/50 | loss=0.0114 | val_r2=0.5770  | lr=4.55e-04 | 11s
+Ep  29/50 | loss=0.0111 | val_r2=0.6012  | lr=4.23e-04 | 11s
+Ep  30/50 | loss=0.0107 | val_r2=0.5820  | lr=3.90e-04 | 10s
+Ep  31/50 | loss=0.0104 | val_r2=0.5803  | lr=3.58e-04 | 11s
+Ep  32/50 | loss=0.0101 | val_r2=0.5705  | lr=3.27e-04 | 10s
+Ep  33/50 | loss=0.0098 | val_r2=0.5592  | lr=2.97e-04 | 10s
+Ep  34/50 | loss=0.0094 | val_r2=0.5451  | lr=2.67e-04 | 10s
+Ep  35/50 | loss=0.0092 | val_r2=0.5843  | lr=2.39e-04 | 11s
+Ep  36/50 | loss=0.0088 | val_r2=0.5616  | lr=2.11e-04 | 10s
+Ep  37/50 | loss=0.0086 | val_r2=0.5645  | lr=1.85e-04 | 10s
+Ep  38/50 | loss=0.0083 | val_r2=0.5555  | lr=1.61e-04 | 12s
+Ep  39/50 | loss=0.0080 | val_r2=0.5597  | lr=1.38e-04 | 11s
+Ep  40/50 | loss=0.0078 | val_r2=0.5616  | lr=1.17e-04 | 10s
+Ep  41/50 | loss=0.0076 | val_r2=0.5475  | lr=9.69e-05 | 10s
+Ep  42/50 | loss=0.0074 | val_r2=0.5443  | lr=7.91e-05 | 12s
+Ep  43/50 | loss=0.0073 | val_r2=0.5475  | lr=6.32e-05 | 10s
+Ep  44/50 | loss=0.0072 | val_r2=0.5429  | lr=4.93e-05 | 10s
+Ep  45/50 | loss=0.0070 | val_r2=0.5456  | lr=3.74e-05 | 10s
+Ep  46/50 | loss=0.0069 | val_r2=0.5418  | lr=2.76e-05 | 11s
+Ep  47/50 | loss=0.0069 | val_r2=0.5426  | lr=1.99e-05 | 10s
+Ep  48/50 | loss=0.0068 | val_r2=0.5453  | lr=1.44e-05 | 10s
+Ep  49/50 | loss=0.0068 | val_r2=0.5472  | lr=1.11e-05 | 10s
+Ep  50/50 | loss=0.0067 | val_r2=0.5464  | lr=1.00e-05 | 10s
+
+Full validation with best model...
+Full val R²: 0.4242 (best epoch 6)
+Saved config.json, best_model.pt, last_model.pt

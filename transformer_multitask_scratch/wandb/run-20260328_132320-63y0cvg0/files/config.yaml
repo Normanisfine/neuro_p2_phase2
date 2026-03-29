@@ -1,0 +1,167 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            dp2vg5qd6vni6uizag6i2tndnz0p9fuc:
+                args:
+                    - --epochs
+                    - "60"
+                    - --batch-size
+                    - "48"
+                    - --lr
+                    - "3e-4"
+                    - --warmup-epochs
+                    - "5"
+                    - --num-layers
+                    - "6"
+                    - --dropout
+                    - "0.1"
+                    - --max-seq-len
+                    - "192"
+                    - --inference-stride
+                    - "96"
+                    - --position-blend
+                    - "0.7"
+                    - --vel-weight
+                    - "0.5"
+                    - --consistency-weight
+                    - "0.25"
+                    - --extra-dropout-max
+                    - "8"
+                    - --wandb
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 128
+                cpu_count_logical: 128
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "56404180992"
+                        used: "694964224"
+                email: limjiannn@gmail.com
+                executable: /scratch/ml8347/conda/envs/neuroinformatics/bin/python
+                gpu: NVIDIA L40S
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ada
+                      cudaCores: 18176
+                      memoryTotal: "48305799168"
+                      name: NVIDIA L40S
+                      uuid: GPU-148df1b9-5d71-cda9-f0f8-90b4f16a2034
+                host: gl004.hpc.nyu.edu
+                memory:
+                    total: "540218806272"
+                os: Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39
+                program: /scratch/ml8347/neuroinformatics/project2/phase2/transformer_multitask_scratch/train.py
+                python: CPython 3.10.19
+                root: /scratch/ml8347/neuroinformatics/project2/phase2/transformer_multitask_scratch
+                slurm:
+                    cluster_name: torch
+                    conf: /opt/slurm/data/slurmd/conf-cache/slurm.conf
+                    cpus_on_node: "8"
+                    cpus_per_task: "8"
+                    gpus_on_node: "1"
+                    gtids: "0"
+                    job_account: torch_pr_38_tandon_advanced
+                    job_cpus_per_node: "8"
+                    job_end_time: "1774747367"
+                    job_gid: "3940421"
+                    job_gpus: "0"
+                    job_id: "5068920"
+                    job_name: txf_mt_scr
+                    job_nodelist: gl004
+                    job_num_nodes: "1"
+                    job_partition: l40s_public
+                    job_qos: gpu48
+                    job_start_time: "1774718567"
+                    job_uid: "3940421"
+                    job_user: ml8347
+                    jobid: "5068920"
+                    jobtmp: /state/partition1/job-5068920
+                    localid: "0"
+                    mem_per_node: "65536"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: gl004
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    script_context: prolog_task
+                    submit_dir: /scratch/ml8347
+                    submit_host: torch-login-a-0.hpc-infra.svc.cluster.local
+                    task_pid: "2508090"
+                    tasks_per_node: "1"
+                    tmpdir: /state/partition1/job-5068920
+                    topology_addr: gl004
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=8
+                startedAt: "2026-03-28T17:23:20.437579Z"
+                writerId: dp2vg5qd6vni6uizag6i2tndnz0p9fuc
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+                - 62
+            "4": 3.10.19
+            "5": 0.25.0
+            "8":
+                - 2
+            "12": 0.25.0
+            "13": linux-x86_64
+batch_size:
+    value: 48
+consistency_weight:
+    value: 0.25
+d_ff:
+    value: 512
+d_model:
+    value: 256
+data_dir:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/transformer_multitask_scratch/../kaggle_data
+dropout:
+    value: 0.1
+epochs:
+    value: 60
+extra_dropout_max:
+    value: 8
+inference_stride:
+    value: 96
+lr:
+    value: 0.0003
+max_seq_len:
+    value: 192
+n_params:
+    value: 3345156
+n_trials:
+    value: 59601
+n_val_sessions:
+    value: 8
+nhead:
+    value: 4
+num_layers:
+    value: 6
+position_blend:
+    value: 0.7
+quick:
+    value: false
+save_every:
+    value: 10
+seed:
+    value: 0
+vel_weight:
+    value: 0.5
+wandb:
+    value: true
+wandb_name:
+    value: null
+wandb_project:
+    value: neuro-p2-scratch-mt
+warmup_epochs:
+    value: 5

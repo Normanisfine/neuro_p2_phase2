@@ -1,0 +1,16 @@
+{
+  "variant": "transformer_multitask",
+  "epochs": 60,
+  "batch_size": 48,
+  "lr": 0.0003,
+  "dropout": 0.1,
+  "num_layers": 6,
+  "max_seq_len": 192,
+  "inference_stride": 96,
+  "position_blend": 0.7,
+  "vel_weight": 4.0,
+  "consistency_weight": 0.5,
+  "extra_dropout_max": 8,
+  "n_val_sessions": 8,
+  "seed": 0
+}

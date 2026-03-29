@@ -1,0 +1,15 @@
+{
+  "d_model": 256,
+  "nhead": 4,
+  "num_layers": 6,
+  "d_ff": 512,
+  "max_seq_len": 128,
+  "dropout": 0.1,
+  "warmup_epochs": 5,
+  "epochs": 40,
+  "batch_size": 64,
+  "lr": 0.0005,
+  "best_val_r2": 0.641829070349464,
+  "best_epoch": 14,
+  "full_val_r2": 0.40391280397799706
+}

@@ -1,0 +1,26 @@
+Train: 159, Val: 28, Val subset: 8
+Building dataset...
+  59601 trials (14.7s)
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:431: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.channel_encoder = nn.TransformerEncoder(ch_layer, num_layers=channel_layers)
+/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/train.py:446: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.time_encoder = nn.TransformerEncoder(time_layer, num_layers=num_layers)
+Params: 3,183,557
+Ep   1/60 | loss=0.0861 (pos=0.0841 vel=0.0005 cons=0.0002; wpos=0.0841 wvel=0.0019 wcons=0.0001) | val_r2=0.0476 * | lr0=1.20e-04 lr1=1.20e-04 | 1149s
+Ep   2/60 | loss=0.0841 (pos=0.0825 vel=0.0004 cons=0.0001; wpos=0.0825 wvel=0.0016 wcons=0.0001) | val_r2=0.0775 * | lr0=1.80e-04 lr1=1.80e-04 | 1151s
+Ep   3/60 | loss=0.0821 (pos=0.0805 vel=0.0004 cons=0.0002; wpos=0.0805 wvel=0.0015 wcons=0.0001) | val_r2=0.0698  | lr0=2.40e-04 lr1=2.40e-04 | 1151s
+Ep   4/60 | loss=0.0808 (pos=0.0792 vel=0.0004 cons=0.0002; wpos=0.0792 wvel=0.0015 wcons=0.0001) | val_r2=0.0954 * | lr0=3.00e-04 lr1=3.00e-04 | 1151s
+Ep   5/60 | loss=0.0801 (pos=0.0786 vel=0.0004 cons=0.0002; wpos=0.0786 wvel=0.0015 wcons=0.0001) | val_r2=0.1089 * | lr0=3.00e-04 lr1=3.00e-04 | 1151s
+Ep   6/60 | loss=0.0782 (pos=0.0766 vel=0.0004 cons=0.0003; wpos=0.0766 wvel=0.0015 wcons=0.0001) | val_r2=0.1369 * | lr0=3.00e-04 lr1=3.00e-04 | 1151s
+Ep   7/60 | loss=0.0763 (pos=0.0747 vel=0.0004 cons=0.0003; wpos=0.0747 wvel=0.0014 wcons=0.0002) | val_r2=0.1039  | lr0=2.99e-04 lr1=2.99e-04 | 1151s
+Ep   8/60 | loss=0.0746 (pos=0.0730 vel=0.0004 cons=0.0004; wpos=0.0730 wvel=0.0014 wcons=0.0002) | val_r2=0.1551 * | lr0=2.98e-04 lr1=2.98e-04 | 1151s
+Ep   9/60 | loss=0.0737 (pos=0.0721 vel=0.0004 cons=0.0004; wpos=0.0721 wvel=0.0014 wcons=0.0002) | val_r2=0.1654 * | lr0=2.96e-04 lr1=2.96e-04 | 1150s
+Ep  10/60 | loss=0.0727 (pos=0.0711 vel=0.0004 cons=0.0004; wpos=0.0711 wvel=0.0014 wcons=0.0002) | val_r2=0.0929  | lr0=2.94e-04 lr1=2.94e-04 | 1151s
+Ep  11/60 | loss=0.0720 (pos=0.0704 vel=0.0003 cons=0.0004; wpos=0.0704 wvel=0.0014 wcons=0.0002) | val_r2=0.2136 * | lr0=2.91e-04 lr1=2.91e-04 | 1150s
+Ep  12/60 | loss=0.0702 (pos=0.0686 vel=0.0003 cons=0.0004; wpos=0.0686 wvel=0.0014 wcons=0.0002) | val_r2=0.1400  | lr0=2.88e-04 lr1=2.88e-04 | 1151s
+Ep  13/60 | loss=0.0676 (pos=0.0660 vel=0.0003 cons=0.0005; wpos=0.0660 wvel=0.0014 wcons=0.0003) | val_r2=0.1968  | lr0=2.85e-04 lr1=2.85e-04 | 1152s
+Ep  14/60 | loss=0.0647 (pos=0.0631 vel=0.0003 cons=0.0006; wpos=0.0631 wvel=0.0013 wcons=0.0003) | val_r2=0.1681  | lr0=2.81e-04 lr1=2.81e-04 | 1151s
+Ep  15/60 | loss=0.0627 (pos=0.0611 vel=0.0003 cons=0.0006; wpos=0.0611 wvel=0.0013 wcons=0.0003) | val_r2=0.2041  | lr0=2.76e-04 lr1=2.76e-04 | 1151s
+Ep  16/60 | loss=0.0607 (pos=0.0590 vel=0.0003 cons=0.0006; wpos=0.0590 wvel=0.0013 wcons=0.0003) | val_r2=0.1946  | lr0=2.72e-04 lr1=2.72e-04 | 1152s
+Ep  17/60 | loss=0.0588 (pos=0.0572 vel=0.0003 cons=0.0007; wpos=0.0572 wvel=0.0013 wcons=0.0003) | val_r2=0.2339 * | lr0=2.66e-04 lr1=2.66e-04 | 1151s
+Ep  18/60 | loss=0.0568 (pos=0.0552 vel=0.0003 cons=0.0007; wpos=0.0552 wvel=0.0013 wcons=0.0004) | val_r2=0.2191  | lr0=2.61e-04 lr1=2.61e-04 | 1150s

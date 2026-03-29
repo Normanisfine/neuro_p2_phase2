@@ -1,0 +1,20 @@
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_setup.py:_flush():81] Configure stats pid to 2139211
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/wandb/run-20260328_135406-ve9qfgg3/logs/debug.log
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/wandb/run-20260328_135406-ve9qfgg3/logs/debug-internal.log
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_init.py:init():844] calling init triggers
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'variant': 'spint_like', 'data_dir': '/scratch/ml8347/neuroinformatics/project2/phase2/kaggle_data', 'pretrained_checkpoint': '/scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/best_model.pt', 'epochs': 60, 'batch_size': 32, 'encoder_lr': 1e-05, 'head_lr': 0.0005, 'lr': 0.0003, 'warmup_epochs': 5, 'd_model': 256, 'nhead': 4, 'num_layers': 4, 'd_ff': 512, 'dropout': 0.1, 'max_seq_len': 256, 'inference_stride': 128, 'position_blend': 0.7, 'vel_weight': 4.0, 'consistency_weight': 0.5, 'extra_dropout_max': 8, 'n_val_sessions': 8, 'seed': 1, 'save_every': 10, 'unfreeze_last_n': 2, 'train_input_proj': False, 'spint_channel_dim': 192, 'spint_channel_layers': 3, 'outdir': '/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/runs/spint_wide', 'wandb': True, 'wandb_project': 'neuro-p2-paper-sweep', 'wandb_name': None, 'config_path': '/scratch/ml8347/neuroinformatics/project2/phase2/paper_sweep_lab/configs/spint_wide.json', 'config_name': 'spint_wide', '_wandb': {}}
+2026-03-28 13:54:06,870 INFO    MainThread:2139211 [wandb_init.py:init():892] starting backend
+2026-03-28 13:54:07,312 INFO    MainThread:2139211 [wandb_init.py:init():895] sending inform_init request
+2026-03-28 13:54:07,345 INFO    MainThread:2139211 [wandb_init.py:init():903] backend started and connected
+2026-03-28 13:54:07,463 INFO    MainThread:2139211 [wandb_init.py:init():973] updated telemetry
+2026-03-28 13:54:07,464 INFO    MainThread:2139211 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-28 13:54:08,376 INFO    MainThread:2139211 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-28 13:54:09,359 INFO    MainThread:2139211 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-28 13:54:09,360 INFO    MainThread:2139211 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-28 13:54:09,360 INFO    MainThread:2139211 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-28 13:54:09,360 INFO    MainThread:2139211 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-28 13:54:09,376 INFO    MainThread:2139211 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-28 13:54:24,264 INFO    MainThread:2139211 [wandb_run.py:_config_callback():1403] config_cb None None {'n_params': 3183557, 'n_trials': 59601}

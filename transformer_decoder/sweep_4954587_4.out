@@ -1,0 +1,61 @@
+Config 4: lr5e-4_do0.05_L4_ep50
+Device: cuda
+Train: 159, Val: 28
+Building dataset...
+  59601 trials (9.8s)
+Params: 2,192,002
+Ep   1/50 | loss=0.0507 | val_r2=0.5048 * | lr=2.00e-04 | 10s
+Ep   2/50 | loss=0.0351 | val_r2=0.6376 * | lr=3.00e-04 | 11s
+Ep   3/50 | loss=0.0301 | val_r2=0.6059  | lr=4.00e-04 | 10s
+Ep   4/50 | loss=0.0275 | val_r2=0.5897  | lr=5.00e-04 | 10s
+Ep   5/50 | loss=0.0260 | val_r2=0.6193  | lr=5.00e-04 | 11s
+Ep   6/50 | loss=0.0237 | val_r2=0.5664  | lr=4.99e-04 | 10s
+Ep   7/50 | loss=0.0220 | val_r2=0.5752  | lr=4.98e-04 | 10s
+Ep   8/50 | loss=0.0206 | val_r2=0.6180  | lr=4.95e-04 | 10s
+Ep   9/50 | loss=0.0193 | val_r2=0.6006  | lr=4.90e-04 | 10s
+Ep  10/50 | loss=0.0183 | val_r2=0.6073  | lr=4.85e-04 | 11s
+Ep  11/50 | loss=0.0173 | val_r2=0.6017  | lr=4.79e-04 | 10s
+Ep  12/50 | loss=0.0166 | val_r2=0.6123  | lr=4.71e-04 | 10s
+Ep  13/50 | loss=0.0158 | val_r2=0.5585  | lr=4.62e-04 | 10s
+Ep  14/50 | loss=0.0150 | val_r2=0.5665  | lr=4.53e-04 | 10s
+Ep  15/50 | loss=0.0142 | val_r2=0.6004  | lr=4.42e-04 | 10s
+Ep  16/50 | loss=0.0138 | val_r2=0.5965  | lr=4.31e-04 | 11s
+Ep  17/50 | loss=0.0131 | val_r2=0.6005  | lr=4.18e-04 | 11s
+Ep  18/50 | loss=0.0126 | val_r2=0.5307  | lr=4.05e-04 | 10s
+Ep  19/50 | loss=0.0121 | val_r2=0.5862  | lr=3.91e-04 | 10s
+Ep  20/50 | loss=0.0115 | val_r2=0.5853  | lr=3.76e-04 | 11s
+Ep  21/50 | loss=0.0110 | val_r2=0.5249  | lr=3.61e-04 | 10s
+Ep  22/50 | loss=0.0107 | val_r2=0.6025  | lr=3.45e-04 | 11s
+Ep  23/50 | loss=0.0104 | val_r2=0.5662  | lr=3.29e-04 | 10s
+Ep  24/50 | loss=0.0100 | val_r2=0.5600  | lr=3.12e-04 | 10s
+Ep  25/50 | loss=0.0093 | val_r2=0.5588  | lr=2.95e-04 | 10s
+Ep  26/50 | loss=0.0089 | val_r2=0.5961  | lr=2.78e-04 | 10s
+Ep  27/50 | loss=0.0085 | val_r2=0.5715  | lr=2.61e-04 | 10s
+Ep  28/50 | loss=0.0080 | val_r2=0.5784  | lr=2.44e-04 | 10s
+Ep  29/50 | loss=0.0076 | val_r2=0.5156  | lr=2.27e-04 | 10s
+Ep  30/50 | loss=0.0072 | val_r2=0.5667  | lr=2.10e-04 | 10s
+Ep  31/50 | loss=0.0068 | val_r2=0.5511  | lr=1.93e-04 | 11s
+Ep  32/50 | loss=0.0065 | val_r2=0.5481  | lr=1.76e-04 | 10s
+Ep  33/50 | loss=0.0062 | val_r2=0.5779  | lr=1.60e-04 | 10s
+Ep  34/50 | loss=0.0059 | val_r2=0.5975  | lr=1.44e-04 | 11s
+Ep  35/50 | loss=0.0056 | val_r2=0.5654  | lr=1.29e-04 | 10s
+Ep  36/50 | loss=0.0054 | val_r2=0.5998  | lr=1.14e-04 | 10s
+Ep  37/50 | loss=0.0051 | val_r2=0.6044  | lr=1.00e-04 | 10s
+Ep  38/50 | loss=0.0049 | val_r2=0.5960  | lr=8.69e-05 | 11s
+Ep  39/50 | loss=0.0047 | val_r2=0.5508  | lr=7.45e-05 | 11s
+Ep  40/50 | loss=0.0046 | val_r2=0.5926  | lr=6.29e-05 | 11s
+Ep  41/50 | loss=0.0044 | val_r2=0.5673  | lr=5.23e-05 | 10s
+Ep  42/50 | loss=0.0043 | val_r2=0.5964  | lr=4.26e-05 | 10s
+Ep  43/50 | loss=0.0042 | val_r2=0.5780  | lr=3.40e-05 | 11s
+Ep  44/50 | loss=0.0041 | val_r2=0.5738  | lr=2.64e-05 | 10s
+Ep  45/50 | loss=0.0040 | val_r2=0.5627  | lr=1.99e-05 | 10s
+Ep  46/50 | loss=0.0040 | val_r2=0.5689  | lr=1.46e-05 | 10s
+Ep  47/50 | loss=0.0039 | val_r2=0.5593  | lr=1.04e-05 | 10s
+Ep  48/50 | loss=0.0039 | val_r2=0.5679  | lr=7.41e-06 | 10s
+Ep  49/50 | loss=0.0039 | val_r2=0.5703  | lr=5.60e-06 | 10s
+Ep  50/50 | loss=0.0039 | val_r2=0.5698  | lr=5.00e-06 | 11s
+
+Full validation with best model...
+Full val R²: 0.4551 (best epoch 2)
+Saved config.json, best_model.pt, last_model.pt
+Config 4 done: 9m 31s

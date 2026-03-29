@@ -1,0 +1,36 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ml8347/.netrc.
+wandb: Currently logged in as: limjiannn (limjiannn-new-york-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: setting up run 95outfpv
+wandb: Tracking run with wandb version 0.25.0
+wandb: Run data is saved locally in /scratch/ml8347/neuroinformatics/project2/phase2/gru_baseline/wandb/run-20260325_234222-95outfpv
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run gru_lr0.0005_do0.1_ep30_h256
+wandb: ⭐️ View project at https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase2
+wandb: 🚀 View run at https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase2/runs/95outfpv
+wandb: updating run metadata
+wandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml
+wandb: uploading summary, console lines 37-38
+wandb: 
+wandb: Run history:
+wandb:       epoch ▁▁▁▂▂▂▂▃▃▃▃▄▄▄▄▅▅▅▅▆▆▆▆▇▇▇▇███
+wandb:          lr ▆██████▇▇▇▇▆▆▆▅▅▄▄▃▃▃▂▂▂▂▁▁▁▁▁
+wandb:      time_s █▂▂▃█▆▃▁▂▁▁▄▃▂▅▁▂▂▂▂▂▁▄▃▂▂▃▂▂▂
+wandb:  train/loss █▅▄▄▃▃▃▃▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: val/best_r2 ▁▄▆▇▇█████████████████████████
+wandb:      val/r2 ▁▄▆▇▇█▅▇▇█▇▇██▇▇▇▇▇▇▆▇▇▇▆▇▇▇▇▇
+wandb: 
+wandb: Run summary:
+wandb:  best_epoch 13
+wandb:       epoch 30
+wandb:          lr 1e-05
+wandb: r2/best_val 0.70448
+wandb: r2/full_val 0.49767
+wandb:      time_s 9.56802
+wandb:  train/loss 0.00367
+wandb: val/best_r2 0.70448
+wandb:      val/r2 0.67348
+wandb: 
+wandb: 🚀 View run gru_lr0.0005_do0.1_ep30_h256 at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase2/runs/95outfpv
+wandb: ⭐️ View project at: https://wandb.ai/limjiannn-new-york-university/neuro-p2-phase2
+wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20260325_234222-95outfpv/logs

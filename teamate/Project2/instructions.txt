@@ -1,0 +1,7 @@
+/run_from_scratch.sh is for training from scratch
+r/run_from_weights.sh is for inference from weights in cpt.zip
+
+但是我感觉这个 ensemble模型学出来的表示不一定有你原来最开始的模型好 (/scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder)
+
+
+可以先试试直接 train from scratch end2end for classification, 然后试一试用 pretrained 你的 weight 和这个 ensembled 的 weight 里某几个层的表示拿出来做 ft for classification
