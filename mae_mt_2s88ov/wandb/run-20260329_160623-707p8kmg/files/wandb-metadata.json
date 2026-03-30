@@ -1,0 +1,92 @@
+{
+  "os":  "Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-03-29T20:06:23.465329Z",
+  "args":  [
+    "--config",
+    "/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/configs/2s_88ov_zero.json",
+    "--wandb"
+  ],
+  "program":  "/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/train.py",
+  "codePath":  "mae_mt_2s88ov/train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/Normanisfine/neuro_p2.git",
+    "commit":  "390fd4965d3b8fd67fe109a662afce669dfda1e6"
+  },
+  "email":  "limjiannn@gmail.com",
+  "root":  "/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov",
+  "host":  "gl023.hpc.nyu.edu",
+  "executable":  "/scratch/ml8347/conda/envs/neuroinformatics/bin/python",
+  "cpu_count":  128,
+  "cpu_count_logical":  128,
+  "gpu":  "NVIDIA L40S",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "56404180992",
+      "used":  "694964224"
+    }
+  },
+  "memory":  {
+    "total":  "540218839040"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA L40S",
+      "memoryTotal":  "48305799168",
+      "cudaCores":  18176,
+      "architecture":  "Ada",
+      "uuid":  "GPU-00fb159b-2084-6a05-6322-a0876a90939a"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "slurm":  {
+    "array_job_id":  "5097909",
+    "array_task_count":  "2",
+    "array_task_id":  "1",
+    "array_task_max":  "1",
+    "array_task_min":  "0",
+    "array_task_step":  "1",
+    "cluster_name":  "torch",
+    "conf":  "/opt/slurm/data/slurmd/conf-cache/slurm.conf",
+    "cpus_on_node":  "8",
+    "cpus_per_task":  "8",
+    "gpus_on_node":  "1",
+    "gtids":  "0",
+    "job_account":  "torch_pr_38_tandon_advanced",
+    "job_cpus_per_node":  "8",
+    "job_end_time":  "1774843555",
+    "job_gid":  "3940421",
+    "job_gpus":  "1",
+    "job_id":  "5097909",
+    "job_name":  "mae_2s88ov",
+    "job_nodelist":  "gl023",
+    "job_num_nodes":  "1",
+    "job_partition":  "l40s_public",
+    "job_qos":  "gpu48",
+    "job_start_time":  "1774814755",
+    "job_uid":  "3940421",
+    "job_user":  "ml8347",
+    "jobid":  "5097909",
+    "jobtmp":  "/state/partition1/job-5097909",
+    "localid":  "0",
+    "mem_per_node":  "65536",
+    "nnodes":  "1",
+    "nodeid":  "0",
+    "nodelist":  "gl023",
+    "oom_kill_step":  "0",
+    "prio_process":  "0",
+    "procid":  "0",
+    "script_context":  "prolog_task",
+    "submit_dir":  "/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep",
+    "submit_host":  "cs608.hpc.nyu.edu",
+    "task_pid":  "1210492",
+    "tasks_per_node":  "1",
+    "tmpdir":  "/state/partition1/job-5097909",
+    "topology_addr":  "gl023",
+    "topology_addr_pattern":  "node",
+    "tres_per_task":  "cpu=8"
+  },
+  "writerId":  "n94vufhp518a20tr6gsaqzyiysn4romg"
+}

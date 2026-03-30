@@ -1,0 +1,14 @@
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ml8347/.netrc.
+wandb: Currently logged in as: limjiannn (limjiannn-new-york-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.25.0
+wandb: Run data is saved locally in /scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/wandb/run-20260329_160535-iva99ct7
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run 2s_88ov_nozero
+wandb: ⭐️ View project at https://wandb.ai/limjiannn-new-york-university/neuro-p2-mt-sweep
+wandb: 🚀 View run at https://wandb.ai/limjiannn-new-york-university/neuro-p2-mt-sweep/runs/iva99ct7
+/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/train.py:124: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)
+/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/train.py:297: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return loss, {"pos_loss": float(pos_loss), "vel_loss": float(vel_loss), "cons_loss": float(cons_loss)}
+[2026-03-29T18:34:12.356] error: *** JOB 5097916 ON gh008 CANCELLED AT 2026-03-29T18:34:12 DUE to SIGNAL Terminated ***

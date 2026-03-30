@@ -1,0 +1,20 @@
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_setup.py:_flush():81] Current SDK version is 0.25.0
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_setup.py:_flush():81] Configure stats pid to 1610808
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_init.py:setup_run_log_directory():717] Logging user logs to /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/wandb/run-20260329_142634-ihyuk31s/logs/debug.log
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/wandb/run-20260329_142634-ihyuk31s/logs/debug-internal.log
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_init.py:init():844] calling init triggers
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'pretrained_checkpoint': '/scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/best_model.pt', 'epochs': 50, 'batch_size': 32, 'encoder_lr': 1e-05, 'head_lr': 0.0005, 'warmup_epochs': 5, 'd_model': 256, 'nhead': 4, 'num_layers': 4, 'd_ff': 512, 'dropout': 0.1, 'window_size': 250, 'window_stride': 31, 'position_blend': 0.75, 'vel_weight': 0.5, 'consistency_weight': 0.25, 'extra_dropout_max': 8, 'n_val_sessions': 8, 'seed': 0, 'save_every': 10, 'p1_data_dir': '/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/../../kaggle_data', 'p1_splits': 'train', 'p1_n_dropout': 28, 'outdir': '/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/runs/5s_88ov', 'wandb_project': 'neuro-p2-mt-sweep', 'wandb_name': None, 'config_name': '5s_88ov', '_wandb': {}}
+2026-03-29 14:26:34,134 INFO    MainThread:1610808 [wandb_init.py:init():892] starting backend
+2026-03-29 14:26:35,192 INFO    MainThread:1610808 [wandb_init.py:init():895] sending inform_init request
+2026-03-29 14:26:35,218 INFO    MainThread:1610808 [wandb_init.py:init():903] backend started and connected
+2026-03-29 14:26:35,326 INFO    MainThread:1610808 [wandb_init.py:init():973] updated telemetry
+2026-03-29 14:26:35,424 INFO    MainThread:1610808 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-29 14:26:35,845 INFO    MainThread:1610808 [wandb_init.py:init():1042] starting run threads in backend
+2026-03-29 14:26:36,705 INFO    MainThread:1610808 [wandb_run.py:_console_start():2524] atexit reg
+2026-03-29 14:26:36,705 INFO    MainThread:1610808 [wandb_run.py:_redirect():2373] redirect: wrap_raw
+2026-03-29 14:26:36,705 INFO    MainThread:1610808 [wandb_run.py:_redirect():2442] Wrapping output streams.
+2026-03-29 14:26:36,705 INFO    MainThread:1610808 [wandb_run.py:_redirect():2465] Redirects installed.
+2026-03-29 14:26:36,727 INFO    MainThread:1610808 [wandb_init.py:init():1082] run started, returning control to user process
+2026-03-29 14:27:03,534 INFO    MainThread:1610808 [wandb_run.py:_config_callback():1403] config_cb None None {'n_params': 2291972, 'n_windows': 310651}

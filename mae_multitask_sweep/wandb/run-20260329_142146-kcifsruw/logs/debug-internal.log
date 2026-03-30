@@ -1,0 +1,12 @@
+{"time":"2026-03-29T14:21:47.203669674-04:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-29T14:21:47.755586965-04:00","level":"INFO","msg":"stream: created new stream","id":"kcifsruw"}
+{"time":"2026-03-29T14:21:47.7556581-04:00","level":"INFO","msg":"handler: started","stream_id":"kcifsruw"}
+{"time":"2026-03-29T14:21:47.778877678-04:00","level":"INFO","msg":"stream: started","id":"kcifsruw"}
+{"time":"2026-03-29T14:21:47.779113034-04:00","level":"INFO","msg":"writer: started","stream_id":"kcifsruw"}
+{"time":"2026-03-29T14:21:47.779140442-04:00","level":"INFO","msg":"sender: started","stream_id":"kcifsruw"}
+{"time":"2026-03-29T14:32:09.971491579-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-29T14:32:10.265108034-04:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-29T14:32:10.27908902-04:00","level":"INFO","msg":"stream: closing","id":"kcifsruw"}
+{"time":"2026-03-29T14:32:10.279104047-04:00","level":"INFO","msg":"handler: closed","stream_id":"kcifsruw"}
+{"time":"2026-03-29T14:32:10.284989455-04:00","level":"INFO","msg":"sender: closed","stream_id":"kcifsruw"}
+{"time":"2026-03-29T14:32:10.285004252-04:00","level":"INFO","msg":"stream: closed","id":"kcifsruw"}

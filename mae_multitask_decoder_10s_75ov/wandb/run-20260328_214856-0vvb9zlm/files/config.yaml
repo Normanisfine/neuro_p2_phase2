@@ -1,0 +1,184 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            i31d998zann2dxbqvxlabz4tmpe4bgyo:
+                args:
+                    - --epochs
+                    - "50"
+                    - --batch-size
+                    - "32"
+                    - --encoder-lr
+                    - "1e-5"
+                    - --head-lr
+                    - "5e-4"
+                    - --warmup-epochs
+                    - "5"
+                    - --dropout
+                    - "0.1"
+                    - --window-size
+                    - "500"
+                    - --window-stride
+                    - "125"
+                    - --position-blend
+                    - "0.75"
+                    - --vel-weight
+                    - "0.5"
+                    - --consistency-weight
+                    - "0.25"
+                    - --extra-dropout-max
+                    - "8"
+                    - --pretrained-checkpoint
+                    - /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/best_model.pt
+                    - --wandb
+                codePath: mae_multitask_decoder_10s_75ov/train.py
+                codePathLocal: train.py
+                cpu_count: 128
+                cpu_count_logical: 128
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "56404180992"
+                        used: "694964224"
+                email: limjiannn@gmail.com
+                executable: /scratch/ml8347/conda/envs/neuroinformatics/bin/python
+                git:
+                    commit: 390fd4965d3b8fd67fe109a662afce669dfda1e6
+                    remote: https://github.com/Normanisfine/neuro_p2.git
+                gpu: NVIDIA H200
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "150754820096"
+                      name: NVIDIA H200
+                      uuid: GPU-faed1752-2d80-fdd5-fe12-95efa2c9eed0
+                host: gh112.hpc.nyu.edu
+                memory:
+                    total: "2163454042112"
+                os: Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39
+                program: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_decoder_10s_75ov/train.py
+                python: CPython 3.10.19
+                root: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_decoder_10s_75ov
+                slurm:
+                    cluster_name: torch
+                    conf: /opt/slurm/data/slurmd/conf-cache/slurm.conf
+                    cpus_on_node: "8"
+                    cpus_per_task: "8"
+                    gpus_on_node: "1"
+                    gtids: "0"
+                    job_account: torch_pr_38_tandon_advanced
+                    job_cpus_per_node: "8"
+                    job_end_time: "1774777704"
+                    job_gid: "3940421"
+                    job_gpus: "6"
+                    job_id: "5081385"
+                    job_name: mae_mt_10s_75ov
+                    job_nodelist: gh112
+                    job_num_nodes: "1"
+                    job_partition: h200_tandon
+                    job_qos: gpu48
+                    job_start_time: "1774748904"
+                    job_uid: "3940421"
+                    job_user: ml8347
+                    jobid: "5081385"
+                    jobtmp: /state/partition1/job-5081385
+                    localid: "0"
+                    mem_per_node: "65536"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: gh112
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    script_context: prolog_task
+                    submit_dir: /scratch/ml8347/neuroinformatics/project2/phase2
+                    submit_host: torch-login-a-1.hpc-infra.svc.cluster.local
+                    task_pid: "2359452"
+                    tasks_per_node: "1"
+                    tmpdir: /state/partition1/job-5081385
+                    topology_addr: gh112
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=8
+                startedAt: "2026-03-29T01:48:56.839250Z"
+                writerId: i31d998zann2dxbqvxlabz4tmpe4bgyo
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+                - 62
+            "4": 3.10.19
+            "5": 0.25.0
+            "8":
+                - 2
+            "12": 0.25.0
+            "13": linux-x86_64
+batch_size:
+    value: 32
+consistency_weight:
+    value: 0.25
+d_ff:
+    value: 512
+d_model:
+    value: 256
+data_dir:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_decoder_10s_75ov/../kaggle_data
+dropout:
+    value: 0.1
+encoder_lr:
+    value: 1e-05
+epochs:
+    value: 50
+extra_dropout_max:
+    value: 8
+head_lr:
+    value: 0.0005
+n_params:
+    value: 2291972
+n_trials:
+    value: 31989
+n_val_sessions:
+    value: 8
+nhead:
+    value: 4
+no_pretrain:
+    value: false
+num_layers:
+    value: 4
+p1_data_dir:
+    value: ""
+p1_n_dropout:
+    value: 28
+p1_splits:
+    value: train
+position_blend:
+    value: 0.75
+pretrained_checkpoint:
+    value: /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/best_model.pt
+quick:
+    value: false
+save_every:
+    value: 10
+seed:
+    value: 0
+vel_weight:
+    value: 0.5
+wandb:
+    value: true
+wandb_name:
+    value: null
+wandb_project:
+    value: neuro-p2-multitask
+warmup_epochs:
+    value: 5
+window_size:
+    value: 500
+window_stride:
+    value: 125

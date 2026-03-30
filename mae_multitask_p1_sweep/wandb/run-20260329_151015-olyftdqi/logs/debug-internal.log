@@ -1,0 +1,12 @@
+{"time":"2026-03-29T15:10:16.699427929-04:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-29T15:10:17.048071934-04:00","level":"INFO","msg":"stream: created new stream","id":"olyftdqi"}
+{"time":"2026-03-29T15:10:17.048114986-04:00","level":"INFO","msg":"handler: started","stream_id":"olyftdqi"}
+{"time":"2026-03-29T15:10:17.056462757-04:00","level":"INFO","msg":"stream: started","id":"olyftdqi"}
+{"time":"2026-03-29T15:10:17.056482368-04:00","level":"INFO","msg":"sender: started","stream_id":"olyftdqi"}
+{"time":"2026-03-29T15:10:17.056522379-04:00","level":"INFO","msg":"writer: started","stream_id":"olyftdqi"}
+{"time":"2026-03-29T16:35:39.706049725-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-29T16:35:39.910218052-04:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-29T16:35:39.915192268-04:00","level":"INFO","msg":"stream: closing","id":"olyftdqi"}
+{"time":"2026-03-29T16:35:39.915200229-04:00","level":"INFO","msg":"handler: closed","stream_id":"olyftdqi"}
+{"time":"2026-03-29T16:35:39.919147717-04:00","level":"INFO","msg":"sender: closed","stream_id":"olyftdqi"}
+{"time":"2026-03-29T16:35:39.919154477-04:00","level":"INFO","msg":"stream: closed","id":"olyftdqi"}

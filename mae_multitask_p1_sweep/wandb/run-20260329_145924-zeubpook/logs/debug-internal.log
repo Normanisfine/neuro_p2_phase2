@@ -1,0 +1,12 @@
+{"time":"2026-03-29T14:59:25.673086618-04:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-29T14:59:26.219182289-04:00","level":"INFO","msg":"stream: created new stream","id":"zeubpook"}
+{"time":"2026-03-29T14:59:26.219255307-04:00","level":"INFO","msg":"handler: started","stream_id":"zeubpook"}
+{"time":"2026-03-29T14:59:26.227995435-04:00","level":"INFO","msg":"stream: started","id":"zeubpook"}
+{"time":"2026-03-29T14:59:26.228152761-04:00","level":"INFO","msg":"writer: started","stream_id":"zeubpook"}
+{"time":"2026-03-29T14:59:26.228183818-04:00","level":"INFO","msg":"sender: started","stream_id":"zeubpook"}
+{"time":"2026-03-29T16:21:52.667706861-04:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2026-03-29T16:21:52.840801859-04:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2026-03-29T16:21:52.852802711-04:00","level":"INFO","msg":"stream: closing","id":"zeubpook"}
+{"time":"2026-03-29T16:21:52.85281291-04:00","level":"INFO","msg":"handler: closed","stream_id":"zeubpook"}
+{"time":"2026-03-29T16:21:52.85800783-04:00","level":"INFO","msg":"sender: closed","stream_id":"zeubpook"}
+{"time":"2026-03-29T16:21:52.858024944-04:00","level":"INFO","msg":"stream: closed","id":"zeubpook"}

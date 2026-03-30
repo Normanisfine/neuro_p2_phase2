@@ -1,0 +1,70 @@
+Device: cuda
+Config: 5s_50ov_nop1
+Window: 250 bins (5.0s), stride: 125 (50% overlap)
+Outdir: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/runs/5s_50ov_nop1
+Train: 159, Val: 28, Val subset: 8
+Building dataset...
+  31989 windows (13.1s)
+/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/train.py:124: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(enc_layer, num_layers=num_layers)
+Params: 2,291,972
+Loading pretrained encoder from: /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/best_model.pt
+  Phase 1 checkpoint: epoch=49, val_nmse=0.7288985848426819
+  Transferred 50 tensors, skipped 7
+/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/train.py:297: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  return loss, {"pos_loss": float(pos_loss), "vel_loss": float(vel_loss), "cons_loss": float(cons_loss)}
+Ep   1/50 | loss=0.0809 (pos=0.0799 vel=0.0007 cons=0.0022) | val_r2=-0.1668 * | lr_enc=4.00e-06 lr_head=2.00e-04 | 14s
+Ep   2/50 | loss=0.0746 (pos=0.0736 vel=0.0005 cons=0.0032) | val_r2=0.1221 * | lr_enc=6.00e-06 lr_head=3.00e-04 | 12s
+Ep   3/50 | loss=0.0683 (pos=0.0671 vel=0.0004 cons=0.0038) | val_r2=0.2273 * | lr_enc=8.00e-06 lr_head=4.00e-04 | 12s
+Ep   4/50 | loss=0.0601 (pos=0.0588 vel=0.0004 cons=0.0046) | val_r2=0.2590 * | lr_enc=1.00e-05 lr_head=5.00e-04 | 12s
+Ep   5/50 | loss=0.0527 (pos=0.0513 vel=0.0004 cons=0.0049) | val_r2=0.3921 * | lr_enc=1.00e-05 lr_head=5.00e-04 | 12s
+Ep   6/50 | loss=0.0474 (pos=0.0460 vel=0.0004 cons=0.0049) | val_r2=0.4362 * | lr_enc=9.99e-06 lr_head=4.99e-04 | 11s
+Ep   7/50 | loss=0.0436 (pos=0.0422 vel=0.0004 cons=0.0049) | val_r2=0.4669 * | lr_enc=9.95e-06 lr_head=4.98e-04 | 11s
+Ep   8/50 | loss=0.0407 (pos=0.0394 vel=0.0004 cons=0.0048) | val_r2=0.4914 * | lr_enc=9.89e-06 lr_head=4.95e-04 | 12s
+Ep   9/50 | loss=0.0385 (pos=0.0372 vel=0.0003 cons=0.0046) | val_r2=0.5178 * | lr_enc=9.81e-06 lr_head=4.90e-04 | 12s
+Ep  10/50 | loss=0.0367 (pos=0.0354 vel=0.0003 cons=0.0045) | val_r2=0.5315 * | lr_enc=9.70e-06 lr_head=4.85e-04 | 12s
+Ep  11/50 | loss=0.0352 (pos=0.0339 vel=0.0003 cons=0.0044) | val_r2=0.5616 * | lr_enc=9.57e-06 lr_head=4.79e-04 | 12s
+Ep  12/50 | loss=0.0339 (pos=0.0327 vel=0.0003 cons=0.0042) | val_r2=0.5552  | lr_enc=9.42e-06 lr_head=4.71e-04 | 11s
+Ep  13/50 | loss=0.0329 (pos=0.0317 vel=0.0003 cons=0.0041) | val_r2=0.5701 * | lr_enc=9.25e-06 lr_head=4.62e-04 | 12s
+Ep  14/50 | loss=0.0319 (pos=0.0307 vel=0.0003 cons=0.0040) | val_r2=0.6088 * | lr_enc=9.05e-06 lr_head=4.53e-04 | 12s
+Ep  15/50 | loss=0.0310 (pos=0.0299 vel=0.0003 cons=0.0040) | val_r2=0.6146 * | lr_enc=8.84e-06 lr_head=4.42e-04 | 12s
+Ep  16/50 | loss=0.0302 (pos=0.0291 vel=0.0003 cons=0.0039) | val_r2=0.6221 * | lr_enc=8.61e-06 lr_head=4.31e-04 | 11s
+Ep  17/50 | loss=0.0296 (pos=0.0285 vel=0.0003 cons=0.0038) | val_r2=0.6283 * | lr_enc=8.36e-06 lr_head=4.18e-04 | 12s
+Ep  18/50 | loss=0.0291 (pos=0.0280 vel=0.0003 cons=0.0038) | val_r2=0.6291 * | lr_enc=8.10e-06 lr_head=4.05e-04 | 11s
+Ep  19/50 | loss=0.0285 (pos=0.0274 vel=0.0003 cons=0.0037) | val_r2=0.6218  | lr_enc=7.82e-06 lr_head=3.91e-04 | 12s
+Ep  20/50 | loss=0.0280 (pos=0.0269 vel=0.0003 cons=0.0037) | val_r2=0.6433 * | lr_enc=7.52e-06 lr_head=3.76e-04 | 12s
+Ep  21/50 | loss=0.0276 (pos=0.0265 vel=0.0003 cons=0.0037) | val_r2=0.6527 * | lr_enc=7.22e-06 lr_head=3.61e-04 | 12s
+Ep  22/50 | loss=0.0272 (pos=0.0261 vel=0.0003 cons=0.0036) | val_r2=0.6265  | lr_enc=6.90e-06 lr_head=3.45e-04 | 11s
+Ep  23/50 | loss=0.0268 (pos=0.0257 vel=0.0003 cons=0.0036) | val_r2=0.6478  | lr_enc=6.58e-06 lr_head=3.29e-04 | 12s
+Ep  24/50 | loss=0.0265 (pos=0.0254 vel=0.0003 cons=0.0036) | val_r2=0.6463  | lr_enc=6.25e-06 lr_head=3.12e-04 | 12s
+Ep  25/50 | loss=0.0261 (pos=0.0251 vel=0.0003 cons=0.0036) | val_r2=0.6403  | lr_enc=5.91e-06 lr_head=2.95e-04 | 12s
+Ep  26/50 | loss=0.0258 (pos=0.0248 vel=0.0003 cons=0.0035) | val_r2=0.6478  | lr_enc=5.57e-06 lr_head=2.78e-04 | 12s
+Ep  27/50 | loss=0.0256 (pos=0.0245 vel=0.0003 cons=0.0035) | val_r2=0.6370  | lr_enc=5.22e-06 lr_head=2.61e-04 | 12s
+Ep  28/50 | loss=0.0253 (pos=0.0243 vel=0.0003 cons=0.0035) | val_r2=0.6729 * | lr_enc=4.88e-06 lr_head=2.44e-04 | 12s
+Ep  29/50 | loss=0.0251 (pos=0.0241 vel=0.0003 cons=0.0035) | val_r2=0.6517  | lr_enc=4.53e-06 lr_head=2.27e-04 | 12s
+Ep  30/50 | loss=0.0249 (pos=0.0239 vel=0.0003 cons=0.0035) | val_r2=0.6605  | lr_enc=4.19e-06 lr_head=2.10e-04 | 11s
+Ep  31/50 | loss=0.0247 (pos=0.0237 vel=0.0003 cons=0.0035) | val_r2=0.6643  | lr_enc=3.85e-06 lr_head=1.93e-04 | 12s
+Ep  32/50 | loss=0.0245 (pos=0.0235 vel=0.0003 cons=0.0035) | val_r2=0.6492  | lr_enc=3.52e-06 lr_head=1.76e-04 | 12s
+Ep  33/50 | loss=0.0244 (pos=0.0234 vel=0.0003 cons=0.0034) | val_r2=0.6529  | lr_enc=3.20e-06 lr_head=1.60e-04 | 12s
+Ep  34/50 | loss=0.0242 (pos=0.0232 vel=0.0003 cons=0.0034) | val_r2=0.6590  | lr_enc=2.88e-06 lr_head=1.44e-04 | 11s
+Ep  35/50 | loss=0.0240 (pos=0.0230 vel=0.0003 cons=0.0034) | val_r2=0.6632  | lr_enc=2.58e-06 lr_head=1.29e-04 | 11s
+Ep  36/50 | loss=0.0240 (pos=0.0230 vel=0.0003 cons=0.0034) | val_r2=0.6638  | lr_enc=2.28e-06 lr_head=1.14e-04 | 12s
+Ep  37/50 | loss=0.0238 (pos=0.0228 vel=0.0003 cons=0.0034) | val_r2=0.6620  | lr_enc=2.00e-06 lr_head=1.00e-04 | 12s
+Ep  38/50 | loss=0.0238 (pos=0.0228 vel=0.0003 cons=0.0034) | val_r2=0.6584  | lr_enc=1.74e-06 lr_head=8.69e-05 | 12s
+Ep  39/50 | loss=0.0237 (pos=0.0227 vel=0.0003 cons=0.0034) | val_r2=0.6568  | lr_enc=1.49e-06 lr_head=7.45e-05 | 12s
+Ep  40/50 | loss=0.0236 (pos=0.0226 vel=0.0003 cons=0.0034) | val_r2=0.6600  | lr_enc=1.26e-06 lr_head=6.29e-05 | 11s
+Ep  41/50 | loss=0.0236 (pos=0.0226 vel=0.0003 cons=0.0034) | val_r2=0.6628  | lr_enc=1.05e-06 lr_head=5.23e-05 | 12s
+Ep  42/50 | loss=0.0235 (pos=0.0225 vel=0.0003 cons=0.0034) | val_r2=0.6660  | lr_enc=8.52e-07 lr_head=4.26e-05 | 12s
+Ep  43/50 | loss=0.0235 (pos=0.0225 vel=0.0003 cons=0.0034) | val_r2=0.6647  | lr_enc=6.79e-07 lr_head=3.40e-05 | 12s
+Ep  44/50 | loss=0.0234 (pos=0.0224 vel=0.0003 cons=0.0034) | val_r2=0.6602  | lr_enc=5.28e-07 lr_head=2.64e-05 | 12s
+Ep  45/50 | loss=0.0233 (pos=0.0223 vel=0.0003 cons=0.0034) | val_r2=0.6656  | lr_enc=3.99e-07 lr_head=1.99e-05 | 12s
+Ep  46/50 | loss=0.0233 (pos=0.0223 vel=0.0003 cons=0.0034) | val_r2=0.6638  | lr_enc=2.92e-07 lr_head=1.46e-05 | 11s
+Ep  47/50 | loss=0.0234 (pos=0.0224 vel=0.0003 cons=0.0034) | val_r2=0.6661  | lr_enc=2.08e-07 lr_head=1.04e-05 | 12s
+Ep  48/50 | loss=0.0233 (pos=0.0223 vel=0.0003 cons=0.0034) | val_r2=0.6668  | lr_enc=1.48e-07 lr_head=7.41e-06 | 12s
+Ep  49/50 | loss=0.0232 (pos=0.0222 vel=0.0003 cons=0.0034) | val_r2=0.6675  | lr_enc=1.12e-07 lr_head=5.60e-06 | 12s
+Ep  50/50 | loss=0.0233 (pos=0.0223 vel=0.0003 cons=0.0034) | val_r2=0.6652  | lr_enc=1.00e-07 lr_head=5.00e-06 | 12s
+
+Full validation with best model...
+Full val R²: 0.5636 (best epoch 28)
+Saved to /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep/runs/5s_50ov_nop1/

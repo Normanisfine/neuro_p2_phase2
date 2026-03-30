@@ -1,0 +1,162 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            za2k37k2y8o25lgawyo3dcg2fimbnpvd:
+                args:
+                    - --config
+                    - /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_p1_sweep/configs/2s_50ov_nozero.json
+                    - --wandb
+                codePath: mae_multitask_p1_sweep/train.py
+                codePathLocal: train.py
+                cpu_count: 96
+                cpu_count_logical: 96
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "56404180992"
+                        used: "694964224"
+                email: limjiannn@gmail.com
+                executable: /scratch/ml8347/conda/envs/neuroinformatics/bin/python
+                git:
+                    commit: 390fd4965d3b8fd67fe109a662afce669dfda1e6
+                    remote: https://github.com/Normanisfine/neuro_p2.git
+                gpu: NVIDIA H100 80GB HBM3
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-a9d4db31-8071-b117-bd0a-b5ce73e35fd7
+                host: gh009.hpc.nyu.edu
+                memory:
+                    total: "1622570971136"
+                os: Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39
+                program: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_p1_sweep/train.py
+                python: CPython 3.10.19
+                root: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_p1_sweep
+                slurm:
+                    array_job_id: "5095855"
+                    array_task_count: "16"
+                    array_task_id: "7"
+                    array_task_max: "15"
+                    array_task_min: "0"
+                    array_task_step: "1"
+                    cluster_name: torch
+                    conf: /opt/slurm/data/slurmd/conf-cache/slurm.conf
+                    cpus_on_node: "8"
+                    cpus_per_task: "8"
+                    gpus_on_node: "1"
+                    gtids: "0"
+                    job_account: torch_pr_38_tandon_advanced
+                    job_cpus_per_node: "8"
+                    job_end_time: "1774839221"
+                    job_gid: "3940421"
+                    job_gpus: "0"
+                    job_id: "5096289"
+                    job_name: mae_mt_p1_sweep
+                    job_nodelist: gh009
+                    job_num_nodes: "1"
+                    job_partition: h100_tandon
+                    job_qos: gpu48
+                    job_start_time: "1774810421"
+                    job_uid: "3940421"
+                    job_user: ml8347
+                    jobid: "5096289"
+                    jobtmp: /state/partition1/job-5096289
+                    localid: "0"
+                    mem_per_node: "65536"
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: gh009
+                    oom_kill_step: "0"
+                    prio_process: "0"
+                    procid: "0"
+                    script_context: prolog_task
+                    submit_dir: /scratch/ml8347
+                    submit_host: torch-login-a-0.hpc-infra.svc.cluster.local
+                    task_pid: "793680"
+                    tasks_per_node: "1"
+                    tmpdir: /state/partition1/job-5096289
+                    topology_addr: gh009
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=8
+                startedAt: "2026-03-29T18:54:04.645949Z"
+                writerId: za2k37k2y8o25lgawyo3dcg2fimbnpvd
+        m: []
+        python_version: 3.10.19
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+                - 62
+            "4": 3.10.19
+            "5": 0.25.0
+            "8":
+                - 2
+            "12": 0.25.0
+            "13": linux-x86_64
+batch_size:
+    value: 32
+config_name:
+    value: 2s_50ov_nozero
+consistency_weight:
+    value: 0.25
+d_ff:
+    value: 512
+d_model:
+    value: 256
+dropout:
+    value: 0.1
+encoder_lr:
+    value: 1e-05
+epochs:
+    value: 50
+extra_dropout_max:
+    value: 8
+head_lr:
+    value: 0.0005
+n_params:
+    value: 2291972
+n_val_sessions:
+    value: 8
+n_windows:
+    value: 192668
+nhead:
+    value: 4
+num_layers:
+    value: 4
+outdir:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_p1_sweep/runs/2s_50ov_nozero
+p1_data_dir:
+    value: /scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_p1_sweep/../../kaggle_data
+p1_n_dropout:
+    value: 0
+p1_splits:
+    value: train
+position_blend:
+    value: 0.75
+pretrained_checkpoint:
+    value: /scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder/sweep_3325164_5/best_model.pt
+save_every:
+    value: 10
+seed:
+    value: 0
+vel_weight:
+    value: 0.5
+wandb_name:
+    value: null
+wandb_project:
+    value: neuro-p2-mt-sweep
+warmup_epochs:
+    value: 5
+window_size:
+    value: 100
+window_stride:
+    value: 50

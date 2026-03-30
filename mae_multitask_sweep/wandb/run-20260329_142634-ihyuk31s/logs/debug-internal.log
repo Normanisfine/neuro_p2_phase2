@@ -1,0 +1,6 @@
+{"time":"2026-03-29T14:26:35.229524852-04:00","level":"INFO","msg":"stream: starting","core version":"0.25.0"}
+{"time":"2026-03-29T14:26:35.570647865-04:00","level":"INFO","msg":"stream: created new stream","id":"ihyuk31s"}
+{"time":"2026-03-29T14:26:35.572081671-04:00","level":"INFO","msg":"handler: started","stream_id":"ihyuk31s"}
+{"time":"2026-03-29T14:26:35.579457952-04:00","level":"INFO","msg":"stream: started","id":"ihyuk31s"}
+{"time":"2026-03-29T14:26:35.579474377-04:00","level":"INFO","msg":"sender: started","stream_id":"ihyuk31s"}
+{"time":"2026-03-29T14:26:35.579498227-04:00","level":"INFO","msg":"writer: started","stream_id":"ihyuk31s"}

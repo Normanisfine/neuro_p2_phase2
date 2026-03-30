@@ -1,0 +1,92 @@
+{
+  "os":  "Linux-5.14.0-570.12.1.el9_6.x86_64-x86_64-with-glibc2.39",
+  "python":  "CPython 3.10.19",
+  "startedAt":  "2026-03-29T20:05:35.570727Z",
+  "args":  [
+    "--config",
+    "/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/configs/2s_88ov_nozero.json",
+    "--wandb"
+  ],
+  "program":  "/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov/train.py",
+  "codePath":  "mae_mt_2s88ov/train.py",
+  "codePathLocal":  "train.py",
+  "git":  {
+    "remote":  "https://github.com/Normanisfine/neuro_p2.git",
+    "commit":  "390fd4965d3b8fd67fe109a662afce669dfda1e6"
+  },
+  "email":  "limjiannn@gmail.com",
+  "root":  "/scratch/ml8347/neuroinformatics/project2/phase2/mae_mt_2s88ov",
+  "host":  "gh008.hpc.nyu.edu",
+  "executable":  "/scratch/ml8347/conda/envs/neuroinformatics/bin/python",
+  "cpu_count":  96,
+  "cpu_count_logical":  96,
+  "gpu":  "NVIDIA H100 80GB HBM3",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "56404180992",
+      "used":  "694964224"
+    }
+  },
+  "memory":  {
+    "total":  "1622570962944"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA H100 80GB HBM3",
+      "memoryTotal":  "85520809984",
+      "cudaCores":  16896,
+      "architecture":  "Hopper",
+      "uuid":  "GPU-d1ba0621-3eea-fd71-7ee9-073cea0a5a4a"
+    }
+  ],
+  "cudaVersion":  "13.0",
+  "slurm":  {
+    "array_job_id":  "5097909",
+    "array_task_count":  "2",
+    "array_task_id":  "0",
+    "array_task_max":  "1",
+    "array_task_min":  "0",
+    "array_task_step":  "1",
+    "cluster_name":  "torch",
+    "conf":  "/opt/slurm/data/slurmd/conf-cache/slurm.conf",
+    "cpus_on_node":  "8",
+    "cpus_per_task":  "8",
+    "gpus_on_node":  "1",
+    "gtids":  "0",
+    "job_account":  "torch_pr_38_tandon_advanced",
+    "job_cpus_per_node":  "8",
+    "job_end_time":  "1774843520",
+    "job_gid":  "3940421",
+    "job_gpus":  "3",
+    "job_id":  "5097916",
+    "job_name":  "mae_2s88ov",
+    "job_nodelist":  "gh008",
+    "job_num_nodes":  "1",
+    "job_partition":  "h100_tandon",
+    "job_qos":  "gpu48",
+    "job_start_time":  "1774814720",
+    "job_uid":  "3940421",
+    "job_user":  "ml8347",
+    "jobid":  "5097916",
+    "jobtmp":  "/state/partition1/job-5097916",
+    "localid":  "0",
+    "mem_per_node":  "65536",
+    "nnodes":  "1",
+    "nodeid":  "0",
+    "nodelist":  "gh008",
+    "oom_kill_step":  "0",
+    "prio_process":  "0",
+    "procid":  "0",
+    "script_context":  "prolog_task",
+    "submit_dir":  "/scratch/ml8347/neuroinformatics/project2/phase2/mae_multitask_sweep",
+    "submit_host":  "cs608.hpc.nyu.edu",
+    "task_pid":  "2734321",
+    "tasks_per_node":  "1",
+    "tmpdir":  "/state/partition1/job-5097916",
+    "topology_addr":  "gh008",
+    "topology_addr_pattern":  "node",
+    "tres_per_task":  "cpu=8"
+  },
+  "writerId":  "ptfhaw7fncjij3m53cp7o6fafpiyxvqu"
+}

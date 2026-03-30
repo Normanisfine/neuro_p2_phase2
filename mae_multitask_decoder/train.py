@@ -2,16 +2,19 @@
 MAE Multitask Decoder — Phase 2 finger position decoding
 ========================================================
 
-Improves on the plain MAE fine-tune baseline by:
-  - predicting positions and velocities jointly
-  - penalizing inconsistency between predicted position differences and velocity
-  - using synthetic extra channel dropout during training
-  - selecting checkpoints on a balanced easy+hard validation subset
-  - using overlap-averaged hybrid inference in validation/submission
+Key features:
+  - Long sliding-window training (default 5s / 250 bins, 50% overlap)
+    instead of per-trial (~1.25s) — gives the model cross-trial context
+  - Predicts positions and velocities jointly (multitask)
+  - Temporal consistency loss: pos[t+1] - pos[t] ≈ vel[t]
+  - Synthetic extra channel dropout augmentation during training
+  - Balanced easy+hard validation subset for checkpoint selection
+  - Hanning-weighted overlap-averaged inference across the full session
 
 Usage:
     python train.py --quick
     python train.py --pretrained-checkpoint /path/to/phase1/best_model.pt --wandb
+    python train.py --window-size 500  # 10s windows
 """
 
 import sys
@@ -45,8 +48,9 @@ from data_utils import (
 )
 
 WANDB_PROJECT = "neuro-p2-multitask"
-MAX_SEQ_LEN = 192
-INPUT_DIM_P1 = 96 + 96 + 4
+WINDOW_SIZE   = 250   # default 5 s at 50 Hz
+WINDOW_STRIDE = 125   # 50% overlap
+INPUT_DIM_P1  = 96 + 96 + 4
 N_VEL = 2
 
 PHASE1_MAE_DIR = "/scratch/ml8347/neuroinformatics/project2/phase1/masked_autoencoder"
@@ -186,65 +190,67 @@ def prepare_session_arrays(sess: dict) -> tuple[np.ndarray, np.ndarray, np.ndarr
     return sbp_z, d_ind, np.concatenate([pos, vel], axis=1)
 
 
-class TrialDataset(Dataset):
+class SlidingWindowDataset(Dataset):
+    """Training dataset using long sliding windows across the full session.
+
+    Windows of `window_size` bins (default 5 s = 250 bins at 50 Hz) are
+    extracted with `window_stride` step (default 125 = 50% overlap) from
+    each session's continuous SBP/kinematics arrays — NOT restricted to
+    individual trial boundaries.  This gives the model cross-trial context
+    and eliminates the ~1.25 s cap of the previous per-trial approach.
+    """
+
     def __init__(
         self,
         session_ids: List[str],
         data_dir: str,
-        max_seq_len: int = MAX_SEQ_LEN,
+        window_size: int = WINDOW_SIZE,
+        window_stride: int = WINDOW_STRIDE,
         extra_dropout_max: int = 8,
         training: bool = True,
         p1_data_dir: str = "",
         p1_n_dropout: int = 28,
         p1_splits: List[str] = None,
     ):
-        self.max_seq_len = max_seq_len
+        self.window_size = window_size
         self.extra_dropout_max = extra_dropout_max
         self.training = training
-        self.trials = []
+        self.windows: List[tuple] = []  # (sbp_z, d_ind, kin_all, valid_len)
+
+        def _add_session(sess: dict):
+            sbp_z, d_ind, kin_all = prepare_session_arrays(sess)
+            n = sbp_z.shape[0]
+            W, S = window_size, window_stride
+            starts = list(range(0, n, S))
+            for cs in starts:
+                ce = min(cs + W, n)
+                cl = ce - cs
+                if cl < 5:
+                    continue
+                self.windows.append((sbp_z[cs:ce], d_ind, kin_all[cs:ce], cl))
 
         for sid in session_ids:
-            sess = load_session(data_dir, sid, is_test=False)
-            sbp_z, d_ind, kin_all = prepare_session_arrays(sess)
-            for ti in range(sess["n_trials"]):
-                s, e = int(sess["start_bins"][ti]), int(sess["end_bins"][ti])
-                if e - s < 5:
-                    continue
-                self.trials.append((sbp_z[s:e], d_ind, kin_all[s:e], e - s))
+            _add_session(load_session(data_dir, sid, is_test=False))
 
         if p1_data_dir:
             splits = p1_splits if p1_splits else ["train"]
-            p1_loaded = 0
+            p1_count = 0
             for split in splits:
                 for sid in list_p1_session_ids(p1_data_dir, split=split):
-                    sess = load_p1_session_as_p2(p1_data_dir, sid, n_dropout=p1_n_dropout, split=split)
-                    sbp_z, d_ind, kin_all = prepare_session_arrays(sess)
-                    for ti in range(sess["n_trials"]):
-                        s, e = int(sess["start_bins"][ti]), int(sess["end_bins"][ti])
-                        if e - s < 5:
-                            continue
-                        self.trials.append((sbp_z[s:e], d_ind, kin_all[s:e], e - s))
-                        p1_loaded += 1
-            print(f"  Added {p1_loaded} trials from Phase 1 data ({splits})")
+                    _add_session(load_p1_session_as_p2(p1_data_dir, sid, n_dropout=p1_n_dropout, split=split))
+                    p1_count += 1
+            print(f"  Added Phase 1 data: {p1_count} sessions ({splits})")
 
     def __len__(self):
-        return len(self.trials)
+        return len(self.windows)
 
     def __getitem__(self, idx):
-        sbp_z, d_ind, kin_all, tlen = self.trials[idx]
-        T = self.max_seq_len
+        sbp_z, d_ind, kin_all, cl = self.windows[idx]
+        W = self.window_size
 
-        if tlen > T:
-            off = np.random.randint(0, tlen - T + 1)
-            sbp_z = sbp_z[off : off + T]
-            kin_all = kin_all[off : off + T]
-            sl = T
-        else:
-            sl = tlen
-
-        sbp_chunk = sbp_z[:sl].copy()
-        kin_chunk = kin_all[:sl].copy()
-        d_chunk = np.tile(d_ind, (sl, 1))
+        sbp_chunk = sbp_z[:cl].copy()
+        kin_chunk = kin_all[:cl].copy()
+        drop_vec  = d_ind.copy()
 
         if self.training and self.extra_dropout_max > 0:
             active_ch = np.where(d_ind == 0.0)[0]
@@ -253,25 +259,24 @@ class TrialDataset(Dataset):
             if n_extra > 0:
                 extra_ch = np.random.choice(active_ch, size=n_extra, replace=False)
                 sbp_chunk[:, extra_ch] = 0.0
-                d_chunk[:, extra_ch] = 1.0
+                drop_vec[extra_ch] = 1.0
 
-        zeros4 = np.zeros((sl, 4), dtype=np.float32)
-        feat = np.concatenate([sbp_chunk, d_chunk, zeros4], axis=1)
+        d_chunk = np.tile(drop_vec, (cl, 1))
+        zeros4  = np.zeros((cl, 4), dtype=np.float32)
+        feat    = np.concatenate([sbp_chunk, d_chunk, zeros4], axis=1)
 
         def pad(a: np.ndarray) -> np.ndarray:
-            if a.shape[0] >= T:
-                return a[:T]
-            return np.pad(a, [(0, T - a.shape[0])] + [(0, 0)] * (a.ndim - 1))
+            if a.shape[0] >= W:
+                return a[:W]
+            return np.pad(a, [(0, W - a.shape[0])] + [(0, 0)] * (a.ndim - 1))
 
-        feat_p = pad(feat)
-        kin_p = pad(kin_chunk)
-        pmask = np.ones(T, dtype=bool)
-        pmask[:sl] = False
+        pmask = np.ones(W, dtype=bool)
+        pmask[:cl] = False
 
         return (
-            torch.from_numpy(feat_p),
-            torch.from_numpy(kin_p[:, :N_KIN]),
-            torch.from_numpy(kin_p[:, 2:4]),
+            torch.from_numpy(pad(feat)),
+            torch.from_numpy(pad(kin_chunk[:, :N_KIN])),
+            torch.from_numpy(pad(kin_chunk[:, 2:4])),
             torch.from_numpy(pmask),
         )
 
@@ -381,54 +386,47 @@ def predict_session_positions(
     model: MAEMultitaskDecoder,
     sess: dict,
     device: torch.device,
-    max_seq_len: int,
-    stride: int,
+    window_size: int,
+    window_stride: int,
     position_blend: float,
 ) -> np.ndarray:
+    """Slide a window of `window_size` bins across the FULL session (no trial
+    boundaries) with `window_stride` step.  Hanning-weighted overlap averaging
+    yields smooth predictions at every time bin."""
     sbp = sess["sbp"]
     d_ind = sess["dropout_ind"]
     mean, std = session_zscore_params(sbp)
     sbp_z = zscore_normalize(sbp, mean, std).astype(np.float32)
     n_bins = sbp_z.shape[0]
     d_tiled = np.tile(d_ind, (n_bins, 1))
-    zeros4 = np.zeros((n_bins, 4), dtype=np.float32)
-    feat = np.concatenate([sbp_z, d_tiled, zeros4], axis=1).astype(np.float32)
+    zeros4  = np.zeros((n_bins, 4), dtype=np.float32)
+    feat    = np.concatenate([sbp_z, d_tiled, zeros4], axis=1)
 
-    pred_all = np.full((n_bins, N_KIN), 0.5, dtype=np.float32)
+    pred_sum   = np.zeros((n_bins, N_KIN), dtype=np.float32)
+    weight_sum = np.zeros(n_bins, dtype=np.float32)
     model.eval()
 
-    for ti in range(sess["n_trials"]):
-        s, e = int(sess["start_bins"][ti]), int(sess["end_bins"][ti])
-        tlen = e - s
-        if tlen <= 0:
-            continue
+    for cs in make_chunk_starts(n_bins, window_size, window_stride):
+        ce = min(cs + window_size, n_bins)
+        cl = ce - cs
+        chunk = feat[cs:ce]
+        if cl < window_size:
+            chunk = np.pad(chunk, ((0, window_size - cl), (0, 0)))
 
-        pred_sum = np.zeros((tlen, N_KIN), dtype=np.float32)
-        weight_sum = np.zeros(tlen, dtype=np.float32)
-        starts = make_chunk_starts(tlen, max_seq_len, stride)
-        for cs in starts:
-            ce = min(cs + max_seq_len, tlen)
-            cl = ce - cs
-            chunk = feat[s + cs : s + ce]
-            if cl < max_seq_len:
-                chunk = np.pad(chunk, ((0, max_seq_len - cl), (0, 0)))
+        ft = torch.from_numpy(chunk).unsqueeze(0).to(device)
+        pm = torch.ones(1, window_size, dtype=torch.bool, device=device)
+        pm[0, :cl] = False
+        pos_pred, vel_pred = model(ft, padding_mask=pm)
+        pos_np = pos_pred.cpu().numpy()[0, :cl]
+        vel_np = vel_pred.cpu().numpy()[0, :cl]
+        hybrid = blend_pos_vel(pos_np, vel_np, position_blend)
 
-            ft = torch.from_numpy(chunk).unsqueeze(0).to(device)
-            pm = torch.ones(1, max_seq_len, dtype=torch.bool, device=device)
-            pm[0, :cl] = False
-            pos_pred, vel_pred = model(ft, padding_mask=pm)
-            pos_np = pos_pred.cpu().numpy()[0, :cl]
-            vel_np = vel_pred.cpu().numpy()[0, :cl]
-            hybrid = blend_pos_vel(pos_np, vel_np, position_blend)
+        weights = np.hanning(cl).astype(np.float32) if cl >= 3 else np.ones(cl, dtype=np.float32)
+        weights = np.maximum(weights, 1e-3)
+        pred_sum[cs:ce]   += hybrid * weights[:, None]
+        weight_sum[cs:ce] += weights
 
-            weights = np.hanning(cl).astype(np.float32) if cl >= 3 else np.ones(cl, dtype=np.float32)
-            weights = np.maximum(weights, 1e-3)
-            pred_sum[cs:ce] += hybrid * weights[:, None]
-            weight_sum[cs:ce] += weights
-
-        pred_all[s:e] = pred_sum / np.maximum(weight_sum[:, None], 1e-6)
-
-    return np.clip(pred_all, 0.0, 1.0)
+    return np.clip(pred_sum / np.maximum(weight_sum[:, None], 1e-6), 0.0, 1.0)
 
 
 @torch.no_grad()
@@ -437,19 +435,17 @@ def validate_model(
     val_ids: List[str],
     data_dir: str,
     device: torch.device,
-    max_seq_len: int,
-    stride: int,
+    window_size: int,
+    window_stride: int,
     position_blend: float,
 ) -> float:
     results = []
     for sid in val_ids:
         sess = load_session(data_dir, sid, is_test=False)
         pred_pos = predict_session_positions(
-            model,
-            sess,
-            device,
-            max_seq_len=max_seq_len,
-            stride=stride,
+            model, sess, device,
+            window_size=window_size,
+            window_stride=window_stride,
             position_blend=position_blend,
         )
         true_pos = sess["kinematics"][:, :N_KIN].astype(np.float32)
@@ -486,8 +482,10 @@ def main():
     pa.add_argument("--num-layers", type=int, default=4)
     pa.add_argument("--d-ff", type=int, default=512)
     pa.add_argument("--dropout", type=float, default=0.1)
-    pa.add_argument("--max-seq-len", type=int, default=MAX_SEQ_LEN)
-    pa.add_argument("--inference-stride", type=int, default=96)
+    pa.add_argument("--window-size", type=int, default=WINDOW_SIZE,
+                    help="Sliding window size in bins (250=5s, 500=10s at 50Hz)")
+    pa.add_argument("--window-stride", type=int, default=WINDOW_STRIDE,
+                    help="Sliding window stride in bins (default: window-size//2 = 50%% overlap)")
     pa.add_argument("--position-blend", type=float, default=0.75)
     pa.add_argument("--vel-weight", type=float, default=0.5)
     pa.add_argument("--consistency-weight", type=float, default=0.25)
@@ -521,19 +519,21 @@ def main():
     print(f"Train: {len(train_ids)}, Val: {len(val_ids)}, Val subset: {len(val_subset)}")
 
     p1_splits = [s.strip() for s in args.p1_splits.split(",") if s.strip()]
+    window_stride = args.window_stride if args.window_stride > 0 else args.window_size // 2
     print("Building dataset...")
     t0 = time.time()
-    ds = TrialDataset(
+    ds = SlidingWindowDataset(
         train_ids,
         args.data_dir,
-        max_seq_len=args.max_seq_len,
+        window_size=args.window_size,
+        window_stride=window_stride,
         extra_dropout_max=args.extra_dropout_max,
         training=True,
         p1_data_dir=args.p1_data_dir,
         p1_n_dropout=args.p1_n_dropout,
         p1_splits=p1_splits,
     )
-    print(f"  {len(ds)} trials ({time.time() - t0:.1f}s)")
+    print(f"  {len(ds)} windows ({time.time() - t0:.1f}s)")
 
     loader = DataLoader(
         ds,
@@ -602,8 +602,8 @@ def main():
             val_subset,
             args.data_dir,
             device,
-            max_seq_len=args.max_seq_len,
-            stride=args.inference_stride,
+            window_size=args.window_size,
+            window_stride=window_stride,
             position_blend=args.position_blend,
         )
         dt = time.time() - t0
@@ -647,8 +647,8 @@ def main():
         val_ids,
         args.data_dir,
         device,
-        max_seq_len=args.max_seq_len,
-        stride=args.inference_stride,
+        window_size=args.window_size,
+        window_stride=window_stride,
         position_blend=args.position_blend,
     )
     print(f"Full val R²: {full_r2:.4f} (best epoch {ckpt['epoch']})")
@@ -659,8 +659,8 @@ def main():
         "num_layers": args.num_layers,
         "d_ff": args.d_ff,
         "dropout": args.dropout,
-        "max_seq_len": args.max_seq_len,
-        "inference_stride": args.inference_stride,
+        "window_size": args.window_size,
+        "window_stride": window_stride,
         "position_blend": args.position_blend,
         "vel_weight": args.vel_weight,
         "consistency_weight": args.consistency_weight,

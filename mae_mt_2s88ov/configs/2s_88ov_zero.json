@@ -1,0 +1,5 @@
+{
+  "window_size": 100,
+  "window_stride": 12,
+  "p1_n_dropout": 28
+}

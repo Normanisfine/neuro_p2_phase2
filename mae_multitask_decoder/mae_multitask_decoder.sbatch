@@ -29,20 +29,18 @@ singularity exec --nv \
     echo '=== Training ==='
     python train.py \
         --epochs 50 \
-        --batch-size 48 \
+        --batch-size 32 \
         --encoder-lr 1e-5 \
         --head-lr 5e-4 \
         --warmup-epochs 5 \
         --dropout 0.1 \
-        --max-seq-len 192 \
-        --inference-stride 96 \
+        --window-size 250 \
+        --window-stride 125 \
         --position-blend 0.75 \
         --vel-weight 0.5 \
         --consistency-weight 0.25 \
         --extra-dropout-max 8 \
         --pretrained-checkpoint \"${PHASE1_CKPT}\" \
-        --p1-data-dir /scratch/ml8347/neuroinformatics/project2/kaggle_data \
-        --p1-splits train \
         --wandb
 
     echo ''
